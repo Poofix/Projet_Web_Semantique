@@ -1,0 +1,8 @@
+**/jobInfo.properties
+.JETEmitters/
+.Java/
+.metadata/
+PROJET_WEB_SEMANTIQUE/code/routines/system/*.*
+PROJET_WEB_SEMANTIQUE/temp/
+PROJET_WEB_SEMANTIQUE/sqlPatterns/
+PROJET_WEB_SEMANTIQUE/talend.project
