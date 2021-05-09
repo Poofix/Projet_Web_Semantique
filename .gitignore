@@ -1,0 +1,8 @@
+**/jobInfo.properties
+TalendWorkspace/.JETEmitters/
+TalendWorkspace/.Java/
+TalendWorkspace/.metadata/
+TalendWorkspace/*/code/routines/system/*.*
+TalendWorkspace/*/temp/
+TalendWorkspace/*/sqlPatterns/
+TalendWorkspace/*/talend.project
