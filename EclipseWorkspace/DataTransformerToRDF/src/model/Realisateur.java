@@ -22,7 +22,7 @@ public class Realisateur implements IRDFGenerator{
 		List<Triplet> result = new ArrayList<Triplet>();
 		
 		result.add(new Triplet(":"+key ,"rdfs:label", '"'+ nom +'"'));
-		result.add(new Triplet(":"+key ,":aPourStyleDePredilection",'"'+genreDePredilection.getKey()+ '"'));
+		result.add(new Triplet(":"+key ,":aPourStyleDePredilection",":"+genreDePredilection.getKey()));
 		return result;
 	}
 
