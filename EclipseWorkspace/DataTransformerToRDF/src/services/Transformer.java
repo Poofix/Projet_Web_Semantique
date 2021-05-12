@@ -140,7 +140,7 @@ public class Transformer {
 					Film existingFilm = dictFilm.get(filmKey);
 					if (existingFilm == null) {
 						dictFilm.put(filmKey, new Film(titre, annee, dictGenres.get(nextLine[2]),
-								dictRealisateurs.get(nextLine[3]), dictLieux.get(lieu))); // TODO Finir le constructeur
+								dictRealisateurs.get(nextLine[3]), dictLieux.get(lieu), Float.parseFloat((nextLine[5])))); // TODO Finir le constructeur
 					} else {
 						existingFilm.lieuxDeTournages.add(dictLieux.get(lieu));
 					}
@@ -159,8 +159,8 @@ public class Transformer {
 
 	}
 
+	// load the model in the transformer instance
 	public void loadModel() {
-
 		this.loadGenre(System.getProperty("user.dir") + "/src/datas/genres.csv");
 		this.loadLieu(System.getProperty("user.dir") + "/src/datas/lieux.csv");
 		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/realisateurs.csv");
@@ -169,8 +169,19 @@ public class Transformer {
 
 	public void convertModelToOntology() {
 		for (Film f : this.dictFilm.values()) {
-			System.out.println(f.titre);
-			System.out.println(f.lieuxDeTournages.get(0).adresse);
+			System.out.println(f.generateRDFTriplet().toString());
+		}
+		System.out.println("========================");
+		for(Genre g : dictGenres.values()) {
+			System.out.println(g.generateRDFTriplet().toString());
+		}
+		System.out.println("========================");
+		for (Lieu l : dictLieux.values()) {
+			System.out.println(l.generateRDFTriplet().toString());
+		}
+		System.out.println("========================");
+		for (Realisateur r : dictRealisateurs.values()) {
+			System.out.println(r.generateRDFTriplet().toString());
 		}
 	}
 }

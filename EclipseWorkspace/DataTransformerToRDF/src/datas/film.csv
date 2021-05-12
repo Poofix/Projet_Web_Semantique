@@ -1,2 +1,4 @@
-titre;annee;genre;auteur;lieu;
-film1;2000;aventure;realisateur4;rue2-47130;
+titre;annee;genre;auteur;lieu;note
+film1;2000;aventure;realisateur4;rue2-47130;2.3;
+film2;2002;comédie;realisateur2;rue3-47130;5.4;
+film2;2002;comédie;realisateur2;rue4-47130;0.1;
