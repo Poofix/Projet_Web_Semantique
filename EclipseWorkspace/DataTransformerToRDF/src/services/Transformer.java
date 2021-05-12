@@ -6,28 +6,36 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.opencsv.CSVReader;
-
-import java.io.IOException;
-import java.io.Reader;
-
 import model.Film;
 import model.Genre;
 import model.Lieu;
 import model.Realisateur;
+import model.Triplet;
+import sparqlclient.SparqlClient;
 
 public class Transformer {
 
+	private SparqlClient sparqlClient;
+	
 	Map<String, Genre> dictGenres;
 	Map<String, Realisateur> dictRealisateurs;
 	Map<String, Lieu> dictLieux;
 	Map<String, Film> dictFilm;
 
-	public Transformer() {
+	public Transformer(SparqlClient sparqlClient) {
 		dictGenres = new HashMap<String, Genre>();
 		dictRealisateurs = new HashMap<String, Realisateur>();
 		dictLieux = new HashMap<String, Lieu>();
-		dictFilm = new HashMap<String, Film>();
+		dictFilm = new HashMap<String, Film>();;
+		
+		this.sparqlClient = sparqlClient;
+		String query = "ASK WHERE { ?s ?p ?o }";
+	    boolean serverIsUp = sparqlClient.ask(query);
+		if( serverIsUp ) {
+			System.out.println("Fuseli server is ready...");
+		}else {
+			System.out.println("ERROR : Fuseli server unreachable...");
+		}
 	}
 
 	private void loadGenre(String csvFilePath) {
@@ -166,22 +174,49 @@ public class Transformer {
 		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/realisateurs.csv");
 		this.loadFilm(System.getProperty("user.dir") + "/src/datas/film.csv");
 	}
+	
+	private String generateRequest(List<Triplet> triplets) {
+		String prefix = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
+				"Prefix : <http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-4>\r\n" + 
+				"PREFIX owl: <http://www.w3.org/2002/07/owl#>\r\n" ;
+		
+		String queryString = prefix + "\n" + "insert data {";
+		for(Triplet t: triplets) {
+			queryString += t.toString() +"\n";			
+		}
+		queryString += "}";
+		System.out.println("QUERY ## " + queryString);
+		return queryString;
+	}
+	
+	
+	
 
 	public void convertModelToOntology() {
-		for (Film f : this.dictFilm.values()) {
-			System.out.println(f.generateRDFTriplet().toString());
-		}
-		System.out.println("========================");
 		for(Genre g : dictGenres.values()) {
-			System.out.println(g.generateRDFTriplet().toString());
+			//System.out.println(g.generateRDFTriplet().toString());
+			sparqlClient.update(generateRequest(g.generateRDFTriplet()));
+			
 		}
 		System.out.println("========================");
 		for (Lieu l : dictLieux.values()) {
-			System.out.println(l.generateRDFTriplet().toString());
+			//System.out.println(l.generateRDFTriplet().toString());
+			sparqlClient.update(generateRequest(l.generateRDFTriplet()));
 		}
 		System.out.println("========================");
 		for (Realisateur r : dictRealisateurs.values()) {
-			System.out.println(r.generateRDFTriplet().toString());
+			//System.out.println(r.generateRDFTriplet().toString());
+			sparqlClient.update(generateRequest(r.generateRDFTriplet()));
 		}
+		System.out.println("========================");
+		for (Film f : this.dictFilm.values()) {
+			//System.out.println(f.generateRDFTriplet().toString());
+			sparqlClient.update(generateRequest(f.generateRDFTriplet()));
+		}
+		
+		
+		//sparqlClient.update(generateRequest(null));
+		
+		
 	}
 }
