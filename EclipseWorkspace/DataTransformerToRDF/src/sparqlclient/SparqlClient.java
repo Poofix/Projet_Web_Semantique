@@ -141,7 +141,8 @@ public class SparqlClient {
             } finally {
                 httpPost.releaseConnection();
             }
-        } catch (IOException ex) {
+        } catch (Exception ex) {
+        	System.out.println(ex);
             Logger.getLogger(SparqlClient.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

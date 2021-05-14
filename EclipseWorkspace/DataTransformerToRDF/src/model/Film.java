@@ -38,7 +38,7 @@ public class Film implements IRDFGenerator{
 		for (Lieu l : lieuxDeTournages) {
 			result.add(new Triplet(":"+key,":seDerouleDans", ":" + l.getKey()));
 		}
-		result.add(new Triplet(":"+key,":aPourNote", '"'+ note+""+ '"'));
+		result.add(new Triplet(":"+key,":aPourNote", '"'+ new String(note+"")+ '"'));
 		return result;
 	}
 

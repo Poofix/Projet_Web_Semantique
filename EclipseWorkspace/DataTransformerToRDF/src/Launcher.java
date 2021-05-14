@@ -1,10 +1,12 @@
 import services.Transformer;
+import sparqlclient.SparqlClient;
 
 public class Launcher {
 
 	public static void main(String[] args) {
 		System.out.println("Starting ...");
-		Transformer transformer = new Transformer();
+		SparqlClient sparqlClient = new SparqlClient("localhost:3030/lieuFrance");
+		Transformer transformer = new Transformer(sparqlClient);
 		System.out.println("Start model loading");
 		transformer.loadModel();
 		System.out.println("End model loading");
