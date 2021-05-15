@@ -8,27 +8,29 @@ import model.IRDFGenerator;
 import model.Triplet;
 import services.Utils;
 
-public class Film implements IRDFGenerator{
-	private static final AtomicInteger count = new AtomicInteger(0); 
-	private String key ;
+public class Film implements IRDFGenerator {
+	private static final AtomicInteger count = new AtomicInteger(0);
+	private String key;
 	private final int id;
-	
+
 	public String titre;
 	public String anneeSortie;
 	public Genre genreDominant;
 	public Realisateur realisateur;
 	public List<Lieu> lieuxDeTournages;
 	public float note;
-	
-	public Film(String titre, String annee, Genre genre, Realisateur real, Lieu lieu,float n) {
+
+	public Film(String titre, String annee, Genre genre, Realisateur real, Lieu lieu, float n) {
 		this.titre = titre;
 		anneeSortie = annee;
 		genreDominant = genre;
-		realisateur = real ;
+		realisateur = real;
 		lieuxDeTournages = new ArrayList<Lieu>();
-		lieuxDeTournages.add(lieu);
+		if (lieu != null) {
+			lieuxDeTournages.add(lieu);
+		}
 		note = n;
-		
+
 		id = count.incrementAndGet();
 		key = "Film" + id;
 		// key = Utils.removeAccent(titre+anneeSortie);
@@ -37,15 +39,19 @@ public class Film implements IRDFGenerator{
 	@Override
 	public List<Triplet> generateRDFTriplet() {
 		List<Triplet> result = new ArrayList<Triplet>();
-		
-		result.add(new Triplet(":"+key,"rdfs:label", '"' + titre+ '"'));
-		result.add(new Triplet(":"+key,":aEteTourneEn", '"' + anneeSortie+ '"'));
-		result.add(new Triplet(":"+key,":aPourGenre", ":" + genreDominant.getKey()));
-		result.add(new Triplet(":"+key,":aPourRealisateur", ":" + realisateur.getKey()));
-		for (Lieu l : lieuxDeTournages) {
-			result.add(new Triplet(":"+key,":seDerouleDans", ":" + l.getKey()));
+
+		result.add(new Triplet(":" + key, "rdfs:label", '"' + titre + '"'));
+		result.add(new Triplet(":" + key, ":aEteTourneEn", '"' + anneeSortie + '"'));
+		if (genreDominant != null) {
+			result.add(new Triplet(":" + key, ":aPourGenre", ":" + genreDominant.getKey()));
 		}
-		result.add(new Triplet(":"+key,":aPourNote", '"'+ new String(note+"")+ '"'));
+		if (realisateur != null) {
+			result.add(new Triplet(":" + key, ":aPourRealisateur", ":" + realisateur.getKey()));
+		}
+		for (Lieu l : lieuxDeTournages) {
+			result.add(new Triplet(":" + key, ":seDerouleDans", ":" + l.getKey()));
+		}
+		result.add(new Triplet(":" + key, ":aPourNote", '"' + new String(note + "") + '"'));
 		return result;
 	}
 
@@ -53,7 +59,5 @@ public class Film implements IRDFGenerator{
 	public String getKey() {
 		return key;
 	}
-	
-	
-	
+
 }
