@@ -4,7 +4,7 @@ import sparqlclient.SparqlClient;
 public class Launcher {
 
 	public static void main(String[] args) {
-		System.out.println("Starting ...");
+		System.out.println("Start Program ...");
 		SparqlClient sparqlClient = new SparqlClient("localhost:3030/lieuFrance");
 		Transformer transformer = new Transformer(sparqlClient);
 		System.out.println("Start model loading");
@@ -13,6 +13,7 @@ public class Launcher {
 		System.out.println("Start insert into sparql");
 		transformer.convertModelToOntology();
 		System.out.println("End insertion into sparql");
+		System.out.println("End Program");
 	}
 
 }
