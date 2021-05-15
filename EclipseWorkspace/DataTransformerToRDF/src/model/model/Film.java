@@ -1,12 +1,17 @@
-package model;
+package model.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
+import model.IRDFGenerator;
+import model.Triplet;
 import services.Utils;
 
 public class Film implements IRDFGenerator{
-	private String key;
+	private static final AtomicInteger count = new AtomicInteger(0); 
+	private String key ;
+	private final int id;
 	
 	public String titre;
 	public String anneeSortie;
@@ -24,7 +29,9 @@ public class Film implements IRDFGenerator{
 		lieuxDeTournages.add(lieu);
 		note = n;
 		
-		key = Utils.removeAccent(titre+anneeSortie);
+		id = count.incrementAndGet();
+		key = "Film" + id;
+		// key = Utils.removeAccent(titre+anneeSortie);
 	}
 
 	@Override

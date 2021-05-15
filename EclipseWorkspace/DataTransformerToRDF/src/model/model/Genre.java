@@ -1,19 +1,28 @@
-package model;
+package model.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
+import model.IRDFGenerator;
+import model.Triplet;
 import services.Utils;
 
 
 public class Genre implements IRDFGenerator{
 	
-	private String key;
+	private static final AtomicInteger count = new AtomicInteger(0); 
+	private String key ;
+	private final int id;
+	
 	public String label;
 	
 	public Genre(String token) {
 		label = token;
-		key= Utils.removeAccent(label);
+		
+		id = count.incrementAndGet();
+		key = "Genre"+id;
+		// key= Utils.removeAccent(label);
 	}
 
 	@Override

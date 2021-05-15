@@ -13,4 +13,13 @@ public class Utils {
         }
 		return  sb.toString(); 
 	}
+	
+	
+	public static String normalize(String label) {
+		String result = new String (label);
+		result = removeAccent(result);
+		result = result.replaceAll("\\s+", "");
+		result = result.toLowerCase();
+		return  result; 
+	}
 }

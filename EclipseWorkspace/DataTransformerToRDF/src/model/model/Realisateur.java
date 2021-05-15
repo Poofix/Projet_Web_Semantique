@@ -1,20 +1,28 @@
-package model;
+package model.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
+import model.IRDFGenerator;
+import model.Triplet;
 import services.Utils;
 
 public class Realisateur implements IRDFGenerator{
 
+	private static final AtomicInteger count = new AtomicInteger(0); 
 	private String key ;
+	private final int id;
+	
 	public String nom;
 	public Genre genreDePredilection;
 	
 	public Realisateur(String token, Genre genre) {
 		nom = token;
 		genreDePredilection = genre;
-		key = Utils.removeAccent(nom);
+		id = count.incrementAndGet();
+		key = "Realisateur"+ id;
+		// key = Utils.removeAccent(nom);
 	}
 
 	@Override

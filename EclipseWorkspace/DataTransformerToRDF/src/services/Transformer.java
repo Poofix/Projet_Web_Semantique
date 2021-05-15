@@ -6,17 +6,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import model.Film;
-import model.Genre;
-import model.Lieu;
-import model.Realisateur;
 import model.Triplet;
+import model.model.Film;
+import model.model.Genre;
+import model.model.Lieu;
+import model.model.Realisateur;
 import sparqlclient.SparqlClient;
 
 public class Transformer {
 
 	private SparqlClient sparqlClient;
-	
+
 	Map<String, Genre> dictGenres;
 	Map<String, Realisateur> dictRealisateurs;
 	Map<String, Lieu> dictLieux;
@@ -26,14 +26,20 @@ public class Transformer {
 		dictGenres = new HashMap<String, Genre>();
 		dictRealisateurs = new HashMap<String, Realisateur>();
 		dictLieux = new HashMap<String, Lieu>();
-		dictFilm = new HashMap<String, Film>();;
-		
+		dictFilm = new HashMap<String, Film>();
+		;
+
 		this.sparqlClient = sparqlClient;
 		String query = "ASK WHERE { ?s ?p ?o }";
-	    boolean serverIsUp = sparqlClient.ask(query);
-		if( serverIsUp ) {
+		boolean serverIsUp = false;
+		try {
+			serverIsUp = sparqlClient.ask(query);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		if (serverIsUp) {
 			System.out.println("Fuseli server is ready...");
-		}else {
+		} else {
 			System.out.println("ERROR : Fuseli server unreachable...");
 		}
 	}
@@ -52,7 +58,7 @@ public class Transformer {
 				while ((line = fileReader.readLine()) != null) {
 					// Get all tokens available in line
 					String[] tokens = line.split(";");
-					dictGenres.put(tokens[0], new Genre(tokens[0]));
+					dictGenres.put(Utils.normalize(tokens[0]), new Genre(tokens[0]));
 				}
 			}
 
@@ -80,7 +86,9 @@ public class Transformer {
 				// Read the file line by line
 				while ((line = fileReader.readLine()) != null) {
 					String[] nextLine = line.split(";");
-					dictRealisateurs.put(nextLine[0], new Realisateur(nextLine[0], dictGenres.get(nextLine[1])));
+					dictRealisateurs.put(Utils.normalize(nextLine[0]),
+							new Realisateur(nextLine[0], 
+									dictGenres.get(Utils.normalize(nextLine[1]))));
 
 				}
 			}
@@ -113,7 +121,7 @@ public class Transformer {
 					String ville = nextLine[1];
 					String codePostal = nextLine[2];
 
-					dictLieux.put(adr + "-" + codePostal, new Lieu(ville, adr, codePostal));
+					dictLieux.put(Utils.normalize(adr + "-" + codePostal), new Lieu(ville, adr, codePostal));
 				}
 			}
 
@@ -143,12 +151,14 @@ public class Transformer {
 					String[] nextLine = line.split(";");
 					String titre = nextLine[0];
 					String annee = nextLine[1]; // TODO METTRE LE BON INDEX
-					String lieu = nextLine[4];
-					String filmKey = titre + annee;
+					String lieu = Utils.normalize(nextLine[4]);
+					String filmKey = Utils.normalize(titre + annee);
 					Film existingFilm = dictFilm.get(filmKey);
 					if (existingFilm == null) {
-						dictFilm.put(filmKey, new Film(titre, annee, dictGenres.get(nextLine[2]),
-								dictRealisateurs.get(nextLine[3]), dictLieux.get(lieu), Float.parseFloat((nextLine[5])))); // TODO Finir le constructeur
+						dictFilm.put(filmKey,
+								new Film(titre, annee, dictGenres.get(Utils.normalize(nextLine[2])), dictRealisateurs.get(Utils.normalize(nextLine[3])),
+										dictLieux.get(lieu), Float.parseFloat((nextLine[5])))); // TODO Finir le
+																								// constructeur
 					} else {
 						existingFilm.lieuxDeTournages.add(dictLieux.get(lieu));
 					}
@@ -174,49 +184,59 @@ public class Transformer {
 		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/realisateurs.csv");
 		this.loadFilm(System.getProperty("user.dir") + "/src/datas/film.csv");
 	}
-	
+
 	private String generateRequest(List<Triplet> triplets) {
-		String prefix = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
-				"Prefix : <http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-4>\r\n" + 
-				"PREFIX owl: <http://www.w3.org/2002/07/owl#>\r\n" ;
-		
+		String prefix = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n"
+				+ "Prefix : <http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-4>\r\n"
+				+ "PREFIX owl: <http://www.w3.org/2002/07/owl#>\r\n";
+
 		String queryString = prefix + "\n" + "insert data {";
-		for(Triplet t: triplets) {
-			queryString += t.toString() +"\n";			
+		for (Triplet t : triplets) {
+			queryString += t.toString() + "\n";
 		}
 		queryString += "}";
 		System.out.println("QUERY ## " + queryString);
 		return queryString;
 	}
-	
-	
-	
 
 	public void convertModelToOntology() {
-		for(Genre g : dictGenres.values()) {
-			//System.out.println(g.generateRDFTriplet().toString());
-			sparqlClient.update(generateRequest(g.generateRDFTriplet()));
-			
+		for (Genre g : dictGenres.values()) {
+			// System.out.println(g.generateRDFTriplet().toString());
+			try {
+				sparqlClient.update(generateRequest(g.generateRDFTriplet()));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		System.out.println("========================");
 		for (Lieu l : dictLieux.values()) {
-			//System.out.println(l.generateRDFTriplet().toString());
-			sparqlClient.update(generateRequest(l.generateRDFTriplet()));
+			// System.out.println(l.generateRDFTriplet().toString());
+			try {
+				sparqlClient.update(generateRequest(l.generateRDFTriplet()));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		System.out.println("========================");
 		for (Realisateur r : dictRealisateurs.values()) {
-			//System.out.println(r.generateRDFTriplet().toString());
-			sparqlClient.update(generateRequest(r.generateRDFTriplet()));
+			// System.out.println(r.generateRDFTriplet().toString());
+			try {
+				sparqlClient.update(generateRequest(r.generateRDFTriplet()));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		System.out.println("========================");
 		for (Film f : this.dictFilm.values()) {
-			//System.out.println(f.generateRDFTriplet().toString());
-			sparqlClient.update(generateRequest(f.generateRDFTriplet()));
+			// System.out.println(f.generateRDFTriplet().toString());
+			try {
+				sparqlClient.update(generateRequest(f.generateRDFTriplet()));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
-		
-		
-		//sparqlClient.update(generateRequest(null));
-		
-		
+
+		// sparqlClient.update(generateRequest(null));
+
 	}
 }
