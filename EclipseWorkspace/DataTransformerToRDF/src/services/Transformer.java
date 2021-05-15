@@ -16,20 +16,22 @@ import sparqlclient.SparqlClient;
 public class Transformer {
 
 	private SparqlClient sparqlClient;
+	private boolean debugMode = false;
 
 	Map<String, Genre> dictGenres;
 	Map<String, Realisateur> dictRealisateurs;
 	Map<String, Lieu> dictLieux;
 	Map<String, Film> dictFilm;
 
-	public Transformer(SparqlClient sparqlClient) {
+	public Transformer(SparqlClient sparqlClient, boolean debugMode) {
 		dictGenres = new HashMap<String, Genre>();
 		dictRealisateurs = new HashMap<String, Realisateur>();
 		dictLieux = new HashMap<String, Lieu>();
 		dictFilm = new HashMap<String, Film>();
-		;
 
 		this.sparqlClient = sparqlClient;
+		this.debugMode = debugMode;
+
 		String query = "ASK WHERE { ?s ?p ?o }";
 		boolean serverIsUp = false;
 		try {
@@ -87,8 +89,7 @@ public class Transformer {
 				while ((line = fileReader.readLine()) != null) {
 					String[] nextLine = line.split(";");
 					dictRealisateurs.put(Utils.normalize(nextLine[0]),
-							new Realisateur(nextLine[0], 
-									dictGenres.get(Utils.normalize(nextLine[1]))));
+							new Realisateur(nextLine[0], dictGenres.get(Utils.normalize(nextLine[1]))));
 
 				}
 			}
@@ -156,9 +157,10 @@ public class Transformer {
 					Film existingFilm = dictFilm.get(filmKey);
 					if (existingFilm == null) {
 						dictFilm.put(filmKey,
-								new Film(titre, annee, dictGenres.get(Utils.normalize(nextLine[2])), dictRealisateurs.get(Utils.normalize(nextLine[3])),
-										dictLieux.get(lieu), Float.parseFloat((nextLine[5])))); // TODO Finir le
-																								// constructeur
+								new Film(titre, annee, dictGenres.get(Utils.normalize(nextLine[2])),
+										dictRealisateurs.get(Utils.normalize(nextLine[3])), dictLieux.get(lieu),
+										Float.parseFloat((nextLine[5])))); // TODO Finir le
+																			// constructeur
 					} else {
 						existingFilm.lieuxDeTournages.add(dictLieux.get(lieu));
 					}
@@ -195,48 +197,61 @@ public class Transformer {
 			queryString += t.toString() + "\n";
 		}
 		queryString += "}";
-		System.out.println("QUERY ## " + queryString);
+		if (!debugMode) {
+			System.out.println("QUERY ## " + queryString);
+		}
 		return queryString;
 	}
 
 	public void convertModelToOntology() {
+
 		for (Genre g : dictGenres.values()) {
-			// System.out.println(g.generateRDFTriplet().toString());
-			try {
-				sparqlClient.update(generateRequest(g.generateRDFTriplet()));
-			} catch (Exception e) {
-				e.printStackTrace();
+			if (debugMode) {
+				System.out.println(generateRequest(g.generateRDFTriplet()));
+			} else {
+				try {
+					sparqlClient.update(generateRequest(g.generateRDFTriplet()));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
-		}
-		System.out.println("========================");
-		for (Lieu l : dictLieux.values()) {
-			// System.out.println(l.generateRDFTriplet().toString());
-			try {
-				sparqlClient.update(generateRequest(l.generateRDFTriplet()));
-			} catch (Exception e) {
-				e.printStackTrace();
+			System.out.println("========================");
+			for (Lieu l : dictLieux.values()) {
+				if (debugMode) {
+					System.out.println(generateRequest(l.generateRDFTriplet()));
+				} else {
+					try {
+						sparqlClient.update(generateRequest(l.generateRDFTriplet()));
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
 			}
-		}
-		System.out.println("========================");
-		for (Realisateur r : dictRealisateurs.values()) {
-			// System.out.println(r.generateRDFTriplet().toString());
-			try {
-				sparqlClient.update(generateRequest(r.generateRDFTriplet()));
-			} catch (Exception e) {
-				e.printStackTrace();
+			System.out.println("========================");
+			for (Realisateur r : dictRealisateurs.values()) {
+				if (debugMode) {
+					System.out.println(generateRequest(r.generateRDFTriplet()));
+				} else {
+					try {
+						sparqlClient.update(generateRequest(r.generateRDFTriplet()));
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
 			}
-		}
-		System.out.println("========================");
-		for (Film f : this.dictFilm.values()) {
-			// System.out.println(f.generateRDFTriplet().toString());
-			try {
-				sparqlClient.update(generateRequest(f.generateRDFTriplet()));
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
+			System.out.println("========================");
+			for (Film f : this.dictFilm.values()) {
+				if (debugMode) {
+					System.out.println(generateRequest(f.generateRDFTriplet()));
 
-		// sparqlClient.update(generateRequest(null));
-
+				} else {
+					try {
+						sparqlClient.update(generateRequest(f.generateRDFTriplet()));
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}
 	}
 }
