@@ -1,1914 +1,2939 @@
 1;6007;luc besson
-2;;assayas olivier
-3;8649;jean-philippe amar
-4;8629;antoine garceau
-5;8629;marc fitoussi
-6;8780;eric le roux
-7;;darroussin jean-pierre
-8;8901;guillaume lubrano
-9;8901;francois descraques
-10;6852;doria achour
-11;6852;sylvain cattenoy
-12;;meddour mounia
-13;3659;felix moati
-14;;dolan xavier
-15;;maclane angus
-18;;eyre richard
-19;;mosier scott
-20;;cortes rodrigo
-21;;berthe frederic
-22;;zobel craig
-23;;villeneuve denis
-24;;schoeller pierre
-25;5018;benjamin euvrard
-26;;godeau philippe
-27;;szifron damian
-28;;meier ursula
-29;4760;marino giardinelli
-30;;drexel claus
-31;;salem lyes
-32;;dindal mark
-33;2441;stephanie pilonca
-34;;tuel laurent
-35;5950;gabriel julien lafferiere
-36;;erguven deniz gamze
-37;;gibson mel
-39;;columbus chris
-40;8594;frederic tellier
-41;4426;nine antico
-42;;jacobsen esben toft
-43;;august bille
-44;;dubosc franck
-45;;inarritu alejandro gonzales
-46;8913;etienne chatiliez
-47;8502;bruno dumont
-48;;hood gavin
-49;;winding refn nicolas
-50;;scott tony
-51;8273;pierre pinaud
-52;;shanley john patrick
-53;;felicioli jean-loup
-54;8919;matthieu delaporte
-55;8919;alexandre de la patelliere
-56;8664;julien despaux
-57;;proyas alex
-58;7798;diane kurys
-59;;branagh kenneth
-60;6817;fred cavaye
-61;;ortega kenny
-62;8271;arnaud selignac
-63;;parker alan
-64;;russell jay
-65;8867;nicole garcia
-66;;polanski roman
-67;;smith simon j.
-68;;grimond philippe
-69;;yuh jennifer
-70;3738;alex lutz
-71;6854;david moreau
-72;;guterman lawrence
-73;;di giusto staephanie
-74;7961;tristan seguela
-75;;toro guillermo del
-76;8802;olivier marchal
-77;;watts jon
-78;8364;anne fontaine
-79;;coffin pierre
-80;;tardieu carine
-81;;legrand xavier
-82;8386;vincent primault
-83;8243;thierry de peretti
-84;;hosoda mamoru
-85;;farhadi asghar
-86;8115;victor saint macary
-87;;comar etienne
-88;8574;jonathan desoindre
-89;;van lamsweerde pino
-90;8403;virgine scswartz
-91;;ragobert thierry
-92;;bellocchio marco
-93;5529;marine colomies
-94;;amaouche nassim
-95;;cordier antony
-96;;bary nicolas
-97;7127;pierre trividic patrick mario bernard
-98;;zemeckis robert
-99;5638;magaly richard serrano
-100;7593;nicolas bary
-101;;daniel rod
-102;;tati jacques
-103;;kurosawa kiyoshi
-104;;lacheau philippe
-105;;gilroy dan
-106;3019;lou jeunet
-107;;bergeon edouard
-108;;bong joon-ho
-109;6426;audrey dana
-110;;summer eric
-111;;moretti nanni
-112;7002;nadege loiseau
-113;7002;julien colonna
-114;;carney john
-115;;noonan chris
-116;6200;said khediri
-117;;dupontel albert.
-118;7610;jean claude brisseau
-119;;ozon frandcois
-120;8372;igor gotesman
-121;;hou hsiao-hsien
-122;;tyldum morten
-123;7397;regis roinsard
-124;;noyce phillip
-125;;lloyd phyllida
-126;;fontaine anne.
-127;8028;pascal elbe
-128;;lin justin
-129;7403;marcela said
-130;3598;mia hanse-love
-131;8223;noemie saglio
-132;6672;frederic auburtin
-133;6672;thomas langmann
-134;;dridi karim
-135;;foster jodie
-136;5901;franck gastambide
-137;5901;david diane
-138;8799;christophe campos
-139;;hegner michael
-140;;van dormael jaco
-141;;corbijn anton
-142;6753;elena cosson
-143;;russell david o
-144;;bourdos gilles
-145;;scott ken
-146;7355;olivier dahan
-147;;campanella juan j.
-148;;lord peter
-149;;rambaldi julien
-150;;gavron sarah
-151;;field todd
-152;;spielberg steven
-153;;kaurismaki aki
-154;8651;maimouna doucoure
-155;8770;p. de chauveron
-156;7872;marion desseigne ravel
-157;;deleuze emilie
-158;;renier jaeraemie
-159;;lasseter john
-160;8672;jean-marc brondolo
-161;;moreau david
-162;;kaytis clay
-163;;ameris jean-pierre
-164;7611;(matt quezada) 2nde equipe paris xavier roy
-165;;lepeniotis peter
-166;8117;claire denis
-167;5810;emmanuel gillibert
-168;;burton mark
-169;4181;peter atencio
-170;;cooley josh
-171;8444;l. colbeau justin
-172;8763;christophe barratier
-173;;jacquot benoit
-174;;knight travis
-175;8213;michel munz 
-176;8213;gerard bitton
-177;6987;remi bezancon
-178;7471;masaki nishiura
-179;;lee jung-hyang
-180;8724;ludovic colbeau
-181;;lee chang-dong
-182;;fehner laea
-183;2738;noel herpe
-184;8642;cathy verney
-185;1442;claude lelouch
-186;7567;marc andre brunet
-187;7567;manu joucla
-188;;murro noam
-189;;lepage frederic
-190;;miyazaki goro
-191;8131;saphia azzedine
-192;8131;francois-regis jeanne
-193;8584;stephane artus
-194;;wajeman elie
-195;8622;safy nebbou
-196;8561;maxime matray
-197;8561;alexia walther
-198;8220;thomas kruithof
-199;8000;yishu yang
-200;;del toro guillermo
-201;2473;aguendia fotabong
-202;5473;guillaume cremonese
-203;;oz frank
-204;;doctor pete
-205;;scott ridley
-206;6611;clint eastwood
-207;3139;fabien cavalerie
-208;8907;thomas bourguignon
-209;;lespert jalil
-210;;benchetrit samuel
-211;;granik debra
-212;;miler zdenek
-213;8883;fanny sidney
-214;;kershner irvin
-215;;gozlan yann
-216;;comencini luigi
-217;8037;lana wachowski
-218;6848;julien abraham
-219;;jacquet luc
-220;;thompson daniele
-221;;tappe holger
-222;6771;nathan belloulou
-223;6771;leonard marti
-224;7161;will koopman
-225;;juusonen kari
-226;;lelio sebastian
-227;6945;matt bloom
-228;6945;randall thorn
-229;6172;emmanuel hamon
-230;;de micco kirk
-231;8017;zhang bo li
-232;8017;wang chen xi
-233;8465;arnaud malherbe
-234;7196;leila bouzid
-235;7735;emilien paron
-236;8772;andre techine
-237;;honorae christophe
-238;;marshall garry
-239;1911;stephane melnyk
-240;8917;murielle magellan
-241;;bezancon remi
-242;;shyamalan manoj night
-243;8821;eric delavaine
-244;;miller george
-245;;soderguit alfredo
-246;8230;francesco  mandelli
-247;;zhao chloae
-248;;tavernier bertrand
-249;;pariser nicolas
-250;7532;remy four
-251;7532; julien war
-252;8164;niels arden oplev
-253;2310;jerome salle
-254;8823;guillaume canet
-255;;wirkola tommy
-256;3156;samy nebbou
-257;;verhoeven paul
-258;;rodriguez alberto
-259;;ngijol thomas.
-260;;mackenzie david
-261;8474;claus drexel
-262;;cooper scott
-263;;schesch stephan
-264;8368;camille delamarre
-265;;rappeneau jean-paul
-266;8480;maurice barthelemy
-267;;daval anne-gaelle
-268;2130;pascal thomas
-269;8120;louis garrel
-270;;buck chris
-271;8259;adeline picault
-272;6430;octave raspail
-273;6430;nicolas herdt
-274;;moll dominik
-275;;cavayae fred
-276;;quillevere katell
-277;;reeves matt
-278;7123;jalil lesperti
-279;8893;jezabel marques nakache
-280;;sissako abderrahmane
-281;;becker jean
-282;6698;flavia castro
-283;6476;jeanne balibar
-284;;estibal sylvain
-285;;fieschi jacques
-286;7886;ayuko tsukahara,
-287;;ficarra glenn.
-288;8758;eric rochant
-289;;gagnol alain
-290;;madden john
-291;8212;thierry de perreti
-292;;vincent christian
-293;281;elodie faure boulue
-294;;chapman gary
-295;;moore rich
-296;8872;erick zonca
-297;8039;vincent giovanni
-298;;gans christophe
-299;;chadwick justin
-300;;redford robert
-301;;pizzolatto nic
-302;7951;julis berge
-303;7951;philippe larue
-304;7600;olivier assayas
-305;5834;philippe mechelen
-306;5834;julien herve
-307;;van groeningen felix
-308;7480;jean-philippe gaud
-309;8871;albert dupontel
-310;7335;lauriane escaffre
-311;7335;yvonnick muller
-312;;bobin james
-313;8381;marcella said
-314;5676;jacqueline lentzou
-315;2882;eloise lang
-316;3031;thomas cailley
-317;8237;guillaume brac
-318;6955;christophe honore
-319;8656;damien chazelle
-320;3607;lee sang yeop
-321;8154;charles van tieghem
-322;;barrymore drew
-323;7139;nicolas maury
-324;;samuell yann
-325;8791;azazel jacobs
-326;;attal yvan
-327;;pimental brian
-328;;lindholm tobias
-329;;meyers nancy
-330;;saleem hiner
-331;;malle louis
-332;8588;olivier barma
-333;;richet jean-francois
-334;;castagnetti alexandre
-335;6902;pierre aknin
-336;6902;philippe larue
-337;5584;andrea bescond
-338;5584;eric metayer
-339;;kiarostami abbas
-340;7558;sophie levy
-341;;cantet laurent
-342;;scanlon dan
-343;;hytner nicholas
-344;8597;christopher mac quarrie
-345;;swan michael
-346;;heboyan alexandre
-347;;jackson peter
-348;6217;emilie carpentier
-349;8658;pascal bonitzer
-350;;oury gerard
-351;;delpy julie.
-352;;shinkai makoto
-353;8226;jean-christophe meurisse
-354;7478;ines reg
-355;7478;kevin debonne
-356;7450;pierre aknine
-357;8488;antonio negret
-358;;schuh jakob
-359;;silverston anthony
-360;;smith sarah
-361;;azzeddine saphia
-362;8373;shaun severi
-363;;ly ladj
-364;5873;geraldine nakache
-365;;softley iain
-366;;leigh mike
-367;8650;wagner de assis
-368;;blossier antoine.
-369;;leclerc philippe
-370;;jonze spike
-371;;curtis richard
-372;8850;jean francois davy
-373;;haigh andrew
-374;;nichols mike
-375;;winterbottom michael
-376;8905;suzanne lindon
-377;;vanier nicolas
-378;4419;jean-paul rouve
-379;6976;pierre dudan
-380;8902;eric toledano
-381;8902;olivier nakache
-382;;dujardin jean
-383;;de vito danny
-384;7441;roman polanski
-385;3292;geraldine de margerie
-386;7621;christopher mac-quarrie
-387;8753;anne depetrini
-388;;park chan-wook
-389;2467;ratp/we are social
-390;;jimenez cedric
-391;;guirado eric
-392;;scherfig lone
-393;;foenkinos stephane
-394;8466;chad chenouga
-395;;trousdale gary
-396;8562;bryan marciano
-397;8057;nicolas saada
-398;8009;richard jobson
-399;2604;axelle ropert
-400;8545;antoine chevrollier
-401;8545;ziad doueiri
-402;;le besco maiwenn
-403;;coffre alexandre
-404;;herry jeanne
-405;6934;eric gravel
-406;;glatzer richard
-407;;huntgeburth hermine
-408;8137;benoit forgeard
-409;8788;julius berg
-410;8087;patricia riggen
-411;8087;daniel sackheim
-412;;dayton jonathan
-413;5626;elise otzenberger
-414;6915;aurelie saada
-415;;kahn caedric
-416;8426;fabien dufils
-417;7564;nicole palo
-418;;chenouga chad
-419;;mungiu cristian
-420;7522;quentin dupieux
-421;6881;jeanne herry
-422;;gerwig greta
-423;;weir peter
-424;;amalric mathieu
-425;;hakonarson grimur
-426;;kassovitz mathieu
-427;4106;pierre briois
-428;4106;theo galampoix
-429;;bohringer romane
-430;;baker sean
-431;;espinosa daniel
-432;;elliot adam
-433;;lindholm tobias.
-434;;des pallieres arnaud
-435;;favreau jon
-436;;yu ronny
-437;;arnold andrea
-438;908;charlotte bourrelly-belhomme
-439;8522;alexandre laurent
-440;;fitoussi marc
-441;;haggis paul
-442;;jeunet jean-pierre
-443;;tirard laurent
-444;;forbes maya
-445;;borleteau lucie
-446;;de palma brian
-447;;fell sam
-448;;jaspaert jeroen
-449;;bay michael
-450;;clooney george
-451;;enrico jerome
-452;;kechiche abdellatif
-453;3625;vincent jamain
-454;;bescond andrea
-455;4433;edouard baer
-456;;kahn cedric
-457;;edwards gareth
-458;8032;laetitia masson
-459;;kormakur baltasar
-460;6055;isabelle doval
-461;;abadi sou
-462;7667;philippe proteau
-463;;black shane
-464;6409;gabriel julien laferriere
-465;;fee brian
-466;;giannoli xavier
-467;;leon de aranoa fernando
-468;;finkiel emmanuel
-469;;peele jordan
-470;8276;fabien gorgeart
-471;7636;elsa bennett
-472;7636;hippolyte dard
-473;;delpy julie
-474;8829;hugo gelin
-475;;panahi jafar
-476;;corsini catherine
-477;;tavernier nils
-478;8725;sebastien cirade
-479;;stanton andrew
-480;;persichetti bob
-481;7955;samir guesmi
-482;3772;philippe godeau
-483;;levant brian
-484;;geffenblad lotta
-485;;reitherman wolfgang
-486;;canet guillaume.
-487;;greengrass paul
-488;6595;didier bivel
-489;8845;samuel bodin
-490;1471;julien lacombe
-491;8284;david morley
-492;8387;jerome cornuau
-493;6948;xavier gens
-494;;lartigau eric
-495;;bezancon raemi
-496;;fellowes julian
-497;7573;m. choy ching shing clement
-498;8859;valerie lemercier
-499;;podalydes bruno
-500;8126;eli ben-david
-501;;lee spike
-502;6434;nicolas vanier
-503;;pins arthur de
-504;;berri claude
-505;6477;eric meng
-506;;singh tarsem
-507;;lagravenese richard
-508;8576;julien carpentier
-509;;kawase naomi
-510;;zwick edward
-511;6088;daniel auteuil
-512;8384;robin campillo
-513;;lawrence francis
-514;8211;stanley woodward
-515;;turteltaub jon
-516;;berthaud fabienne
-517;7999;mikael buch
-518;;gutierrez jorge r.
-519;2560;gullaume gallienne
-520;;ivernel guillaume
-521;;larrieu arnaud
-522;;szumowska malgorzata
-523;;bedos nicolas
-524;;russo anthony
-525;8183;jean luc ayach
-526;3428;valeria bruni-tedeschi
-527;8128;ruben alves
-528;8822;etienne comar
-529;;sonnenfeld barry
-530;7899;pascal verschooris
-531;2245;cecilia de arce
-532;7537;philippe faucon
-533;;la patelliere alexandre de
-534;;diab mohamed
-535;;core pierre
-536;;lvovsky noemie
-537;799;gabrielle floquet
-538;;ronning joachim
-539;;liman doug
-540;5885;sergio castellitto
-541;;lateste eddie
-542;6014;anne gaelle daval
-543;;szabo thomas
-544;8903;hafidi abdelouahed
-545;;ross gary
-546;982;jean francois richet
-547;;rouaud cecilia
-548;917;jean-christophe delpias
-549;8312;kilian riedhof
-550;;chbosky stephen
-551;7516;mathieu sapin
-552;;duvernay ava
-553;;reed peyton
-554;7413;alan swyer
-555;;fangmeier stefen
-556;;jaoui agnes
-557;;alaux david
-558;5221;julie manoukian
-559;7332;yuki saito
-560;8748;cyril mennegun
-561;8445;lidia terki
-562;;faucon philippe
-563;;quillaevaerae katell
-564;7863;emmanuel mouret
-565;;reine sophie
-566;;moller jesper
-567;7884;michael schur
-568;6675;matt bloom
-569;6675;ronan burke
-570;6627;mia engberg
-571;;boyle danny
-572;1002;virginie hervieu
-573;;hastrup jannik
-574;6607;ludovic bernard
-575;;sengelin emilie
-576;;thurmeier michael
-577;8478;manuel boursinhac
-578;7252;oded ruskin
-579;6285;nolwenn lemesle
-580;;gansel dennis
-581;7324;frederic farrucci
-582;;dardenne luc
-583;8744;frederic balekdjian
-584;7256;anne giafferi
-585;;martino steve
-586;2825;mohamed hamidi
-587;;ball wes
-588;;baroux olivier
-589;5266;michel hazanavicius
-590;;bayona juan antonio
-591;;nebbou safy
-592;;chouraqui elie
-593;8707;mamane
-594;;lord phil
-595;;cameron cody
-596;8118;philippe lefebvre 
-597;8118;mathilde	vallet
-598;;le ny anne
-599;8847;claus drexler
-600;8533;daniel roby
-601;7938;alexei popogrebsky
-602;4757;xavier legrand
-603;;hoffman dustin
-604;;bertuccelli julie
-605;8858;samba mballo
-606;8113;ludovic colbeau-justin
-607;7779;octave raspail
-608;;wachowski larry
-609;;marshall rob
-610;8195;paul walker
-611;7814;cathy verne
-612;;besson luc
-613;;jenson vicky
-614;;resnais alain
-615;;hogan p.j.
-616;;lellouche gilles
-617;;arriaga guillermo
-618;3588;christophe duthuron
-619;8047;jeffrey chiang
-620;;monfery dominique
-621;;zonca erick
-622;;ford tom
-623;8601;mikhael hers
-624;;silverman david
-625;8734;franchin dom
-626;8841;melanie laurent
-627;;bowers david
-628;;daniels lee
-629;5914;thierry petit
-630;;arcady alexandre
-631;;gelin hugo
-632;;neel julien
-633;5366;olivier van hoofstadt
-634;;abouet marguerite
-635;;moati faelix
-636;;templeton suzie
-637;;sugii gisaburo
-638;8518;edouard bergeon
-639;;glazer jonathan
-640;;horovitz israel
-641;;farrelly peter
-642;;lemercier valerie
-643;7291;etgar keret
-644;7291;shira geffen
-645;;czajka isabelle
-646;;hill tim
-647;;judor eric
-648;;cazes eric
-649;5861;olivier jahan
-650;;cuaron alfonso
-651;8754;ludovic  hudson
-652;8132;alex zamm
-653;1719;julien despaux
-654;1719;sebasien cirade
-655;;miller bennett
-656;;rourke josie
-657;;park nick
-658;;antin juan
-659;;weitz paul
-660;7415;jan hryniak
-661;;noxon marty
-662;8512;damon thomas
-663;;hayward jimmy
-664;6985;alejandro bazzano
-665;;musker john
-666;8316;non communique
-667;;webb mark
-668;4532;lorraine levy
-669;;clermont-tonnerre laure de
-670;;webb marc
-671;5092;laurent tirard
-672;;bruni-tedeschi valeria
-673;;podalydaes bruno
-674;;haneke michael
-675;;fincher david
-676;;kenan gil
-677;8687;jerome bonnell
-678;5953;nicolas herdt
-679;;abrams j. j.
-680;6720;arnaud despleschin
-681;;chabrol claude
-682;;king michael p.
-683;4624;guillaume nicloux
-684;;aramaki shinji
-685;7264;damien chazelle
-686;7264;houda benyamina
-687;7264;laila marrakchi
-688;7264;alan poul
-689;;penna joe
-690;3733;robin sykes
-691;;goscinny rene
-692;8033;lou assous
-693;7629;sadam siddig
-694;8826;teddy lussi modeste
-695;;frankel david
-696;;sy brigitte
-697;;percival brian
-698;4595;frederic balekdjian
-699;4595;fabien nury
-700;8767;colombe savignac
-701;6949;romain gavras
-702;;ficarra glenn
-703;;jarmusch jim
-704;;huth james
-705;8339;jeremy minui
-706;;minghella anthony
-707;2667;jim bagdonas
-708;8261;xavier giannoli
-709;431;jean-pierre ameris
-710;;kosaka kitaro
-711;;zeitlin benh
-712;;clert alexandra
-713;7580;david charhon
-714;8482;ozgur yildiz
-715;;petersen wolfgang
-716;7821;stephane kazandjian
-717;;shults trey edward
-718;8909;elsa bennett
-719;8909;hippolyte dard
-720;8909;frederic berthe
-721;7183;rebecca zlotowski
-722;8890;antoine garceau
-723;7352;kike maillo
-724;6960;olivier doran
-725;8500;raphael marriq
-726;3995;francis duquet
-727;;maguire sharon
-728;3088;amro hamzawi
-729;8486;chang keun chun
-730;8412;jonathan cohen  jeremie galan
-731;;placido michele
-732;;johnson tim
-733;;minkoff rob
-734;8760;leonor serraille
-735;;lowery david
-736;8538;alain chabat
-737;;salles walter
-738;;boreal marc
-739;;riklis eran
-740;2080;pascal sid
-741;;pawlikowski pawel
-742;;gatlif tony
-743;;suco sarah
-744;;mayer michael
-745;7834;chris clough
-746;;jenkins patty
-747;;roskam michael r.
-748;;triet justine
-749;;becker walt
-750;;lioret philippe
-751;4543;madame kamir ainouz
-752;8355;marjory dejardin
-753;8891;sylvie verheyde
-754;;bird brad
-755;8485;naidra ayadi
-756;8554;gabor reisz
-757;8300;thomas langmann
-758;4660;marie noelle sehr
-759;8610;noemie saglio
-760;8610;renaud bertrand
-761;;mention-schaar marie-castille
-762;;tykwer tom
-763;;nolfi george
-764;7566;hiroshi nishatani
-765;;mermoud frederic
-766;;letterman rob
-767;;dante joe
-768;;wells john
-769;;benyamina houda
-770;;gordon howard
-771;;darnell eric
-772;8280;hall hartley
-773;8801;rachid hami
-774;8686;darren star
-775;;dercourt denis
-776;3048;matt bloom
-777;3048;ronan burke
-778;3048;robert burke
-779;;silberling brad
-780;;scorsese martin
-781;8496;emmanuelle bercot
-782;;thomas betty
-783;;norton edward
-784;7715;stephane demoustier
-785;;geronimi clyde
-786;7941;lucie borleteau
-787;8479;cedric ido
-788;8693;jeffrey reiner
-789;;leconte patrice
-790;5674;christian faure
-791;8635;jean-marc rudnicki
-792;3999;julien rambaldi
-793;;gluck will
-794;5612;guillaume vatan
-795;8851;fred garson
-796;;nishikubo mizuho
-797;8873;nathan silver
-798;;katabuchi sunao
-799;;soren david
-800;;panahandeh ida
-801;;campillo robin
-802;;selick henry
-803;;maistre gilles de
-804;1753;david
-805;1753;douglas
-806;;oury gaerard
-807;5759;gilles bourdos
-808;;anderson wes
-809;5355;zhou yao wu
-810;;nicolas-troyan cedric
-811;;brizae staephane
-812;;ducournau julia
-813;7157;dominik moll
-814;8310;antony hickling
-815;;king paul
-816;2241;francois de joussineau
-817;8815;douglas attal
-818;;kervern gustave
-819;;kasdan jake
-820;;deluc edouard
-821;6577;trivikram srinivas
-822;;taechinae andrae
-823;;anspach solveig
-824;;singer bryan
-825;6116;sebastien laugier
-826;;jones kirk
-827;8666;simon kinberg
-828;;sanders chris
-829;;trachtenberg dan
-830;7739;ziad doueiri
-831;8167;jean philippe amar
-832;;chabat alain
-833;5809;roxane delomas
-834;5089;slimane-baptiste berhoun
-835;7945;antoine de maximy
-836;7967;alex de la iglesia
-837;5443;zabou breitman
-838;;gilroy tony
-839;;dessaint jean-christophe
-840;4099;julien zidi
-841;;boden anna
-842;;barbier eric
-843;4887;coline pagoda
-844;;stoller nicholas
-845;;dippe mark a. z.
-846;;tarantino quentin
-847;;durringer xavier
-848;;fuqua antoine
-849;;zimmer helene
-850;5578;plaignaud denis
-851;171;vipul shah
-852;;kurzel justin
-853;7113;philippe de chauveron
-854;8665;leo zhang
-855;;miller chris
-856;7130;gregory magne
-857;5075;david chausse
-858;7458;thomas gilou
-859;;martin-laval pierre-frandcois
-860;8249;david hugonot petit
-861;3200;tomer sisley
-862;;girault jean
-863;4584;kyan khojandi
-864;4584;bruno muschio
-865;;robert yves
-866;;forestier sara
-867;5842;fabrice laffont
-868;7645;sophie marceau
-869;;daldry stephen
-870;8199;nikola lange
-871;;toledano eric
-872;;scafaria lorene.
-873;;edgerton joel
-874;;sorkin aaron
-875;;iannucci armando
-876;8551;mabrouk el mechri
-877;8453;theodore bonnet
-878;;honeyborne james
-879;7363;elsa bennett
-880;7363;hippolyte dard
-881;;egoyan atom
-882;7995;cecilia rouaud
-883;;lee sung-gang
-884;;vaughn matthew
-885;7327;ludovic bergery
-886;;cavaye fred
-887;;deyries bernard
-888;8242;nadege loiseau
-889;8286;nessim chikhaoui
-890;8836;sou abadi
-891;;hamidi mohamed
-892;;charpiat francoise
-893;6058;olivier baroux
-894;8319;eric guirado
-895;;gosling ryan
-896;8874;tarek boudali
-897;8613;david weill
-898;;garrel louis
-899;6178;ladislas chollat
-900;1399;martin rosete
-901;;duthuron christophe
-902;;luske hamilton
-903;6850;jean luc bertrand
-904;;girerd jacques-remy
-905;;lima kevin
-906;;berry richard
-907;;donnersmarck florian henckel von
-908;;dudok de wit michael
-909;;labaki nadine
-910;8165;hector cabell reyes
-911;;di giusto stephanie
-912;3415;navie
-913;3415;flober
-914;;chadha gurinder
-915;;van sant gus
-916;;jean-baptiste lucien
-917;5604;jean-luc ayach
-918;;foenkinos david
-919;8175;dime davis
-920;8688;laurent cantet
-921;;coulin muriel
-922;8022;dearbhla walsh
-923;8185;pierre-francois martin-laval
-924;;bosch rose
-925;; ethan coen j coen scenario 
-926;;dupontel albert
-927;3777;fred scotlande
-928;;hustache-mathieu gerald.
-929;8804;martin wood
-930;;yeatman hoyt
-931;7921;laurent tuel
-932;;de vita christian
-933;;otomo katsuhiro
-934;;davies terence
-935;8071;xabi molia
-936;;charlot alexandre
-937;;muyalert anna
-938;4053;elia souleiman
-939;;ayache-vidal olivier
-940;;burger neil
-941;;macdonald kevin
-942;8423;anais volpe
-943;7902;steven lilien
-944;7902;bryan wynbrandt
-945;;blier bertrand
-946;7988;audrey estrougo
-947;8503;david lanzmann
-948;;mcquarrie christopher
-949;;wright joe
-950;;grand corps malade
-951;;rodriguez robert
-952;8835;christophe barraud
-953;7672;pawel pawlikowski
-954;3987;lise akoka
-955;3987;romane gueret
-956;;sheridan taylor
-957;8678;louis-do lencquesaing
-958;6923;constance meyer
-959;;bouchareb rachid
-960;8527;clement pillet
-961;8527;julien arnardi
-962;6640;eric woreth
-963;1085;loic armel colin
-964;2959;pape amadou sy
-965;;boon dany
-966;8346;frederic mermoud
-967;;gallienne guillaume
-968;6830;adrien piquet-gauthier
-969;6830;simon istolainen
-970;1090;tristan aurouet
-971;1090;thomas bidegain
-972;1090;marc fitoussi
-973;1090;cyril gelblat
-974;1090;vianney lebasque
-975;;azuelos lisa
-976;;dugain marc
-977;8521;elia suleiman
-978;;melfi theodore
-979;;lanners bouli
-980;412;francois velle
-981;; my uncle"
-982;8863;franck gastambide
-983;;curtis simon
-984;;le guay philippe
-985;;chapman brenda
-986;;holland agnieszka
-987;8275;yoann guillouzouic
-988;;belvaux lucas
-989;;weerasethakul apichatpong
-990;;hunt courtney
-991;;ramsay lynne
-992;4271;florent bernard
-993;;algar james
-994;8558;zhou gao wu
-995;;berman ted
-996;8061;ken biller
-997;;lutz alex
-998;7939;sylvie ohayon
-999;;mccarthy tom
-1000;;ozon francois
-1001;;stassen ben
-1002;;charuel hubert
-1003;8700;bouvard viret
-1004;;trotta margarethe von
-1005;;stromberg robert
-1006;8819;eric judor
-1007;;thomas pascal
-1008;;sohn peter
-1009;;blomkamp neill
-1010;;marshall tonie
-1011;;varin mathias
-1012;;verney cathy
-1013;;verbinski gore
-1014;;zep
-1015;;techine andre
-1016;8667;eva husson
-1017;4382;nathalie marchak
-1018;8766;julien hallard
-1019;;mysius lea
-1020;8719;dominique farrugia
-1021;;berla stephane
-1022;7585;elsa bennett hippolyte dard
-1023;4946;marion vernoux
-1024;;roth eli
-1025;;macfarlane seth
-1026;;condon bill
-1027;6758;judith davis
-1028;8676;maiwenn
-1029;2856;antonin delaroche-vernet
-1030;5149;emma de caunes
-1031;;amachoukeli marie
-1032;;mouscadet jerome
-1033;;butler chris
-1034;;emmerich roland
-1035;7664;michel denisot
-1036;;levy shawn
-1037;8825;jeremie renier
-1038;;breitman zabou
-1039;8311;maryel devera
-1040;8351;nicolas silhol
-1041;8288;dany boon
-1042;;petit louis-julien
-1043;4313;michael marie
-1044;;levine jonathan
-1045;8546;huo jianqi
-1046;7427;shujaat saudagar
-1047;7927;antonin peretjatko
-1048;;loiseau nadege
-1049;;bannier gilles
-1050;;palansky mark
-1051;;zviaguintsev andrei
-1052;;nichols jeff
-1053;8777;maxime govare
-1054;;johnston joe
-1055;;mcteigue james
-1056;;trier lars von
-1057;3685;nicolas cuche
-1058;;sorogoyen rodrigo
-1059;;ross matt
-1060;8808;july hygreck
-1061;;hitchcock alfred
-1062;;slade david
-1063;8646;marilou berry
-1064;3640;romuald boulanger
-1065;;abrams jeffrey jacob
-1066;8548;sandrine dumas
-1067;7883;thibaud martin
-1068;4613;akim isker
-1069;;giovanetti guillaume
-1070;7336;hector cabello reyes
-1071;7856;thierry binisti
-1072;8704;mahamat-saleh haroun
-1073;8035;hugo blick
-1074;5237;jacques doillon
-1075;;gato enrique
-1076;;morgan peter
-1077;2995;virginie saveur
-1078;;reitman jason
-1079;;griffiths mark
-1080;;mitchell david robert
-1081;8866;tien-jen huang
-1082;;coogler ryan
-1083;;garland alex
-1084;7651;dan sackheim
-1085;;deschamps jerome
-1086;6628;pascal bourdiaux
-1087;;sandberg david f.
-1088;;valette eric
-1089;;nolan christopher
-1090;;chaye remi
-1091;8159;gilles legrand
-1092;;waititi taika
-1093;8674;charlotte schi0ler
-1094;;rintaro
-1095;;grimault paul
-1096;;kurtzman alex
-1097;7175;prentice penny
-1098;8191;walter veltroni
-1099;;baudry antonin
-1100;8587;pierre andre lhomme
-1101;;cabrera dominique
-1102;8878;novemie lvovsky
-1103;;garrone matteo
-1104;;mihaileanu radu
-1105;;lecomte ounie
-1106;7111;andy mogel
-1107;7111;jarrad paul
-1108;;flackett jennifer
-1109;;clichy louis
-1110;;cook barry
-1111;7360;stephanie murat
-1112;8860;emily mortimer
-1113;;lanners bouli.
-1114;;gannaway robert
-1115;;vernoux marion
-1116;;chow stephen
-1117;;amenabar alejandro.
-1118;;lynch david
-1119;;apted michael
-1120;;payne alexander
-1121;1689;pierre salvadori
-1122;;wincer simon
-1123;3190;franck magnier
-1124;;boukhrief nicolas
-1125;8472;carine tardieu
-1126;;phillips todd
-1127;;edwards cory
-1128;;weinstein phil
-1129;;burton tim
-1130;;fleischer ruben
-1131;6064;mathias pardo
-1132;;miller claude
-1133;;allen woody
-1134;;salvadori pierre
-1135;;dembo richard
-1136;;crowe cameron
-1137;;almodovar pedro
-1138;;advani nikhil
-1139;6223;david hourregue
-1140;6238;philippe larue
-1141;;gastambide franck
-1142;6163;matt hastings
-1143;;west simon
-1144;;achache mona
-1145;3273;valeria bruni tedeschi
-1146;5825;julien hosmalin
-1147;5825;lionel mougin
-1148;;muller valerie
-1149;8102;bruno chiche
-1150;;abreu ale
-1151;8849;james foley
-1152;;barratier christophe
-1153;8516;simon bouisson
-1154;8868;virginie verrier
-1155;;robelin stephane
-1156;8621;audrey diwan
-1157;1416;maxime roy
-1158;7937;jan kounen
-1159;8536;alexandra leclere
-1160;;okiura hiroyuki
-1161;8513;didier philippe
-1162;598;matthieu longatte
-1163;;asbury kelly
-1164;1823;aritz moreno
-1165;;laferriere gabriel
-1166;7599;camille delamarre
-1167;7599;franck brett
-1168;;kirkpatrick karey
-1169;;chomet sylvain
-1170;1188;robert guediguian
-1171;184;gabriel le bomin
-1172;8608;li lu
-1173;;pearce drew
-1174;4718;chris briant
-1175;;garcia nicole
-1176;8559;julian schnabel
-1177;;vincent thomas
-1178;;yonebayashi hiromasa
-1179;;linklater richard
-1180;;halas john
-1181;;miyazaki hayao
-1182;;garenq vincent
-1183;5420;maxime charden
-1184;5420;laurene dervieux
-1185;;cheney yarrow
-1186;;vallee jean-marc
-1187;;fontaine anne
-1188;7541;willy biondani
-1189;8534;sergi portabella
-1190;;jia zhang ke
-1191;7498;franck ribiere
-1192;3463;ben
-1193;;laguionie jean-frandcois
-1194;4889;cedric klapisch
-1195;;zwart harald
-1196;;stanton andrew.
-1197;;kapur shekhar
-1198;;kusturica emir
-1199;;elbe pascal
-1200;;brizzi gaetan
-1201;2893;yvan attal
-1202;7712;stevan lee mraovitch
-1203;5190;tristan aurouet thomas bidegain marc fitoussi cyril gelblat vianney lebasque
-1204;;wayans keenen ivory
-1205;;rochant eric
-1206;6662;santiago mitre
-1207;5260;arnaud viard
-1208;;chatiliez etienne
-1209;4712;manuel laurent
-1210;4712;anouar el alami
-1211;;trank josh
-1212;;bonello bertrand
-1213;;hand david
-1214;8599;stephane
-1215;8599;david foenkinos
-1216;7080;xavier de choudens
-1217;126;byun hyuk
-1218;;raimbault antoine
-1219;;karukoski dome
-1220;3630;maxime taris
-1221;5909;geoff sax
-1222;7717;alexandre pierrin
-1223;7717;olivier marquezy
-1224;;meadows shane
-1225;8265;simon astier
-1226;5274;denis imbert
-1227;;lachauer jan
-1228;6606;saphia azzeddine
-1229;6606;francois-regis jeanne
-1230;;safdie ben
-1231;8675;foazan rizal
-1232;;hall don
-1233;579;ignacio clemente mateos
-1234;8623;louis choquette
-1235;;roinsard regis.
-1236;7012;monsieur mohamed hamidi
-1237;;gosnell raja
-1238;;fillieres sophie
-1239;8812;charline bourgeois tacquet
-1240;;molia xabi
-1241;;fletcher dexter
-1242;3601;association cdcl
-1243;;peretjatko antonin
-1244;;cailley thomas
-1245;;davies russell t.
-1246;8916;katia lewkowicz
-1247;;crowley john
-1248;;saldanha carlos
-1249;5258;gabriel julien-laferriere
-1250;8499;jean pascal zadi
-1251;8499;john waxxx
-1252;;howard byron
-1253;5569;kim nguyen
-1254;;benioff david
-1255;7202;michele laroque
-1256;;saada nicolas
-1257;;whedon joss
-1258;6408;bruno mercier
-1259;7222;jacques audiard
-1260;;heidscheotter uwe
-1261;8560;pierre-andre lhomme
-1262;;penn sean
-1263;;ringer olivier
-1264;4810;cedric lepretre
-1265;;annaud jean-jacques
-1266;;kelly richard
-1267;8313;lea mazer
-1268;3951;margaux lenfant
-1269;8416;lucien jean baptiste
-1270;8450;denis thybaud
-1271;;bigelow kathryn
-1272;;senez guillaume
-1273;6507;cedric le gallo
-1274;6507;maxime govare
-1275;;anderson paul thomas
-1276;;dardenne jean-pierre
-1277;;osborne mark
-1278;;mitchell mike
-1279;7869;anna cazanave-cambet
-1280;2082;gabriele muccino
-1281;;campbell martin
-1282;6492;n/a
-1283;;sollima stefano
-1284;;hallard julien
-1285;1450;florent sabatier
-1286;8268;nadir mokneche
-1287;;zviaguintsev andreei
-1288;;chaumeil pascal
-1289;8420;romain levy
-1290;7084;emmanuel courcol
-1291;7554;sandrine kiberlain
-1292;6613;dan zeff
-1293;8846;daniel cohen
-1294;;lelouch claude
-1295;;woo john
-1296;8583;pierre schoeller
-1297;;mauduit allan
-1298;7140;hirokazu kore-eda
-1299;;pautonnier gaerard
-1300;;lussi-modeste teddy
-1301;;raimi sam
-1302;8428;stephane robelin
-1303;5232;elsa bennet
-1304;5232;hyppolite dard
-1305;5232;simon astier
-1306;;sattouf riad
-1307;8609;michel leclerc
-1308;8848;philippe garrel
-1309;8769;xiancheng deng
-1310;5750;philippe lacheau
-1311;;nemes laszlo
-1312;8173;louis leterrier
-1313;6678;rachid bouchareb
-1314;8592;cheyenne carron
-1315;8832;josee dayan
-1316;;cornillac clovis
-1317;;al-mansour haifaa
-1318;;forster marc
-1319;;villaceque anne
-1320;5713;varante soudjian
-1321;;heidschotter uwe
-1322;1095;tuva novotny
-1323;;mazin craig
-1324;;mann michael
-1325;1735;francois valla
-1326;8864;christopher thompson
-1327;;derrickson scott
-1328;8578;steven conrad
-1329;;kitano takeshi
-1330;7507;martial schmeltz
-1331;;tadjedin massy
-1332;6364;louis farge
-1333;;doillon jacques
-1334;;rabate pascal
-1335;5899;miguel courtois
-1336;;zlotowski rebecca
-1337;5732;sophie fillieres
-1338;8885;stephane batut
-1339;8750;antoine garceau
-1340;8750;marc fitoussi
-1341;6708;alexandre claudin
-1342;;deblois dean
-1343;;malick terrence
-1344;;espigares alexandre
-1345;3441;muriel robin
-1346;;dietschy vincent
-1347;3442;virginie sauveur
-1348;8202;min-ho woo
-1349;;dumont bruno
-1350;;batra ritesh
-1351;;serraille laeonor
-1352;;canet guillaume
-1353;5662;lucas bernard
-1354;7054;flo ber
-1355;;russo joe
-1356;8475;arnauld mercadier
-1357;;soderbergh steven
-1358;;gaelin hugo
-1359;;coen ethan.
-1360;;dudok de wit michaeel
-1361;;schnabel julian
-1362;4496;nicolas capu
-1363;4496;mona achache
-1364;7654;stephan kopecky
-1365;8075;nadav lapid
-1366;6248;agnes obdia
-1367;7978;mathieu amalric
-1368;;mcdonagh martin
-1369;;docter pete
-1370;;krasinski john
-1371;8544;eleonore pourriat
-1372;6882;dan mazer
-1373;6973;jean-xavier de lestrade
-1374;;eastwood clint
-1375;;dugain marc.
-1376;;carion christian
-1377;;blaise aaron
-1378;;debbouze jamel
-1379;;bonitzer pascal
-1380;;barras claude
-1381;8441;reem kherici
-1382;;calberac ivan
-1383;5402;manuel laigre
-1384;;hewitt pete
-1385;;stevenson robert
-1386;8332;david michod
-1387;8269;mukesh chhabra
-1388;;coppola francis ford
-1389;8069;harry bradbeer
-1390;;gunn james
-1391;8517;lea fazer
-1392;;yamamoto nizo
-1393;8001;yuri rossi
-1394;7033;cong li
-1395;8856;jean pierre ameris
-1396;;bonnell jerome
-1397;5396;yann gozlan
-1398;;kruithof thomas
-1399;;renner benjamin
-1400;;guillard philippe
-1401;;klapisch cedric
-1402;;anger caedric
-1403;6496;xavier durringer
-1404;;perrin jacques
-1405;;le guay philippe.
-1406;;mckay chris
-1407;;freitag hayo
-1408;7898;manousos manousakis
-1409;8556;michel blanc
-1410;7846;melissa drigeard
-1411;;donzelli valerie.
-1412;;desplechin arnaud
-1413;;larrain pablo
-1414;;leondis anthony
-1415;;bernard ludovic
-1416;;goscinny rene (1926-1977)
-1417;;sanders rupert
-1418;;taylor tate
-1419;;baek-yeop sung
-1420;;kojima masayuki
-1421;;gleize delphine
-1422;7828;frederic hazan
-1423;8248;flora lau
-1424;;barbe vlad
-1425;;aronofsky darren
-1426;7963;philippe lioret
-1427;;martin-laval pierre-francois
-1428;;seong baek-yeob
-1429;;rouby simon
-1430;;freudenthal thor
-1431;8793;meliane marcaggi
-1432;3745;laure debutler
-1433;3984;goncalo waddington
-1434;;renaud chris
-1435;;moller gustav
-1436;237;hortense motrot pinchon
-1437;6106;julien weille
-1438;;csupo gabor
-1439;;greno nathan
-1440;8579;renaud bertrand
-1441;;oelhoffen david
-1442;8336;alfred lot
-1443;;hardwicke catherine
-1444;;michalik alexis
-1445;2595;jouy samuel
-1446;8378;olivier meys
-1447;;abrams jeffrey jacob.
-1448;;jung
-1449;;jones tommy lee
-1450;;dupieux quentin
-1451;;cronenberg david
-1452;8644;anthony marciano
-1453;;allers roger
-1454;8607;vianney lebasque
-1455;2303;andrei smirnov
-1456;;bluth don
-1457;8612;amy sherman-palladino
-1458;8612;dan palladino
-1459;;hazanavicius michel
-1460;;honore christophe
-1461;;unkrich lee
-1462;8879;fabrice gobert
-1463;7569;juan pablo martinez
-1464;;chaplin charles
-1465;;graffin benoit
-1466;8869;amanda sthers
-1467;8892;quentin reynaud
-1468;7903;bernard stora
-1469;;hara keiichi
-1470;;davaa byambasuren
-1471;8660;ludovik
-1472;;coen joel
-1473;;kaye tony
-1474;;trevorrow colin
-1475;;fleck ryan
-1476;;becker wolfgang
-1477;;sugiyama keiichi
-1478;8376;frederic forestier
-1479;;marquand richard
-1480;;johnson rian
-1481;;gabriel mike
-1482;;annakin ken
-1483;;stone oliver
-1484;8116;frederic berthe
-1485;;charles larry
-1486;;cianfrance derek
-1487;;ghobadi bahman
-1488;;le besco maeiwenn
-1489;;leterrier louis
-1490;;tartakovsky genndy
-1491;8786;julien rappeneau
-1492;8550;philippe harel
-1493;8380;arnaud selignac,
-1494;;gilligan vince
-1495;;walter anders
-1496;8454;clovis cornillac
-1497;8604;ralph fiennes
-1498;7732;marie jardillier
-1499;7732;mathieu oullion
-1500;8877;blandine lenoir
-1501;;rahimi atiq
-1502;;levinson barry
-1503;;omond eric
-1504;948;ange raynaud
-1505;;ralli pierre
-1506;;bardine garri
-1507;;audiard jacques
-1508;2657;nonstop producoes
-1509;;loach ken
-1510;;braff zach
-1511;7813;paul lapierre
-1512;;ceylan nuri bilge
-1513;;mendoza brillante
-1514;;gokalp mathias
-1515;;meirelles fernando
-1516;4626;felix guimard
-1517;8876;guillaume gallienne
-1518;7247;philippe le guay
-1519;5254;vincent garenq
-1520;3372;stephane kappes
-1521;8857;liu chun-chien
-1522;7122;alex graves
-1523;2855;frederic schoendoerffer
-1524;;chazelle damien
-1525;;lucas george
-1526;8542;matthew weiner
-1527;8568;frank bellocq
-1528;;sfar joann
-1529;;mckay adam
-1530;8573;eva ionesco
-1531;;cauvin brice
-1532;;serreau coline
-1533;8895;valerie donzelli
-1534;;moore tomm
-1535;;lee ang
-1536;;russell david o.
-1537;8494;matthias schweighoffer
-1538;8636;lisa azuelos
-1539;8759;marc fitoussi
-1540;6748;nath dumont
-1541;;siri florent-emilio
-1542;;mcg
-1543;8567;cedric anger
-1544;3719;delphine seignon
-1545;8854;e.tolenado/o.nakache
-1546;;jenkins barry
-1547;8659;stephen cafiero
-1548;;chauveron philippe de
-1549;8798;vladimir rodionoff
-1550;8774;francois uzan
-1551;7853;bruno podalydes
-1552;;gondry michel
-1553;;taylor alan
-1554;8190;gilles paquet brenner
-1555;;laguionie jean-francois
-1556;;changdong lee
-1557;;snyder zack
-1558;;snyder zach
-1559;;mangold james
-1560;;fehner lea
-1561;2636;paul-anthony mille
-1562;8884;jean marc brondolo
-1563;;delepine benoit
-1564;;muschietti andy
-1565;;denis claire
-1566;;lilienfeld jean-paul
-1567;;wong kar-wai
-1568;2403;renaud betrand
-1569;;hansen-love mia
-1570;;gonzalez inarritu alejandro
-1571;;mcgrath tom
-1572;;nicloux guillaume
-1573;;sharpsteen ben
-1574;8626;monsieur chris briant
-1575;;carriere christine
-1576;8738;martin provost
-1577;;marciano anthony.
-1578;;gilliam terry
-1579;8682;paolo barzman
-1580;8595;wash westmoreland
-1581;3832;hirokazu kore eda
-1582;;alfredson tomas
-1583;;weitz chris
-1584;8887;j.christophe delpias
-1585;;pawlikovsky pawel
-1586;449;paul lapierre
-1587;449;juliette tresanini
-1588;8805;eric lavaine
-1589;;wiseman len
-1590;3571;mateo guez
-1591;4840;leila sy
-1592;4840;kery james
-1593;;pinaud pierre
-1594;8575;marie monge
-1595;;kinberg simon
-1596;7533;anne de clercq
-1597;8631;justine triet
-1598;7949;christian schwochow
-1599;;kheiron
-1600;8077;marion laine
-1601;;laine marion
-1602;7816;julia rezende
-1603;;white susanna
-1604;;jolivet pierre
-1605;;delepine benoait
-1606;;dion cyril
-1607;8853;aditya chopra
-1608;5737;antoine de bary
-1609;;berg peter
-1610;8181;pascal lahmani
-1611;8401;antoine chevrollier
-1612;;sung-gang lee
-1613;;graffin benoait
-1614;;sciamma caeline
-1615;8433;gabriel laferriere
-1616;3257;philippe lefebvre
-1617;2674;clement michel
-1618;8715;tessa schram
-1619;6989;nicolas bedos
-1620;824;jean-baptiste dusseaux
-1621;;dominik andrew
-1622;;mendonca filho kleber
-1623;;twomey nora
-1624;;padilha jose
-1625;;kondo yoshifumi
-1626;;diasteme
-1627;;annable graham
-1628;3708;jean paul civeyrac
-1629;;sheridan jim
-1630;;morita hiroyuki
-1631;8257;matt bloom
-1632;8257;robert burke
-1633;8257;ronan burke
-1634;;jaoui agnaes
-1635;;duguay christian
-1636;;yates david
-1637;;ritchie guy
-1638;;desmares christian
-1639;;le gallo caedric
-1640;;liebesman jonathan
-1641;;akin fatih
-1642;8358;eric baudelaire
-1643;5629;david
-1644;5629;stephane foenkinos
-1645;;brevig eric
-1646;;balda kyle
-1647;;paquet-brenner gilles
-1648;8504;baya kasmi
-1649;6696;mathias malzieu
-1650;8598;ken scott
-1651;7803;charlotte brandstrom
-1652;8765;cyprien vial
-1653;;affleck ben
-1654;8281;gary gray
-1655;8458;danielle arbid
-1656;7449;stephane marelli
-1657;3700;benoit jacquot
-1658;8648;renaud bertrand
-1659;8648;noemie saglio
-1660;;zem roschdy
-1661;;cooper bradley
-1662;;kore-eda hirokazu
-1663;;schwentke robert
-1664;7981;zhang bo li
-1665;;hahn gerhard
-1666;;alves ruben
-1667;;cebula idit
-1668;416;laurent rochette
-1669;;jennings garth
-1670;;loter steve
-1671;;campion jane
-1672;;synger bryan
-1673;329;alexandre da silva
-1674;;mendes sam
-1675;;dong yue
-1676;;chandor j.c.
-1677;;bellocchio marco.
-1678;8375;frederic jardin
-1679;;murphy ryan
-1680;;clements ron
-1681;8602;mia hansen-love
-1682;;ayer david
-1683;;newell mike
-1684;8645;frankie wallach
-1685;;bercot emmanuelle
-1686;7614;james huth
-1687;;jung (1965-....)
-1688;;garcia rodrigo
-1689;7199;benedicte delmas
-1690;;ramsey peter
-1691;5128;leo karmann
-1692;8713;valerie urrea
-1693;8713;nathalie masduraud
-1694;;muccino gabriele
-1695;;hooper tom
-1696;;ayouch nabil
-1697;;garel-weiss marie
-1698;;allen woody (pseud.)
-1699;;mariage benoit
-1700;6529;fabrice eboue
-1701;7232;edouard deluc
-1702;8139;julien weill
-1703;8899;herve hadmar
-1704;6343;romane bohringer
-1705;;hopkins stephen
-1706;1423;alexandre castagnetti
-1707;6276;marie garel weiss
-1708;5360;david lynch
-1709;;mostow jonathan
-1710;;folman ari
-1711;6648;thomas lilti
-1712;7220;chun chieh
-1713;;petzold christian
-1714;1909;elsa amiel
-1715;8370;eve deboise
-1716;;gray james
-1717;;lavaine eric
-1718;7077;jonathan barre
-1719;6175;julie oona
-1720;8671;jalil lespert
-1721;7066;gabriel aghion
-1722;;willimon beau
-1723;;schmitt eric-emmanuel
-1724;8794;jean paul salome
-1725;7862;john wax
-1726;7862;jean-pascal zadi
-1727;8565;jonathan
-1728;;chayae raemi
-1729;8886;myriam aziza
-1730;;saleh tarik
-1731;;wan james
-1732;6256;martin bourboulon
-1733;;miller rebecca
-1734;8844;shirley monsarrat
-1735;;guadagnino luca
-1736;8911;vladimir de fontenay/marie monge
-1737;;nakache geraldine
-1738;;harris ed
-1739;8053;marie-castille mention-schaar
-1740;;yoshiura yasuhiro
-1741;;manos james jr
-1742;;bergeron bibo
-1743;;langmann thomas
-1744;;satrapi marjane
-1745;8552;patrick cassir
-1746;;apatow judd
-1747;;lenoir blandine
-1748;;davis john a.
-1749;7729;catherine corsini
-1750;;onteniente fabien
-1751;;roach jay
-1752;8123;andrea bescond
-1753;8123;eric metayer
-1754;;pouzadoux pascale
-1755;;lumet sidney
-1756;8555;stephen woolfenden
-1757;;leclerc michel
-1758;;coen ethan
-1759;7275;christophe delpias
-1760;;salle jerome
-1761;;waters mark
-1762;;adamson andrew
-1763;;anger cedric
-1764;6393;jerome commandeur
-1765;;vinterberg thomas
-1766;8705;dominic savage
-1767;3345;matthieu mares-savelli
-1768;;puenzo lucia
-1769;6760;franck gastambide
-1770;6760;david diane
-1771;;teplitzky jonathan
-1772;8411;antoinette boulat
-1773;;miller tim
-1774;;frears stephen
-1775;8785;olivier ayache vidal
-1776;;gelblat cyril
-1777;;luhrmann baz
-1778;6930;avril besson
-1779;;leclere alexandra
-1780;4549;yann gonzalez
-1781;;auteuil daniel
-1782;;ferrante elena
-1783;975;samuel collardey
-1784;975;antoine chevrollier
-1785;975;mathieu demy
-1786;975;helier cisterne
-1787;;evans marc
-1788;6723;sinan ozturk
-1789;5159;zhou nan
-1790;7850;pierre trividic
-1791;7850;patrick mario bernard
-1792;5610;peter cattaneo
-1793;8424;didier le pecheurs
-1794;;cameron james
-1795;8253;andre erkau
-1796;;takahata isao
-1797;8564;david oelhoffen
-1798;;yeon sang-ho
-1799;;anderson stephen j.
-1800;;izquierdo angel
-1801;5030;francois ozon
-1802;;mayer zoltan
-1803;;lilti thomas
-1804;;brize stephane
-1805;;koepp david
-1806;;desagnat francois
-1807;8119;sarah marx
-1808;;sciamma celine
-1809;7684;andreas bescond
-1810;7684;eric metayer
-1811;;bourboulon martin
-1812;;rich richard
-1813;4769;dan occo
-1814;;kurys diane
-1815;;blair wayne
-1816;;hillcoat john
-1817;;mouret emmanuel
-1818;7864;dominique baumart
-1819;7864;mouloud achour
-1820;;guaediguian robert
-1821;4820;arnaud
-1822;4820;jean-marie larrieu
-1823;;lanthimos yorgos
-1824;;klapisch caedric
-1825;;ostlund ruben
-1826;;niccol andrew
-1827;8580;lea fredeval
-1828;;silhol nicolas
-1829;8684;eric rochant
-1830;8684;jacques audiard
-1831;8684;anna novion
-1832;8684;samuel collardey
-1833;931;joachim delmotte
-1834;931;matthieu moerlen
-1835;7984;tonie marshall
-1836;7704;damien maric
-1837;;le besco maiwenn.
-1838;8457;daniel syrkin
-1839;8619;eric rochant
-1840;8619;pascale ferran
-1841;8619;anna novion
-1842;8619;leila marrakchi
-1843;;poire jean-marie
-1844;;acker shane
-1845;;ocelot michel
-1846;7875;jean christophe delpias
-1847;;howard ron
-1848;;haynes todd
-1849;;pautonnier gerard
-1850;;lvovsky noaemie
-1851;;kosinski joseph
-1852;;beauvois xavier.
-1853;;rappeneau julien
-1854;;o'callaghan matthew
-1855;8596;herve mimran
-1856;2463;elsa bennett
-1857;2463;hippolyte dard
-1858;2463;slimane-baptiste berhoun
-1859;;coppola sofia
-1860;8410;anne le ny
-1861;;andrews mark
-1862;;obadia agnes
-1863;8736;dominique rocher
-1864;7143;michael youn
-1865;8402;marc recuenco
-1866;;donzelli valerie
-1867;;hughes albert
-1868;8771;emmanuel finkiel
-1869;8109;rizal mantovani
-1870;;elissalde serge
-1871;;aster ari
-1872;;marchal olivier
-1873;8865;elie wajeman
-1874;8912;giovanni aloi
-1875;;wedge chris
-1876;1047;hallali alysse
-1877;1047;martin thibaut
-1878;8834;laurent perreau
-1879;8898;ludovic colbeau justin
-1880;;beauvois xavier
-1881;;abbasi ali
-1882;;delaporte matthieu
-1883;;besson luc.
-1884;;guediguian robert
-1885;; charlotte armstrong aut. adapte 
-1886;;miller bruce
-1887;;leclercq julien
-1888;8910;stephane malhuret
-1889;8781;nicolas guicheteau
-1890;;green david gordon
-1891;8811;franck dubosc
-1892;8043;titus selge
-1893;;provost martin
-1894;4529;archie borders
-1895;;mcqueen steve
-1896;;lonergan kenneth
-1897;;hickner steve
-1898;3728;francis magnin
-1899;6877;marc-aurele vecchione
-1900;7464;olivier nakache
-1901;7464;eric toledano
-1902;7464;pierre salvadori
-1903;7464;mathieu vadepied
-1904;7464;nicolas parisier
-1905;6363;frederic berthe
-1906;6363;eric le roux
-1907;;blanco jorge
-1908;;roby daniel
-1909;7749;laurent lafitte
-1910;8006;yves renier
-1911;;hall klay
-1912;;telerman cecile
-1913;;rosenberg rudi
-1914;;michod david
-1915;5875;michel reilhac
-1916;;dhont lukas
-1917;;winding refn nicolas.
+2;;rochant
+3;;eric
+4;8649;jean-philippe amar
+5;8629;antoine garceau
+6;8629;marc fitoussi
+7;8780;eric le roux
+8;;sung-gang
+9;;lee
+10;;amaouche
+11;;nassim
+12;;izquierdo
+13;;angel
+14;8901;guillaume lubrano
+15;8901;francois descraques
+16;6852;doria achour
+17;6852;sylvain cattenoy
+18;;burton
+19;;mark
+20;3659;felix moati
+21;;zobel
+22;;craig
+23;;podalydaes
+24;;bruno
+27;;martin-laval
+28;;pierre-frandcois
+29;;delepine
+30;;benoait
+31;;ghobadi
+32;;bahman
+33;;dion
+34;;cyril
+35;;leigh
+36;;mike
+37;5018;benjamin euvrard
+38;;ngijol
+39;;thomas.
+40;;chapman
+41;;gary
+42;;becker
+43;;walt
+44;4760;marino giardinelli
+45;;chouraqui
+46;;elie
+47;2441;stephanie pilonca
+48;;rahimi
+49;;atiq
+50;;kondo
+51;;yoshifumi
+52;5950;gabriel julien lafferiere
+54;8594;frederic tellier
+55;4426;nine antico
+56;;bonitzer
+57;;pascal
+58;;cronenberg
+59;;david
+60;;haynes
+61;;todd
+62;;liebesman
+63;;jonathan
+64;8913;etienne chatiliez
+65;8502;bruno dumont
+66;;duguay
+67;;christian
+68;8273;pierre pinaud
+69;8919;matthieu delaporte
+70;8919;alexandre de la patelliere
+71;8664;julien despaux
+72;;mention-schaar
+73;;marie-castille
+74;;ducournau
+75;;julia
+76;7798;diane kurys
+77;;asbury
+78;;kelly
+79;;lecomte
+80;;ounie
+81;6817;fred cavaye
+82;;baker
+83;;sean
+84;;pizzolatto
+85;;nic
+86;8271;arnaud selignac
+87;;oury
+88;;gaerard
+89;8867;nicole garcia
+90;;polanski roman
+91;;meadows
+92;;shane
+93;;hahn
+94;;gerhard
+95;;kenan
+96;;gil
+97;;pinaud
+98;;pierre
+99;3738;alex lutz
+100;6854;david moreau
+101;;takahata
+102;;isao
+103;;andrews
+104;;mark
+105;;diab
+106;;mohamed
+107;7961;tristan seguela
+108;;dayton
+109;;jonathan
+110;8802;olivier marchal
+111;8364;anne fontaine
+112;8386;vincent primault
+113;8243;thierry de peretti
+114;;favreau
+115;;jon
+116;8115;victor saint macary
+117;8574;jonathan desoindre
+118;;darnell
+119;;eric
+120;8403;virgine scswartz
+121;5529;marine colomies
+122;;hopkins
+123;;stephen
+124;;schnabel
+125;;julian
+126;7127;pierre trividic patrick mario bernard
+127;;nakache
+128;;geraldine
+129;;taechinae
+130;;andrae
+131;;russell
+132;;david o.
+133;5638;magaly richard serrano
+134;7593;nicolas bary
+135;3019;lou jeunet
+136;;toledano
+137;;eric
+138;;marchal
+139;;olivier
+140;6426;audrey dana
+141;;willimon
+142;;beau
+143;7002;nadege loiseau
+144;7002;julien colonna
+145;6200;said khediri
+146;7610;jean claude brisseau
+147;8372;igor gotesman
+148;7397;regis roinsard
+149;;shyamalan
+150;;manoj night
+151;;ayer
+152;;david
+153;8028;pascal elbe
+154;7403;marcela said
+155;3598;mia hanse-love
+156;8223;noemie saglio
+157;6672;frederic auburtin
+158;6672;thomas langmann
+159;5901;franck gastambide
+160;5901;david diane
+161;;lima
+162;;kevin
+163;;canet
+164;;guillaume
+165;;chenouga
+166;;chad
+167;8799;christophe campos
+168;;moll
+169;;dominik
+170;;forestier
+171;;sara
+172;6753;elena cosson
+173;;elissalde
+174;;serge
+175;;manos
+176;;james jr
+177;;charpiat
+178;;francoise
+179;7355;olivier dahan
+180;;nolan
+181;;christopher
+182;;gilligan
+183;;vince
+184;;vernoux
+185;;marion
+186;;renier
+187;;jaeraemie
+188;;curtis
+189;;simon
+190;;legrand
+191;;xavier
+192;;hooper
+193;;tom
+194;;moretti
+195;;nanni
+196;;inarritu
+197;;alejandro gonzales
+198;;delepine
+199;;benoit
+200;;elliot
+201;;adam
+202;8770;p. de chauveron
+203;8651;maimouna doucoure
+204;7872;marion desseigne ravel
+205;; ethan coen
+206;;j coen
+207;;scenario 
+208;;jarmusch
+209;;jim
+210;;mendes
+211;;sam
+212;;gokalp
+213;;mathias
+214;8672;jean-marc brondolo
+215;;hayward
+216;;jimmy
+217;7611;(matt quezada) 2nde equipe paris xavier roy
+218;8117;claire denis
+219;;sugiyama
+220;;keiichi
+221;5810;emmanuel gillibert
+222;4181;peter atencio
+223;;vincent
+224;;christian
+225;;ameris
+226;;jean-pierre
+227;8444;l. colbeau justin
+228;8763;christophe barratier
+229;;scott
+230;;tony
+231;;maistre
+232;;gilles de
+233;;greengrass
+234;;paul
+235;8213;michel munz 
+236;8213;gerard bitton
+237;6987;remi bezancon
+238;;haneke
+239;;michael
+240;;fleck
+241;;ryan
+242;7471;masaki nishiura
+243;;jimenez
+244;;cedric
+245;;dupieux
+246;;quentin
+247;8724;ludovic colbeau
+248;;brizzi
+249;;gaetan
+250;2738;noel herpe
+251;8642;cathy verney
+252;1442;claude lelouch
+253;;hegner
+254;;michael
+255;7567;marc andre brunet
+256;7567;manu joucla
+257;;larrain
+258;;pablo
+259;;le besco
+260;;maiwenn
+261;8131;saphia azzedine
+262;8131;francois-regis jeanne
+263;8584;stephane artus
+264;;marciano
+265;;anthony.
+266;;raimbault
+267;;antoine
+268;8622;safy nebbou
+269;;singer
+270;;bryan
+271;8561;maxime matray
+272;8561;alexia walther
+273;8220;thomas kruithof
+274;8000;yishu yang
+275;2473;aguendia fotabong
+276;5473;guillaume cremonese
+277;;satrapi
+278;;marjane
+279;;yuh
+280;;jennifer
+281;6611;clint eastwood
+282;3139;fabien cavalerie
+283;8907;thomas bourguignon
+284;;dumont
+285;;bruno
+286;;meirelles
+287;;fernando
+288;;farrelly
+289;;peter
+290;8883;fanny sidney
+291;;klapisch
+292;;caedric
+293;8037;lana wachowski
+294;6848;julien abraham
+295;;oury
+296;;gerard
+297;;lanners
+298;;bouli.
+299;;frears
+300;;stephen
+301;6771;nathan belloulou
+302;6771;leonard marti
+303;;sorkin
+304;;aaron
+305;7161;will koopman
+306;6945;matt bloom
+307;6945;randall thorn
+308;6172;emmanuel hamon
+309;;trachtenberg
+310;;dan
+311;8017;zhang bo li
+312;8017;wang chen xi
+313;;deleuze
+314;;emilie
+315;8465;arnaud malherbe
+316;;nichols
+317;;jeff
+318;7196;leila bouzid
+319;7735;emilien paron
+320;8772;andre techine
+321;;auteuil
+322;;daniel
+323;;arriaga
+324;;guillermo
+325;;mariage
+326;;benoit
+327;;reitherman
+328;;wolfgang
+329;1911;stephane melnyk
+330;8917;murielle magellan
+331;8821;eric delavaine
+332;;ivernel
+333;;guillaume
+334;;raimi
+335;;sam
+336;;berthaud
+337;;fabienne
+338;8230;francesco  mandelli
+339;;gavron
+340;;sarah
+341;7532;remy four
+342;7532; julien war
+343;8164;niels arden oplev
+344;2310;jerome salle
+345;8823;guillaume canet
+346;;bong
+347;;joon-ho
+348;3156;samy nebbou
+349;;fincher
+350;;david
+351;;emmerich
+352;;roland
+353;;brevig
+354;;eric
+355;;dong
+356;;yue
+357;;kechiche
+358;;abdellatif
+359;;almodovar
+360;;pedro
+361;8474;claus drexel
+362;;tirard
+363;;laurent
+364;;hustache-mathieu
+365;;gerald.
+366;;silverston
+367;;anthony
+368;;madden
+369;;john
+370;;stassen
+371;;ben
+372;;meyers
+373;;nancy
+374;8368;camille delamarre
+375;;glatzer
+376;;richard
+377;;fangmeier
+378;;stefen
+379;8480;maurice barthelemy
+380;;johnson
+381;;tim
+382;;muccino
+383;;gabriele
+384;;kelly
+385;;richard
+386;;gilliam
+387;;terry
+388;;miller
+389;;rebecca
+390;2130;pascal thomas
+391;;mysius
+392;;lea
+393;;charles
+394;;larry
+395;;mackenzie
+396;;david
+397;8120;louis garrel
+398;8259;adeline picault
+399;6430;octave raspail
+400;6430;nicolas herdt
+401;;gelblat
+402;;cyril
+403;;laferriere
+404;;gabriel
+405;;lin
+406;;justin
+407;7123;jalil lesperti
+408;8893;jezabel marques nakache
+409;;dupontel
+410;;albert.
+411;;dembo
+412;;richard
+413;6698;flavia castro
+414;;derrickson
+415;;scott
+416;6476;jeanne balibar
+417;;darroussin
+418;;jean-pierre
+419;;barratier
+420;;christophe
+421;7886;ayuko tsukahara,
+422;8758;eric rochant
+423;8212;thierry de perreti
+424;281;elodie faure boulue
+425;;rouaud
+426;;cecilia
+427;;mazin
+428;;craig
+429;8872;erick zonca
+430;8039;vincent giovanni
+431;;mosier
+432;;scott
+433;;kurys
+434;;diane
+435;7951;julis berge
+436;7951;philippe larue
+437;7600;olivier assayas
+438;;gilroy
+439;;tony
+440;5834;philippe mechelen
+441;5834;julien herve
+442;;cianfrance
+443;;derek
+444;;kahn
+445;;caedric
+446;;barbe
+447;;vlad
+448;7480;jean-philippe gaud
+449;8871;albert dupontel
+450;7335;lauriane escaffre
+451;7335;yvonnick muller
+452;8381;marcella said
+453;;thomas
+454;;pascal
+455;;anderson
+456;;paul thomas
+457;;hood
+458;;gavin
+459;5676;jacqueline lentzou
+460;;judor
+461;;eric
+462;2882;eloise lang
+463;;dindal
+464;;mark
+465;;nolfi
+466;;george
+467;3031;thomas cailley
+468;;resnais
+469;;alain
+470;8237;guillaume brac
+471;6955;christophe honore
+472;;freudenthal
+473;;thor
+474;8656;damien chazelle
+475;;burton
+476;;tim
+477;3607;lee sang yeop
+478;;cavaye
+479;;fred
+480;;ayache-vidal
+481;;olivier
+482;8154;charles van tieghem
+483;;chauveron
+484;;philippe de
+485;;poire
+486;;jean-marie
+487;;lemercier
+488;;valerie
+489;7139;nicolas maury
+490;;nicloux
+491;;guillaume
+492;;beauvois
+493;;xavier.
+494;8791;azazel jacobs
+495;;lee
+496;;jung-hyang
+497;;rosenberg
+498;;rudi
+499;;parker
+500;;alan
+501;;lowery
+502;;david
+503;;bary
+504;;nicolas
+505;8588;olivier barma
+506;;cuaron
+507;;alfonso
+508;;ceylan
+509;;nuri bilge
+510;;tykwer
+511;;tom
+512;6902;pierre aknin
+513;6902;philippe larue
+514;5584;andrea bescond
+515;5584;eric metayer
+516;;tartakovsky
+517;;genndy
+518;;doctor
+519;;pete
+520;7558;sophie levy
+521;8597;christopher mac quarrie
+522;;hickner
+523;;steve
+524;;soren
+525;;david
+526;;flackett
+527;;jennifer
+528;;serreau
+529;;coline
+530;;bowers
+531;;david
+532;6217;emilie carpentier
+533;8658;pascal bonitzer
+534;;wachowski
+535;;larry
+536;8226;jean-christophe meurisse
+537;7478;ines reg
+538;7478;kevin debonne
+539;7450;pierre aknine
+540;8488;antonio negret
+541;;desplechin
+542;;arnaud
+543;;apatow
+544;;judd
+545;;garcia
+546;;nicole
+547;8373;shaun severi
+548;5873;geraldine nakache
+549;8650;wagner de assis
+550;;peele
+551;;jordan
+552;;gatlif
+553;;tony
+554;;cailley
+555;;thomas
+556;;coffre
+557;;alexandre
+558;8850;jean francois davy
+559;8905;suzanne lindon
+560;;lee
+561;;spike
+562;;oz
+563;;frank
+564;;boden
+565;;anna
+566;;hardwicke
+567;;catherine
+568;4419;jean-paul rouve
+569;;leclercq
+570;;julien
+571;;ostlund
+572;;ruben
+573;6976;pierre dudan
+574;8902;eric toledano
+575;8902;olivier nakache
+576;7441;roman polanski
+577;3292;geraldine de margerie
+578;;harris
+579;;ed
+580;7621;christopher mac-quarrie
+581;;jeunet
+582;;jean-pierre
+583;;jaoui
+584;;agnaes
+585;8753;anne depetrini
+586;;petit
+587;;louis-julien
+588;;leterrier
+589;;louis
+590;;garcia
+591;;rodrigo
+592;;girault
+593;;jean
+594;2467;ratp/we are social
+595;;garrone
+596;;matteo
+597;;suco
+598;;sarah
+599;;faucon
+600;;philippe
+601;;jackson
+602;;peter
+603;;vinterberg
+604;;thomas
+605;8466;chad chenouga
+606;;singh
+607;;tarsem
+608;;des pallieres
+609;;arnaud
+610;8562;bryan marciano
+611;8057;nicolas saada
+612;8009;richard jobson
+613;2604;axelle ropert
+614;8545;antoine chevrollier
+615;8545;ziad doueiri
+616;6934;eric gravel
+617;8137;benoit forgeard
+618;8788;julius berg
+619;;ficarra
+620;;glenn
+621;8087;patricia riggen
+622;8087;daniel sackheim
+623;5626;elise otzenberger
+624;6915;aurelie saada
+625;;morita
+626;;hiroyuki
+627;8426;fabien dufils
+628;7564;nicole palo
+629;;knight
+630;;travis
+631;;lvovsky
+632;;noaemie
+633;;buck
+634;;chris
+635;7522;quentin dupieux
+636;6881;jeanne herry
+637;;kawase
+638;;naomi
+639;;carion
+640;;christian
+641;4106;pierre briois
+642;4106;theo galampoix
+643;;sattouf
+644;;riad
+645;;pautonnier
+646;;gerard
+647;;sanders
+648;;rupert
+649;;garel-weiss
+650;;marie
+651;;teplitzky
+652;;jonathan
+653;;davies
+654;;russell t.
+655;;king
+656;;michael p.
+657;;dubosc
+658;;franck
+659;908;charlotte bourrelly-belhomme
+660;8522;alexandre laurent
+661;;levant
+662;;brian
+663;;techine
+664;;andre
+665;;achache
+666;;mona
+667;;coppola
+668;;francis ford
+669;3625;vincent jamain
+670;;sugii
+671;;gisaburo
+672;4433;edouard baer
+673;;petersen
+674;;wolfgang
+675;;yu
+676;;ronny
+677;8032;laetitia masson
+678;;bohringer
+679;;romane
+680;6055;isabelle doval
+681;7667;philippe proteau
+682;;sorogoyen
+683;;rodrigo
+684;6409;gabriel julien laferriere
+685;;horovitz
+686;;israel
+687;;taylor
+688;;tate
+689;;herry
+690;;jeanne
+691;;park
+692;;chan-wook
+693;8276;fabien gorgeart
+694;;deluc
+695;;edouard
+696;7636;elsa bennett
+697;7636;hippolyte dard
+698;8829;hugo gelin
+699;;hand
+700;;david
+701;;carney
+702;;john
+703;;folman
+704;;ari
+705;8725;sebastien cirade
+706;;honorae
+707;;christophe
+708;7955;samir guesmi
+709;3772;philippe godeau
+710;;del toro
+711;;guillermo
+712;;azzeddine
+713;;saphia
+714;;donzelli
+715;;valerie.
+716;;murro
+717;;noam
+718;6595;didier bivel
+719;;fontaine
+720;;anne.
+721;;newell
+722;;mike
+723;8845;samuel bodin
+724;1471;julien lacombe
+725;;ringer
+726;;olivier
+727;8284;david morley
+728;;verhoeven
+729;;paul
+730;8387;jerome cornuau
+731;6948;xavier gens
+732;7573;m. choy ching shing clement
+733;8859;valerie lemercier
+734;;cazes
+735;;eric
+736;;renaud
+737;;chris
+738;8126;eli ben-david
+739;6434;nicolas vanier
+740;;tavernier
+741;;bertrand
+742;;mann
+743;;michael
+744;;jennings
+745;;garth
+746;6477;eric meng
+747;8576;julien carpentier
+748;;de micco
+749;;kirk
+750;6088;daniel auteuil
+751;;osborne
+752;;mark
+753;8384;robin campillo
+754;8211;stanley woodward
+755;7999;mikael buch
+756;2560;gullaume gallienne
+757;8183;jean luc ayach
+758;3428;valeria bruni-tedeschi
+759;8128;ruben alves
+760;8822;etienne comar
+761;7899;pascal verschooris
+762;2245;cecilia de arce
+763;7537;philippe faucon
+764;;weitz
+765;;paul
+766;;villaceque
+767;;anne
+768;;gato
+769;;enrique
+770;799;gabrielle floquet
+771;;moller
+772;;jesper
+773;5885;sergio castellitto
+774;6014;anne gaelle daval
+775;8903;hafidi abdelouahed
+776;;bruni-tedeschi
+777;;valeria
+778;;eyre
+779;;richard
+780;982;jean francois richet
+781;;ford
+782;;tom
+783;917;jean-christophe delpias
+784;;lynch
+785;;david
+786;8312;kilian riedhof
+787;;sciamma
+788;;celine
+789;;coen
+790;;ethan.
+791;;blier
+792;;bertrand
+793;;cooper
+794;;scott
+795;7516;mathieu sapin
+796;;hastrup
+797;;jannik
+798;;abrams
+799;;jeffrey jacob
+800;7413;alan swyer
+801;;roth
+802;;eli
+803;5221;julie manoukian
+804;7332;yuki saito
+805;8748;cyril mennegun
+806;8445;lidia terki
+807;;di giusto
+808;;stephanie
+809;7863;emmanuel mouret
+810;;cauvin
+811;;brice
+812;;levy
+813;;shawn
+814;;kaye
+815;;tony
+816;;eastwood
+817;;clint
+818;7884;michael schur
+819;6675;matt bloom
+820;6675;ronan burke
+821;6627;mia engberg
+822;;breitman
+823;;zabou
+824;1002;virginie hervieu
+825;;sissako
+826;;abderrahmane
+827;6607;ludovic bernard
+828;8478;manuel boursinhac
+829;;bonnell
+830;;jerome
+831;;trier
+832;;lars von
+833;7252;oded ruskin
+834;6285;nolwenn lemesle
+835;7324;frederic farrucci
+836;;scherfig
+837;;lone
+838;8744;frederic balekdjian
+839;;west
+840;;simon
+841;;miller
+842;;bennett
+843;7256;anne giafferi
+844;2825;mohamed hamidi
+845;;cameron
+846;;james
+847;;davaa
+848;;byambasuren
+849;;dietschy
+850;;vincent
+851;;mendoza
+852;;brillante
+853;5266;michel hazanavicius
+854;8707;mamane
+855;;klapisch
+856;;cedric
+857;8118;philippe lefebvre 
+858;8118;mathilde	vallet
+859;;taylor
+860;;alan
+861;8847;claus drexler
+862;;monfery
+863;;dominique
+864;;bourdos
+865;;gilles
+866;8533;daniel roby
+867;7938;alexei popogrebsky
+868;4757;xavier legrand
+869;;jolivet
+870;;pierre
+871;;wedge
+872;;chris
+873;8858;samba mballo
+874;8113;ludovic colbeau-justin
+875;7779;octave raspail
+876;8195;paul walker
+877;7814;cathy verne
+878;;garrel
+879;;louis
+880;;canet
+881;;guillaume.
+882;3588;christophe duthuron
+883;;zimmer
+884;;helene
+885;8047;jeffrey chiang
+886;;wells
+887;;john
+888;;thompson
+889;;daniele
+890;;chapman
+891;;brenda
+892;8601;mikhael hers
+893;;campbell
+894;;martin
+895;8734;franchin dom
+896;8841;melanie laurent
+897;;hosoda
+898;;mamoru
+899;;van groeningen
+900;;felix
+901;5914;thierry petit
+902;;le ny
+903;;anne
+904;;winding refn
+905;;nicolas.
+906;;geronimi
+907;;clyde
+908;;deblois
+909;;dean
+910;5366;olivier van hoofstadt
+911;;vanier
+912;;nicolas
+913;8518;edouard bergeon
+914;7291;etgar keret
+915;7291;shira geffen
+916;5861;olivier jahan
+917;8754;ludovic  hudson
+918;;scorsese
+919;;martin
+920;8132;alex zamm
+921;;kinberg
+922;;simon
+923;1719;julien despaux
+924;1719;sebasien cirade
+925;;nebbou
+926;;safy
+927;;percival
+928;;brian
+929;;lee
+930;;chang-dong
+931;7415;jan hryniak
+932;8512;damon thomas
+933;6985;alejandro bazzano
+934;;dippe
+935;;mark a. z.
+936;;mermoud
+937;;frederic
+938;;dardenne
+939;;jean-pierre
+940;8316;non communique
+941;;bird
+942;;brad
+943;4532;lorraine levy
+944;;rich
+945;;richard
+946;;adamson
+947;;andrew
+948;5092;laurent tirard
+949;;spielberg
+950;;steven
+951;;muyalert
+952;;anna
+953;8687;jerome bonnell
+954;;grimault
+955;;paul
+956;5953;nicolas herdt
+957;;haggis
+958;;paul
+959;;sollima
+960;;stefano
+961;;lvovsky
+962;;noemie
+963;6720;arnaud despleschin
+964;;dudok de wit
+965;;michael
+966;;minkoff
+967;;rob
+968;4624;guillaume nicloux
+969;;gleize
+970;;delphine
+971;;bertuccelli
+972;;julie
+973;;allen
+974;;woody
+975;7264;damien chazelle
+976;7264;houda benyamina
+977;7264;laila marrakchi
+978;7264;alan poul
+979;3733;robin sykes
+980;;dugain
+981;;marc.
+982;;delpy
+983;;julie
+984;;curtis
+985;;richard
+986;;paquet-brenner
+987;;gilles
+988;8033;lou assous
+989;7629;sadam siddig
+990;8826;teddy lussi modeste
+991;4595;frederic balekdjian
+992;4595;fabien nury
+993;8767;colombe savignac
+994;6949;romain gavras
+995;;finkiel
+996;;emmanuel
+997;;weir
+998;;peter
+999;;ross
+1000;;matt
+1001;;honeyborne
+1002;;james
+1003;;shinkai
+1004;;makoto
+1005;8339;jeremy minui
+1006;;garenq
+1007;;vincent
+1008;2667;jim bagdonas
+1009;8261;xavier giannoli
+1010;;yeon
+1011;;sang-ho
+1012;431;jean-pierre ameris
+1013;;kosinski
+1014;;joseph
+1015;7580;david charhon
+1016;8482;ozgur yildiz
+1017;7821;stephane kazandjian
+1018;;calberac
+1019;;ivan
+1020;;iannucci
+1021;;armando
+1022;8909;elsa bennett
+1023;8909;hippolyte dard
+1024;8909;frederic berthe
+1025;;malick
+1026;;terrence
+1027;;rambaldi
+1028;;julien
+1029;;moller
+1030;;gustav
+1031;;marshall
+1032;;garry
+1033;7183;rebecca zlotowski
+1034;;frankel
+1035;;david
+1036;8890;antoine garceau
+1037;7352;kike maillo
+1038;;august
+1039;;bille
+1040;;kirkpatrick
+1041;;karey
+1042;;gaelin
+1043;;hugo
+1044;6960;olivier doran
+1045;8500;raphael marriq
+1046;3995;francis duquet
+1047;3088;amro hamzawi
+1048;8486;chang keun chun
+1049;8412;jonathan cohen  jeremie galan
+1050;;reitman
+1051;;jason
+1052;;felicioli
+1053;;jean-loup
+1054;;jean-baptiste
+1055;;lucien
+1056;;azuelos
+1057;;lisa
+1058;;coogler
+1059;;ryan
+1060;;berthe
+1061;;frederic
+1062;;chomet
+1063;;sylvain
+1064;;selick
+1065;;henry
+1066;8760;leonor serraille
+1067;;tarantino
+1068;;quentin
+1069;;howard
+1070;;byron
+1071;8538;alain chabat
+1072;;trotta
+1073;;margarethe von
+1074;;abadi
+1075;;sou
+1076;;van lamsweerde
+1077;;pino
+1078;2080;pascal sid
+1079;7834;chris clough
+1080;;blaise
+1081;;aaron
+1082;;hou
+1083;;hsiao-hsien
+1084;;denis
+1085;;claire
+1086;4543;madame kamir ainouz
+1087;8355;marjory dejardin
+1088;8891;sylvie verheyde
+1089;;yonebayashi
+1090;;hiromasa
+1091;8485;naidra ayadi
+1092;8554;gabor reisz
+1093;;goscinny
+1094;;rene (1926-1977)
+1095;8300;thomas langmann
+1096;4660;marie noelle sehr
+1097;8610;noemie saglio
+1098;8610;renaud bertrand
+1099;;bezancon
+1100;;remi
+1101;;lepeniotis
+1102;;peter
+1103;;mcqueen
+1104;;steve
+1105;;musker
+1106;;john
+1107;7566;hiroshi nishatani
+1108;;akin
+1109;;fatih
+1110;;mostow
+1111;;jonathan
+1112;;miyazaki
+1113;;goro
+1114;8280;hall hartley
+1115;8801;rachid hami
+1116;8686;darren star
+1117;3048;matt bloom
+1118;3048;ronan burke
+1119;3048;robert burke
+1120;;wincer
+1121;;simon
+1122;;leclerc
+1123;;michel
+1124;;ramsay
+1125;;lynne
+1126;;daniel
+1127;;rod
+1128;8496;emmanuelle bercot
+1129;;puenzo
+1130;;lucia
+1131;;allen
+1132;;woody (pseud.)
+1133;7715;stephane demoustier
+1134;;assayas
+1135;;olivier
+1136;7941;lucie borleteau
+1137;;alves
+1138;;ruben
+1139;8479;cedric ido
+1140;8693;jeffrey reiner
+1141;5674;christian faure
+1142;8635;jean-marc rudnicki
+1143;3999;julien rambaldi
+1144;5612;guillaume vatan
+1145;;pearce
+1146;;drew
+1147;;michod
+1148;;david
+1149;;algar
+1150;;james
+1151;8851;fred garson
+1152;8873;nathan silver
+1153;;girerd
+1154;;jacques-remy
+1155;;boyle
+1156;;danny
+1157;;dugain
+1158;;marc
+1159;;blanco
+1160;;jorge
+1161;1753;david
+1162;1753;douglas
+1163;;fell
+1164;;sam
+1165;5759;gilles bourdos
+1166;;silhol
+1167;;nicolas
+1168;5355;zhou yao wu
+1169;;gosling
+1170;;ryan
+1171;;besson
+1172;;luc.
+1173;7157;dominik moll
+1174;;charuel
+1175;;hubert
+1176;8310;antony hickling
+1177;2241;francois de joussineau
+1178;8815;douglas attal
+1179;;sheridan
+1180;;taylor
+1181;;lanthimos
+1182;;yorgos
+1183;;cordier
+1184;;antony
+1185;6577;trivikram srinivas
+1186;;juusonen
+1187;;kari
+1188;;foenkinos
+1189;;david
+1190;;bosch
+1191;;rose
+1192;6116;sebastien laugier
+1193;8666;simon kinberg
+1194;;coen
+1195;;ethan
+1196;;kosaka
+1197;;kitaro
+1198;;hunt
+1199;;courtney
+1200;;softley
+1201;;iain
+1202;7739;ziad doueiri
+1203;;labaki
+1204;;nadine
+1205;8167;jean philippe amar
+1206;;evans
+1207;;marc
+1208;;mouret
+1209;;emmanuel
+1210;5809;roxane delomas
+1211;;linklater
+1212;;richard
+1213;;barrymore
+1214;;drew
+1215;5089;slimane-baptiste berhoun
+1216;7945;antoine de maximy
+1217;7967;alex de la iglesia
+1218;5443;zabou breitman
+1219;;jenkins
+1220;;barry
+1221;;kiarostami
+1222;;abbas
+1223;;palansky
+1224;;mark
+1225;4099;julien zidi
+1226;;daval
+1227;;anne-gaelle
+1228;;obadia
+1229;;agnes
+1230;4887;coline pagoda
+1231;;fee
+1232;;brian
+1233;5578;plaignaud denis
+1234;171;vipul shah
+1235;;edwards
+1236;;cory
+1237;;lagravenese
+1238;;richard
+1239;;whedon
+1240;;joss
+1241;7113;philippe de chauveron
+1242;8665;leo zhang
+1243;7130;gregory magne
+1244;5075;david chausse
+1245;;zwick
+1246;;edward
+1247;7458;thomas gilou
+1248;;safdie
+1249;;ben
+1250;;woo
+1251;;john
+1252;;lee
+1253;;sung-gang
+1254;;gondry
+1255;;michel
+1256;;macdonald
+1257;;kevin
+1258;8249;david hugonot petit
+1259;3200;tomer sisley
+1260;4584;kyan khojandi
+1261;4584;bruno muschio
+1262;5842;fabrice laffont
+1263;7645;sophie marceau
+1264;8199;nikola lange
+1265;;nishikubo
+1266;;mizuho
+1267;;salles
+1268;;walter
+1269;;krasinski
+1270;;john
+1271;;kervern
+1272;;gustave
+1273;;batra
+1274;;ritesh
+1275;;martin-laval
+1276;;pierre-francois
+1277;8551;mabrouk el mechri
+1278;8453;theodore bonnet
+1279;;fontaine
+1280;;anne
+1281;7363;elsa bennett
+1282;7363;hippolyte dard
+1283;7995;cecilia rouaud
+1284;;boreal
+1285;;marc
+1286;;gastambide
+1287;;franck
+1288;7327;ludovic bergery
+1289;8242;nadege loiseau
+1290;8286;nessim chikhaoui
+1291;8836;sou abadi
+1292;;nemes
+1293;;laszlo
+1294;6058;olivier baroux
+1295;;honore
+1296;;christophe
+1297;8319;eric guirado
+1298;8874;tarek boudali
+1299;8613;david weill
+1300;;moati
+1301;;faelix
+1302;;bescond
+1303;;andrea
+1304;;ball
+1305;;wes
+1306;;macfarlane
+1307;;seth
+1308;;soderguit
+1309;;alfredo
+1310;;fehner
+1311;;lea
+1312;6178;ladislas chollat
+1313;;yamamoto
+1314;;nizo
+1315;1399;martin rosete
+1316;;kassovitz
+1317;;mathieu
+1318;6850;jean luc bertrand
+1319;;ralli
+1320;;pierre
+1321;;telerman
+1322;;cecile
+1323;8165;hector cabell reyes
+1324;3415;navie
+1325;3415;flober
+1326;;chazelle
+1327;;damien
+1328;5604;jean-luc ayach
+1329;8175;dime davis
+1330;8688;laurent cantet
+1331;;stoller
+1332;;nicholas
+1333;8022;dearbhla walsh
+1334;8185;pierre-francois martin-laval
+1335;;maclane
+1336;;angus
+1337;3777;fred scotlande
+1338;8804;martin wood
+1339;7921;laurent tuel
+1340;;schesch
+1341;;stephan
+1342;8071;xabi molia
+1343;;granik
+1344;;debra
+1345;4053;elia souleiman
+1346;;blomkamp
+1347;;neill
+1348;;muschietti
+1349;;andy
+1350;;lenoir
+1351;;blandine
+1352;;belvaux
+1353;;lucas
+1354;;panahandeh
+1355;;ida
+1356;8423;anais volpe
+1357;;schwentke
+1358;;robert
+1359;7902;steven lilien
+1360;7902;bryan wynbrandt
+1361;;reed
+1362;;peyton
+1363;;marquand
+1364;;richard
+1365;;placido
+1366;;michele
+1367;;cameron
+1368;;cody
+1369;7988;audrey estrougo
+1370;8503;david lanzmann
+1371;;dhont
+1372;;lukas
+1373;;grand corps malade
+1374;8835;christophe barraud
+1375;7672;pawel pawlikowski
+1376;3987;lise akoka
+1377;3987;romane gueret
+1378;8678;louis-do lencquesaing
+1379;6923;constance meyer
+1380;;gosnell
+1381;;raja
+1382;8527;clement pillet
+1383;8527;julien arnardi
+1384;6640;eric woreth
+1385;;mendonca filho
+1386;;kleber
+1387;1085;loic armel colin
+1388;2959;pape amadou sy
+1389;;amenabar
+1390;;alejandro.
+1391;;abrams
+1392;;j. j.
+1393;;dudok de wit
+1394;;michaeel
+1395;;stromberg
+1396;;robert
+1397;;jenkins
+1398;;patty
+1399;;saleh
+1400;;tarik
+1401;8346;frederic mermoud
+1402;;turteltaub
+1403;;jon
+1404;;lioret
+1405;;philippe
+1406;;waititi
+1407;;taika
+1408;;lacheau
+1409;;philippe
+1410;;boon
+1411;;dany
+1412;6830;adrien piquet-gauthier
+1413;6830;simon istolainen
+1414;;glazer
+1415;;jonathan
+1416;;stanton
+1417;;andrew
+1418;1090;tristan aurouet
+1419;1090;thomas bidegain
+1420;1090;marc fitoussi
+1421;1090;cyril gelblat
+1422;1090;vianney lebasque
+1423;8521;elia suleiman
+1424;412;francois velle
+1425;;dante
+1426;;joe
+1427;;van dormael
+1428;;jaco
+1429;;giovanetti
+1430;;guillaume
+1431;; my uncle"
+1432;8863;franck gastambide
+1433;;chow
+1434;;stephen
+1435;;moreau
+1436;;david
+1437;8275;yoann guillouzouic
+1438;;tyldum
+1439;;morten
+1440;;annaud
+1441;;jean-jacques
+1442;4271;florent bernard
+1443;;luske
+1444;;hamilton
+1445;;jaspaert
+1446;;jeroen
+1447;;gray
+1448;;james
+1449;8558;zhou gao wu
+1450;8061;ken biller
+1451;;gozlan
+1452;;yann
+1453;;arcady
+1454;;alexandre
+1455;;bayona
+1456;;juan antonio
+1457;7939;sylvie ohayon
+1458;;lilienfeld
+1459;;jean-paul
+1460;8700;bouvard viret
+1461;;zeitlin
+1462;;benh
+1463;;niccol
+1464;;andrew
+1465;8819;eric judor
+1466;;miyazaki
+1467;;hayao
+1468;;leclere
+1469;;alexandra
+1470;;mayer
+1471;;michael
+1472;;smith
+1473;;simon j.
+1474;;clements
+1475;;ron
+1476;;rappeneau
+1477;;jean-paul
+1478;;comencini
+1479;;luigi
+1480;;trevorrow
+1481;;colin
+1482;;howard
+1483;;ron
+1484;;zep
+1485;;karukoski
+1486;;dome
+1487;;bedos
+1488;;nicolas
+1489;8667;eva husson
+1490;;rourke
+1491;;josie
+1492;4382;nathalie marchak
+1493;8766;julien hallard
+1494;;clermont-tonnerre
+1495;;laure de
+1496;8719;dominique farrugia
+1497;7585;elsa bennett hippolyte dard
+1498;;richet
+1499;;jean-francois
+1500;4946;marion vernoux
+1501;;fleischer
+1502;;ruben
+1503;6758;judith davis
+1504;8676;maiwenn
+1505;2856;antonin delaroche-vernet
+1506;5149;emma de caunes
+1507;;butler
+1508;;chris
+1509;;becker
+1510;;jean
+1511;;fieschi
+1512;;jacques
+1513;;baek-yeop
+1514;;sung
+1515;;walter
+1516;;anders
+1517;7664;michel denisot
+1518;;bonello
+1519;;bertrand
+1520;8825;jeremie renier
+1521;;bourboulon
+1522;;martin
+1523;;le guay
+1524;;philippe
+1525;8311;maryel devera
+1526;;russo
+1527;;joe
+1528;; charlotte armstrong
+1529;;aut. adapte 
+1530;;dercourt
+1531;;denis
+1532;8351;nicolas silhol
+1533;8288;dany boon
+1534;;benioff
+1535;;david
+1536;;espigares
+1537;;alexandre
+1538;4313;michael marie
+1539;;riklis
+1540;;eran
+1541;8546;huo jianqi
+1542;7427;shujaat saudagar
+1543;7927;antonin peretjatko
+1544;;blossier
+1545;;antoine.
+1546;;langmann
+1547;;thomas
+1548;8777;maxime govare
+1549;;de vita
+1550;;christian
+1551;;hill
+1552;;tim
+1553;3685;nicolas cuche
+1554;;hakonarson
+1555;;grimur
+1556;;cortes
+1557;;rodrigo
+1558;8808;july hygreck
+1559;8646;marilou berry
+1560;3640;romuald boulanger
+1561;8548;sandrine dumas
+1562;7883;thibaud martin
+1563;;johnson
+1564;;rian
+1565;4613;akim isker
+1566;7336;hector cabello reyes
+1567;7856;thierry binisti
+1568;;godeau
+1569;;philippe
+1570;8704;mahamat-saleh haroun
+1571;8035;hugo blick
+1572;5237;jacques doillon
+1573;;doillon
+1574;;jacques
+1575;2995;virginie saveur
+1576;;chaye
+1577;;remi
+1578;;wayans
+1579;;keenen ivory
+1580;;lucas
+1581;;george
+1582;;campillo
+1583;;robin
+1584;;valette
+1585;;eric
+1586;;scafaria
+1587;;lorene.
+1588;8866;tien-jen huang
+1589;7651;dan sackheim
+1590;;debbouze
+1591;;jamel
+1592;6628;pascal bourdiaux
+1593;;sohn
+1594;;peter
+1595;;bellocchio
+1596;;marco.
+1597;;egoyan
+1598;;atom
+1599;8159;gilles legrand
+1600;8674;charlotte schi0ler
+1601;;murphy
+1602;;ryan
+1603;;rintaro
+1604;;dupontel
+1605;;albert
+1606;7175;prentice penny
+1607;8191;walter veltroni
+1608;8587;pierre andre lhomme
+1609;;jenson
+1610;;vicky
+1611;8878;novemie lvovsky
+1612;;beauvois
+1613;;xavier
+1614;;chandor
+1615;;j.c.
+1616;7111;andy mogel
+1617;7111;jarrad paul
+1618;;laguionie
+1619;;jean-frandcois
+1620;7360;stephanie murat
+1621;;levinson
+1622;;barry
+1623;8860;emily mortimer
+1624;;norton
+1625;;edward
+1626;;vallee
+1627;;jean-marc
+1628;1689;pierre salvadori
+1629;;forbes
+1630;;maya
+1631;3190;franck magnier
+1632;8472;carine tardieu
+1633;;alfredson
+1634;;tomas
+1635;;lartigau
+1636;;eric
+1637;;mcteigue
+1638;;james
+1639;6064;mathias pardo
+1640;;jacobsen
+1641;;esben toft
+1642;;carriere
+1643;;christine
+1644;;kurtzman
+1645;;alex
+1646;;schmitt
+1647;;eric-emmanuel
+1648;;kusturica
+1649;;emir
+1650;;salle
+1651;;jerome
+1652;6223;david hourregue
+1653;;delaporte
+1654;;matthieu
+1655;6238;philippe larue
+1656;;rodriguez
+1657;;robert
+1658;;mayer
+1659;;zoltan
+1660;6163;matt hastings
+1661;3273;valeria bruni tedeschi
+1662;5825;julien hosmalin
+1663;5825;lionel mougin
+1664;;desagnat
+1665;;francois
+1666;;russell
+1667;;jay
+1668;;leconte
+1669;;patrice
+1670;8102;bruno chiche
+1671;;bobin
+1672;;james
+1673;8849;james foley
+1674;;jacquot
+1675;;benoit
+1676;8516;simon bouisson
+1677;8868;virginie verrier
+1678;;petzold
+1679;;christian
+1680;8621;audrey diwan
+1681;;bluth
+1682;;don
+1683;1416;maxime roy
+1684;7937;jan kounen
+1685;8536;alexandra leclere
+1686;;miller
+1687;;tim
+1688;;mouscadet
+1689;;jerome
+1690;8513;didier philippe
+1691;598;matthieu longatte
+1692;1823;aritz moreno
+1693;7599;camille delamarre
+1694;7599;franck brett
+1695;;samuell
+1696;;yann
+1697;;templeton
+1698;;suzie
+1699;;pariser
+1700;;nicolas
+1701;;lord
+1702;;peter
+1703;;king
+1704;;paul
+1705;1188;robert guediguian
+1706;;yoshiura
+1707;;yasuhiro
+1708;;gannaway
+1709;;robert
+1710;;roby
+1711;;daniel
+1712;;ozon
+1713;;frandcois
+1714;184;gabriel le bomin
+1715;8608;li lu
+1716;4718;chris briant
+1717;;ficarra
+1718;;glenn.
+1719;;stevenson
+1720;;robert
+1721;8559;julian schnabel
+1722;;kurosawa
+1723;;kiyoshi
+1724;;luhrmann
+1725;;baz
+1726;;di giusto
+1727;;staephanie
+1728;;lellouche
+1729;;gilles
+1730;5420;maxime charden
+1731;5420;laurene dervieux
+1732;;trank
+1733;;josh
+1734;;berla
+1735;;stephane
+1736;7541;willy biondani
+1737;8534;sergi portabella
+1738;;wiseman
+1739;;len
+1740;7498;franck ribiere
+1741;3463;ben
+1742;;farhadi
+1743;;asghar
+1744;4889;cedric klapisch
+1745;;burger
+1746;;neil
+1747;;affleck
+1748;;ben
+1749;;estibal
+1750;;sylvain
+1751;;antin
+1752;;juan
+1753;;serraille
+1754;;laeonor
+1755;;rouby
+1756;;simon
+1757;;crowley
+1758;;john
+1759;;zwart
+1760;;harald
+1761;;davies
+1762;;terence
+1763;;waters
+1764;;mark
+1765;;mitchell
+1766;;mike
+1767;;annable
+1768;;graham
+1769;;winterbottom
+1770;;michael
+1771;;barbier
+1772;;eric
+1773;;crowe
+1774;;cameron
+1775;2893;yvan attal
+1776;;robelin
+1777;;stephane
+1778;7712;stevan lee mraovitch
+1779;;lateste
+1780;;eddie
+1781;5190;tristan aurouet thomas bidegain marc fitoussi cyril gelblat vianney lebasque
+1782;;sonnenfeld
+1783;;barry
+1784;6662;santiago mitre
+1785;5260;arnaud viard
+1786;;meier
+1787;;ursula
+1788;;coulin
+1789;;muriel
+1790;;penn
+1791;;sean
+1792;4712;manuel laurent
+1793;4712;anouar el alami
+1794;;grimond
+1795;;philippe
+1796;;anspach
+1797;;solveig
+1798;;yates
+1799;;david
+1800;8599;stephane
+1801;8599;david foenkinos
+1802;;webb
+1803;;marc
+1804;7080;xavier de choudens
+1805;;webb
+1806;;mark
+1807;126;byun hyuk
+1808;;hara
+1809;;keiichi
+1810;3630;maxime taris
+1811;5909;geoff sax
+1812;7717;alexandre pierrin
+1813;7717;olivier marquezy
+1814;8265;simon astier
+1815;;miller
+1816;;chris
+1817;;nichols
+1818;;mike
+1819;;seong
+1820;;baek-yeob
+1821;5274;denis imbert
+1822;6606;saphia azzeddine
+1823;6606;francois-regis jeanne
+1824;8675;foazan rizal
+1825;;chaplin
+1826;;charles
+1827;;branagh
+1828;;kenneth
+1829;579;ignacio clemente mateos
+1830;;reine
+1831;;sophie
+1832;8623;louis choquette
+1833;;smith
+1834;;sarah
+1835;;wan
+1836;;james
+1837;7012;monsieur mohamed hamidi
+1838;;condon
+1839;;bill
+1840;8812;charline bourgeois tacquet
+1841;;aster
+1842;;ari
+1843;;attal
+1844;;yvan
+1845;3601;association cdcl
+1846;;lindholm
+1847;;tobias.
+1848;;clert
+1849;;alexandra
+1850;;minghella
+1851;;anthony
+1852;;cooley
+1853;;josh
+1854;8916;katia lewkowicz
+1855;;sy
+1856;;brigitte
+1857;;annakin
+1858;;ken
+1859;5258;gabriel julien-laferriere
+1860;8499;jean pascal zadi
+1861;8499;john waxxx
+1862;5569;kim nguyen
+1863;;tati
+1864;;jacques
+1865;;abouet
+1866;;marguerite
+1867;7202;michele laroque
+1868;6408;bruno mercier
+1869;7222;jacques audiard
+1870;8560;pierre-andre lhomme
+1871;;ozon
+1872;;francois
+1873;;lloyd
+1874;;phyllida
+1875;4810;cedric lepretre
+1876;8313;lea mazer
+1877;3951;margaux lenfant
+1878;8416;lucien jean baptiste
+1879;8450;denis thybaud
+1880;6507;cedric le gallo
+1881;6507;maxime govare
+1882;;le besco
+1883;;maiwenn.
+1884;;zonca
+1885;;erick
+1886;;abbasi
+1887;;ali
+1888;7869;anna cazanave-cambet
+1889;;erguven
+1890;;deniz gamze
+1891;2082;gabriele muccino
+1892;;bernard
+1893;;ludovic
+1894;6492;n/a
+1895;;gerwig
+1896;;greta
+1897;1450;florent sabatier
+1898;8268;nadir mokneche
+1899;;zem
+1900;;roschdy
+1901;8420;romain levy
+1902;;ritchie
+1903;;guy
+1904;;loiseau
+1905;;nadege
+1906;;czajka
+1907;;isabelle
+1908;;jaoui
+1909;;agnes
+1910;;verney
+1911;;cathy
+1912;7084;emmanuel courcol
+1913;7554;sandrine kiberlain
+1914;6613;dan zeff
+1915;8846;daniel cohen
+1916;;hall
+1917;;don
+1918;;lelouch
+1919;;claude
+1920;;thurmeier
+1921;;michael
+1922;;ramsey
+1923;;peter
+1924;8583;pierre schoeller
+1925;7140;hirokazu kore-eda
+1926;;saleem
+1927;;hiner
+1928;8428;stephane robelin
+1929;;lelio
+1930;;sebastian
+1931;5232;elsa bennet
+1932;5232;hyppolite dard
+1933;5232;simon astier
+1934;;cooper
+1935;;bradley
+1936;8609;michel leclerc
+1937;;jones
+1938;;tommy lee
+1939;8848;philippe garrel
+1940;;pins
+1941;;arthur de
+1942;8769;xiancheng deng
+1943;5750;philippe lacheau
+1944;8173;louis leterrier
+1945;;dujardin
+1946;;jean
+1947;;aronofsky
+1948;;darren
+1949;6678;rachid bouchareb
+1950;8592;cheyenne carron
+1951;8832;josee dayan
+1952;;ly
+1953;;ladj
+1954;;panahi
+1955;;jafar
+1956;5713;varante soudjian
+1957;1095;tuva novotny
+1958;;comar
+1959;;etienne
+1960;1735;francois valla
+1961;8864;christopher thompson
+1962;8578;steven conrad
+1963;;o'callaghan
+1964;;matthew
+1965;7507;martial schmeltz
+1966;;scott
+1967;;ken
+1968;;melfi
+1969;;theodore
+1970;6364;louis farge
+1971;;podalydes
+1972;;bruno
+1973;5899;miguel courtois
+1974;5732;sophie fillieres
+1975;;kaurismaki
+1976;;aki
+1977;8885;stephane batut
+1978;;baroux
+1979;;olivier
+1980;;duthuron
+1981;;christophe
+1982;8750;antoine garceau
+1983;8750;marc fitoussi
+1984;;changdong
+1985;;lee
+1986;6708;alexandre claudin
+1987;;loter
+1988;;steve
+1989;;lavaine
+1990;;eric
+1991;3441;muriel robin
+1992;;kahn
+1993;;cedric
+1994;3442;virginie sauveur
+1995;8202;min-ho woo
+1996;;clichy
+1997;;louis
+1998;;johnston
+1999;;joe
+2000;;kitano
+2001;;takeshi
+2002;;bellocchio
+2003;;marco
+2004;;larrieu
+2005;;arnaud
+2006;5662;lucas bernard
+2007;;gilroy
+2008;;dan
+2009;7054;flo ber
+2010;8475;arnauld mercadier
+2011;;maguire
+2012;;sharon
+2013;;graffin
+2014;;benoait
+2015;;elbe
+2016;;pascal
+2017;4496;nicolas capu
+2018;4496;mona achache
+2019;7654;stephan kopecky
+2020;8075;nadav lapid
+2021;6248;agnes obdia
+2022;7978;mathieu amalric
+2023;;letterman
+2024;;rob
+2025;8544;eleonore pourriat
+2026;6882;dan mazer
+2027;;dridi
+2028;;karim
+2029;;rappeneau
+2030;;julien
+2031;6973;jean-xavier de lestrade
+2032;;eastwood clint
+2033;;guadagnino
+2034;;luca
+2035;;cavayae
+2036;;fred
+2037;8441;reem kherici
+2038;5402;manuel laigre
+2039;;mckay
+2040;;chris
+2041;;foster
+2042;;jodie
+2043;;edgerton
+2044;;joel
+2045;;kore-eda
+2046;;hirokazu
+2047;;le gallo
+2048;;caedric
+2049;8332;david michod
+2050;8269;mukesh chhabra
+2051;8069;harry bradbeer
+2052;;scott
+2053;;ridley
+2054;;unkrich
+2055;;lee
+2056;;pawlikovsky
+2057;;pawel
+2058;;weerasethakul
+2059;;apichatpong
+2060;8517;lea fazer
+2061;;cornillac
+2062;;clovis
+2063;8001;yuri rossi
+2064;7033;cong li
+2065;;koepp
+2066;;david
+2067;8856;jean pierre ameris
+2068;;sanders
+2069;;chris
+2070;5396;yann gozlan
+2071;;peretjatko
+2072;;antonin
+2073;;siri
+2074;;florent-emilio
+2075;;abrams
+2076;;jeffrey jacob.
+2077;6496;xavier durringer
+2078;7898;manousos manousakis
+2079;8556;michel blanc
+2080;7846;melissa drigeard
+2081;;lachauer
+2082;;jan
+2083;;molia
+2084;;xabi
+2085;;bay
+2086;;michael
+2087;;mungiu
+2088;;cristian
+2089;;griffiths
+2090;;mark
+2091;7828;frederic hazan
+2092;8248;flora lau
+2093;;toro
+2094;;guillermo del
+2095;7963;philippe lioret
+2096;;wirkola
+2097;;tommy
+2098;8793;meliane marcaggi
+2099;;brize
+2100;;stephane
+2101;3745;laure debutler
+2102;;borleteau
+2103;;lucie
+2104;3984;goncalo waddington
+2105;237;hortense motrot pinchon
+2106;;lee
+2107;;ang
+2108;6106;julien weille
+2109;8579;renaud bertrand
+2110;;amalric
+2111;;mathieu
+2112;;saada
+2113;;nicolas
+2114;8336;alfred lot
+2115;;triet
+2116;;justine
+2117;;park
+2118;;nick
+2119;;drexel
+2120;;claus
+2121;;bouchareb
+2122;;rachid
+2123;;noxon
+2124;;marty
+2125;;donzelli
+2126;;valerie
+2127;2595;jouy samuel
+2128;;heboyan
+2129;;alexandre
+2130;8378;olivier meys
+2131;;winding refn
+2132;;nicolas
+2133;;fellowes
+2134;;julian
+2135;;moore
+2136;;rich
+2137;;watts
+2138;;jon
+2139;;guaediguian
+2140;;robert
+2141;;jia
+2142;;zhang ke
+2143;;ross
+2144;;gary
+2145;;hamidi
+2146;;mohamed
+2147;;jung
+2148;;gabriel
+2149;;mike
+2150;;mcquarrie
+2151;;christopher
+2152;;russo
+2153;;anthony
+2154;;csupo
+2155;;gabor
+2156;8644;anthony marciano
+2157;;mccarthy
+2158;;tom
+2159;;martino
+2160;;steve
+2161;;lilti
+2162;;thomas
+2163;;pimental
+2164;;brian
+2165;;chatiliez
+2166;;etienne
+2167;8607;vianney lebasque
+2168;2303;andrei smirnov
+2169;8612;amy sherman-palladino
+2170;8612;dan palladino
+2171;;chadha
+2172;;gurinder
+2173;8879;fabrice gobert
+2174;;stanton
+2175;;andrew.
+2176;;charlot
+2177;;alexandre
+2178;7569;juan pablo martinez
+2179;8869;amanda sthers
+2180;;padilha
+2181;;jose
+2182;8892;quentin reynaud
+2183;7903;bernard stora
+2184;;daniels
+2185;;lee
+2186;8660;ludovik
+2187;;coppola
+2188;;sofia
+2189;;hall
+2190;;klay
+2191;;sandberg
+2192;;david f.
+2193;;chayae
+2194;;raemi
+2195;8376;frederic forestier
+2196;;berri
+2197;;claude
+2198;;deschamps
+2199;;jerome
+2200;;fehner
+2201;;laea
+2202;;lespert
+2203;;jalil
+2204;;marshall
+2205;;rob
+2206;;bardine
+2207;;garri
+2208;;rodriguez
+2209;;alberto
+2210;8116;frederic berthe
+2211;;lepage
+2212;;frederic
+2213;;scanlon
+2214;;dan
+2215;;perrin
+2216;;jacques
+2217;8786;julien rappeneau
+2218;;huth
+2219;;james
+2220;8550;philippe harel
+2221;8380;arnaud selignac,
+2222;;loach
+2223;;ken
+2224;;gelin
+2225;;hugo
+2226;8454;clovis cornillac
+2227;;fletcher
+2228;;dexter
+2229;8604;ralph fiennes
+2230;7732;marie jardillier
+2231;7732;mathieu oullion
+2232;;kaytis
+2233;;clay
+2234;8877;blandine lenoir
+2235;;ortega
+2236;;kenny
+2237;;arnold
+2238;;andrea
+2239;;garland
+2240;;alex
+2241;948;ange raynaud
+2242;2657;nonstop producoes
+2243;;salvadori
+2244;;pierre
+2245;;schoeller
+2246;;pierre
+2247;;mihaileanu
+2248;;radu
+2249;;muller
+2250;;valerie
+2251;;szabo
+2252;;thomas
+2253;;roach
+2254;;jay
+2255;7813;paul lapierre
+2256;;le besco
+2257;;maeiwenn
+2258;;tadjedin
+2259;;massy
+2260;;durringer
+2261;;xavier
+2262;;ronning
+2263;;joachim
+2264;;gibson
+2265;;mel
+2266;4626;felix guimard
+2267;8876;guillaume gallienne
+2268;7247;philippe le guay
+2269;;noonan
+2270;;chris
+2271;5254;vincent garenq
+2272;3372;stephane kappes
+2273;8857;liu chun-chien
+2274;7122;alex graves
+2275;2855;frederic schoendoerffer
+2276;;redford
+2277;;robert
+2278;;blair
+2279;;wayne
+2280;;lumet
+2281;;sidney
+2282;8542;matthew weiner
+2283;;pautonnier
+2284;;gaerard
+2285;8568;frank bellocq
+2286;;cook
+2287;;barry
+2288;8573;eva ionesco
+2289;;oelhoffen
+2290;;david
+2291;;varin
+2292;;mathias
+2293;8895;valerie donzelli
+2294;8494;matthias schweighoffer
+2295;8636;lisa azuelos
+2296;;lasseter
+2297;;john
+2298;8759;marc fitoussi
+2299;6748;nath dumont
+2300;;mcg
+2301;;nicolas-troyan
+2302;;cedric
+2303;;provost
+2304;;martin
+2305;;ragobert
+2306;;thierry
+2307;8567;cedric anger
+2308;;al-mansour
+2309;;haifaa
+2310;3719;delphine seignon
+2311;8854;e.tolenado/o.nakache
+2312;8659;stephen cafiero
+2313;;chaumeil
+2314;;pascal
+2315;;columbus
+2316;;chris
+2317;;kasdan
+2318;;jake
+2319;;graffin
+2320;;benoit
+2321;;laguionie
+2322;;jean-francois
+2323;;fillieres
+2324;;sophie
+2325;8798;vladimir rodionoff
+2326;8774;francois uzan
+2327;7853;bruno podalydes
+2328;;sfar
+2329;;joann
+2330;;acker
+2331;;shane
+2332;;fitoussi
+2333;;marc
+2334;;heidscheotter
+2335;;uwe
+2336;;mcdonagh
+2337;;martin
+2338;8190;gilles paquet brenner
+2339;;dessaint
+2340;;jean-christophe
+2341;;mangold
+2342;;james
+2343;;wong
+2344;;kar-wai
+2345;;soderbergh
+2346;;steven
+2347;;benchetrit
+2348;;samuel
+2349;;allers
+2350;;roger
+2351;;van sant
+2352;;gus
+2353;;reeves
+2354;;matt
+2355;;lonergan
+2356;;kenneth
+2357;;freitag
+2358;;hayo
+2359;;becker
+2360;;wolfgang
+2361;;salem
+2362;;lyes
+2363;;gagnol
+2364;;alain
+2365;2636;paul-anthony mille
+2366;8884;jean marc brondolo
+2367;;dolan
+2368;;xavier
+2369;;leclerc
+2370;;philippe
+2371;;slade
+2372;;david
+2373;;white
+2374;;susanna
+2375;;zlotowski
+2376;;rebecca
+2377;;guediguian
+2378;;robert
+2379;;polanski
+2380;;roman
+2381;2403;renaud betrand
+2382;;bergeon
+2383;;edouard
+2384;;jonze
+2385;;spike
+2386;;berg
+2387;;peter
+2388;8626;monsieur chris briant
+2389;;kapur
+2390;;shekhar
+2391;8738;martin provost
+2392;;hoffman
+2393;;dustin
+2394;8682;paolo barzman
+2395;8595;wash westmoreland
+2396;;chabat
+2397;;alain
+2398;3832;hirokazu kore eda
+2399;;zhao
+2400;;chloae
+2401;8887;j.christophe delpias
+2402;;donnersmarck
+2403;;florian henckel von
+2404;;gallienne
+2405;;guillaume
+2406;449;paul lapierre
+2407;449;juliette tresanini
+2408;8805;eric lavaine
+2409;;corsini
+2410;;catherine
+2411;3571;mateo guez
+2412;;gordon
+2413;;howard
+2414;;cantet
+2415;;laurent
+2416;;twomey
+2417;;nora
+2418;;malle
+2419;;louis
+2420;;lindholm
+2421;;tobias
+2422;4840;leila sy
+2423;4840;kery james
+2424;;black
+2425;;shane
+2426;8575;marie monge
+2427;;core
+2428;;pierre
+2429;;zviaguintsev
+2430;;andrei
+2431;7533;anne de clercq
+2432;;ayouch
+2433;;nabil
+2434;;katabuchi
+2435;;sunao
+2436;8631;justine triet
+2437;;hogan
+2438;;p.j.
+2439;7949;christian schwochow
+2440;;kheiron
+2441;8077;marion laine
+2442;;hallard
+2443;;julien
+2444;;campion
+2445;;jane
+2446;;anger
+2447;;cedric
+2448;7816;julia rezende
+2449;;moore
+2450;;tomm
+2451;;espinosa
+2452;;daniel
+2453;;kormakur
+2454;;baltasar
+2455;;marshall
+2456;;tonie
+2457;;silverman
+2458;;david
+2459;8853;aditya chopra
+2460;;guterman
+2461;;lawrence
+2462;;miller
+2463;;george
+2464;;hewitt
+2465;;pete
+2466;5737;antoine de bary
+2467;;sharpsteen
+2468;;ben
+2469;8181;pascal lahmani
+2470;8401;antoine chevrollier
+2471;;green
+2472;;david gordon
+2473;;tardieu
+2474;;carine
+2475;;liman
+2476;;doug
+2477;;gansel
+2478;;dennis
+2479;;cebula
+2480;;idit
+2481;;foenkinos
+2482;;stephane
+2483;8433;gabriel laferriere
+2484;3257;philippe lefebvre
+2485;;verbinski
+2486;;gore
+2487;;zemeckis
+2488;;robert
+2489;2674;clement michel
+2490;;payne
+2491;;alexander
+2492;8715;tessa schram
+2493;6989;nicolas bedos
+2494;824;jean-baptiste dusseaux
+2495;;bezancon
+2496;;raemi
+2497;;barras
+2498;;claude
+2499;;michalik
+2500;;alexis
+2501;;diasteme
+2502;;boukhrief
+2503;;nicolas
+2504;;vincent
+2505;;thomas
+2506;;miller
+2507;;claude
+2508;3708;jean paul civeyrac
+2509;;anger
+2510;;caedric
+2511;;jones
+2512;;kirk
+2513;;forster
+2514;;marc
+2515;8257;matt bloom
+2516;8257;robert burke
+2517;8257;ronan burke
+2518;;brizae
+2519;;staephane
+2520;;ferrante
+2521;;elena
+2522;8358;eric baudelaire
+2523;5629;david
+2524;5629;stephane foenkinos
+2525;;swan
+2526;;michael
+2527;8504;baya kasmi
+2528;;chbosky
+2529;;stephen
+2530;6696;mathias malzieu
+2531;;summer
+2532;;eric
+2533;8598;ken scott
+2534;;dardenne
+2535;;luc
+2536;7803;charlotte brandstrom
+2537;8765;cyprien vial
+2538;8281;gary gray
+2539;8458;danielle arbid
+2540;;davis
+2541;;john a.
+2542;7449;stephane marelli
+2543;;gans
+2544;;christophe
+2545;;cabrera
+2546;;dominique
+2547;3700;benoit jacquot
+2548;8648;renaud bertrand
+2549;8648;noemie saglio
+2550;;mitchell
+2551;;david robert
+2552;7981;zhang bo li
+2553;;campanella
+2554;;juan j.
+2555;;persichetti
+2556;;bob
+2557;416;laurent rochette
+2558;;anderson
+2559;;stephen j.
+2560;;field
+2561;;todd
+2562;329;alexandre da silva
+2563;;aramaki
+2564;;shinji
+2565;;rabate
+2566;;pascal
+2567;;bannier
+2568;;gilles
+2569;;hillcoat
+2570;;john
+2571;;tavernier
+2572;;nils
+2573;;greno
+2574;;nathan
+2575;8375;frederic jardin
+2576;;szumowska
+2577;;malgorzata
+2578;8602;mia hansen-love
+2579;;lutz
+2580;;alex
+2581;;delpy
+2582;;julie.
+2583;8645;frankie wallach
+2584;;schuh
+2585;;jakob
+2586;7614;james huth
+2587;;renner
+2588;;benjamin
+2589;;balda
+2590;;kyle
+2591;;jung (1965-....)
+2592;;kojima
+2593;;masayuki
+2594;;meddour
+2595;;mounia
+2596;7199;benedicte delmas
+2597;5128;leo karmann
+2598;8713;valerie urrea
+2599;8713;nathalie masduraud
+2600;;mauduit
+2601;;allan
+2602;;szifron
+2603;;damian
+2604;;mcgrath
+2605;;tom
+2606;;thomas
+2607;;betty
+2608;;onteniente
+2609;;fabien
+2610;;tuel
+2611;;laurent
+2612;6529;fabrice eboue
+2613;;gonzalez inarritu
+2614;;alejandro
+2615;;lord
+2616;;phil
+2617;;okiura
+2618;;hiroyuki
+2619;7232;edouard deluc
+2620;;advani
+2621;;nikhil
+2622;8139;julien weill
+2623;8899;herve hadmar
+2624;;phillips
+2625;;todd
+2626;;desmares
+2627;;christian
+2628;;miller
+2629;;bruce
+2630;;guirado
+2631;;eric
+2632;6343;romane bohringer
+2633;;deyries
+2634;;bernard
+2635;1423;alexandre castagnetti
+2636;;coen
+2637;;joel
+2638;6276;marie garel weiss
+2639;;laine
+2640;;marion
+2641;5360;david lynch
+2642;6648;thomas lilti
+2643;7220;chun chieh
+2644;1909;elsa amiel
+2645;8370;eve deboise
+2646;;holland
+2647;;agnieszka
+2648;;heidschotter
+2649;;uwe
+2650;;wright
+2651;;joe
+2652;;pouzadoux
+2653;;pascale
+2654;;gluck
+2655;;will
+2656;7077;jonathan barre
+2657;6175;julie oona
+2658;;miler
+2659;;zdenek
+2660;8671;jalil lespert
+2661;;alaux
+2662;;david
+2663;;haigh
+2664;;andrew
+2665;7066;gabriel aghion
+2666;;kershner
+2667;;irvin
+2668;8794;jean paul salome
+2669;;besson
+2670;;luc
+2671;7862;john wax
+2672;7862;jean-pascal zadi
+2673;;le guay
+2674;;philippe.
+2675;8565;jonathan
+2676;;corbijn
+2677;;anton
+2678;;hytner
+2679;;nicholas
+2680;8886;myriam aziza
+2681;6256;martin bourboulon
+2682;8844;shirley monsarrat
+2683;;halas
+2684;;john
+2685;;dominik
+2686;;andrew
+2687;8911;vladimir de fontenay/marie monge
+2688;;cheney
+2689;;yarrow
+2690;8053;marie-castille mention-schaar
+2691;;sheridan
+2692;;jim
+2693;8552;patrick cassir
+2694;;trousdale
+2695;;gary
+2696;7729;catherine corsini
+2697;8123;andrea bescond
+2698;8123;eric metayer
+2699;;castagnetti
+2700;;alexandre
+2701;8555;stephen woolfenden
+2702;;bercot
+2703;;emmanuelle
+2704;7275;christophe delpias
+2705;;fuqua
+2706;;antoine
+2707;6393;jerome commandeur
+2708;;de palma
+2709;;brian
+2710;;synger
+2711;;bryan
+2712;8705;dominic savage
+2713;3345;matthieu mares-savelli
+2714;6760;franck gastambide
+2715;6760;david diane
+2716;;enrico
+2717;;jerome
+2718;8411;antoinette boulat
+2719;;daldry
+2720;;stephen
+2721;;ocelot
+2722;;michel
+2723;8785;olivier ayache vidal
+2724;;jacquet
+2725;;luc
+2726;;baudry
+2727;;antonin
+2728;6930;avril besson
+2729;;guillard
+2730;;philippe
+2731;4549;yann gonzalez
+2732;975;samuel collardey
+2733;975;antoine chevrollier
+2734;975;mathieu demy
+2735;975;helier cisterne
+2736;;tappe
+2737;;holger
+2738;;morgan
+2739;;peter
+2740;6723;sinan ozturk
+2741;5159;zhou nan
+2742;7850;pierre trividic
+2743;7850;patrick mario bernard
+2744;5610;peter cattaneo
+2745;8424;didier le pecheurs
+2746;;otomo
+2747;;katsuhiro
+2748;8253;andre erkau
+2749;;stone
+2750;;oliver
+2751;8564;david oelhoffen
+2752;;berman
+2753;;ted
+2754;;weitz
+2755;;chris
+2756;5030;francois ozon
+2757;;amachoukeli
+2758;;marie
+2759;;villeneuve
+2760;;denis
+2761;8119;sarah marx
+2762;;leondis
+2763;;anthony
+2764;;weinstein
+2765;;phil
+2766;;huntgeburth
+2767;;hermine
+2768;7684;andreas bescond
+2769;7684;eric metayer
+2770;;levine
+2771;;jonathan
+2772;4769;dan occo
+2773;;duvernay
+2774;;ava
+2775;;goscinny
+2776;;rene
+2777;;braff
+2778;;zach
+2779;;gutierrez
+2780;;jorge r.
+2781;7864;dominique baumart
+2782;7864;mouloud achour
+2783;;wajeman
+2784;;elie
+2785;4820;arnaud
+2786;4820;jean-marie larrieu
+2787;;berry
+2788;;richard
+2789;;abreu
+2790;;ale
+2791;8580;lea fredeval
+2792;;omond
+2793;;eric
+2794;8684;eric rochant
+2795;8684;jacques audiard
+2796;8684;anna novion
+2797;8684;samuel collardey
+2798;931;joachim delmotte
+2799;931;matthieu moerlen
+2800;;lanners
+2801;;bouli
+2802;;giannoli
+2803;;xavier
+2804;;geffenblad
+2805;;lotta
+2806;;roinsard
+2807;;regis.
+2808;;hitchcock
+2809;;alfred
+2810;7984;tonie marshall
+2811;7704;damien maric
+2812;8457;daniel syrkin
+2813;8619;eric rochant
+2814;8619;pascale ferran
+2815;8619;anna novion
+2816;8619;leila marrakchi
+2817;;bergeron
+2818;;bibo
+2819;;coffin
+2820;;pierre
+2821;7875;jean christophe delpias
+2822;;vaughn
+2823;;matthew
+2824;;lawrence
+2825;;francis
+2826;;russell
+2827;;david o
+2828;;la patelliere
+2829;;alexandre de
+2830;;benyamina
+2831;;houda
+2832;8596;herve mimran
+2833;;shanley
+2834;;john patrick
+2835;;zviaguintsev
+2836;;andreei
+2837;2463;elsa bennett
+2838;2463;hippolyte dard
+2839;2463;slimane-baptiste berhoun
+2840;8410;anne le ny
+2841;;robert
+2842;;yves
+2843;8736;dominique rocher
+2844;7143;michael youn
+2845;8402;marc recuenco
+2846;8771;emmanuel finkiel
+2847;8109;rizal mantovani
+2848;;senez
+2849;;guillaume
+2850;;quillevere
+2851;;katell
+2852;;docter
+2853;;pete
+2854;8865;elie wajeman
+2855;8912;giovanni aloi
+2856;;kurzel
+2857;;justin
+2858;;apted
+2859;;michael
+2860;;lussi-modeste
+2861;;teddy
+2862;;shults
+2863;;trey edward
+2864;;hughes
+2865;;albert
+2866;;hansen-love
+2867;;mia
+2868;1047;hallali alysse
+2869;1047;martin thibaut
+2870;;neel
+2871;;julien
+2872;8834;laurent perreau
+2873;8898;ludovic colbeau justin
+2874;;clooney
+2875;;george
+2876;;de vito
+2877;;danny
+2878;;sciamma
+2879;;caeline
+2880;;pawlikowski
+2881;;pawel
+2882;;quillaevaerae
+2883;;katell
+2884;8910;stephane malhuret
+2885;;penna
+2886;;joe
+2887;8781;nicolas guicheteau
+2888;8811;franck dubosc
+2889;8043;titus selge
+2890;4529;archie borders
+2891;;proyas
+2892;;alex
+2893;;mckay
+2894;;adam
+2895;;anderson
+2896;;wes
+2897;;chadwick
+2898;;justin
+2899;;leon de aranoa
+2900;;fernando
+2901;3728;francis magnin
+2902;6877;marc-aurele vecchione
+2903;;silberling
+2904;;brad
+2905;;noyce
+2906;;phillip
+2907;7464;olivier nakache
+2908;7464;eric toledano
+2909;7464;pierre salvadori
+2910;7464;mathieu vadepied
+2911;7464;nicolas parisier
+2912;;saldanha
+2913;;carlos
+2914;;sengelin
+2915;;emilie
+2916;;audiard
+2917;;jacques
+2918;6363;frederic berthe
+2919;6363;eric le roux
+2920;7749;laurent lafitte
+2921;8006;yves renier
+2922;;snyder
+2923;;zack
+2924;;gunn
+2925;;james
+2926;;edwards
+2927;;gareth
+2928;;snyder
+2929;;zach
+2930;;yeatman
+2931;;hoyt
+2932;5875;michel reilhac
+2933;;bigelow
+2934;;kathryn
+2935;;kruithof
+2936;;thomas
+2937;;hazanavicius
+2938;;michel
+2939;;roskam
+2940;;michael r.
+2941;;chabrol
+2942;;claude

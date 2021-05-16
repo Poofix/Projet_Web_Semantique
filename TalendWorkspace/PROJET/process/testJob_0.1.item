@@ -274,8 +274,8 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out3">
         <mapperTableEntries name="key_film" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="TITRE" expression="StringHandling.DOWNCASE(TalendString.removeAccents(row9.TITRE))" type="id_String" nullable="true"/>
-        <mapperTableEntries name="AUTEUR" expression="StringHandling.CHANGE(StringHandling.DOWNCASE(TalendString.removeAccents(row9.AUTEUR)), &quot;,&quot;, &quot;&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="TITRE" expression="StringHandling.DOWNCASE(TalendString.removeAccents(StringHandling.CHANGE(row9.TITRE,&quot;'&quot;,&quot; &quot;))) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="AUTEUR" expression="StringHandling.DOWNCASE(TalendString.removeAccents(row9.AUTEUR)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="nbEmprunt" expression="row9.nbEmprunt   " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="annee_tournage" expression=" " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="type_tournage" expression="" type="id_String" nullable="true"/>
@@ -575,7 +575,7 @@
         <mapperTableEntries name="key_Film" expression="Var.key_Film " type="id_Integer"/>
         <mapperTableEntries name="annee_tournage" expression="row8.annee_tournage " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="type_tournage" expression="StringHandling.DOWNCASE(TalendString.removeAccents(row8.type_tournage))" type="id_String" nullable="true"/>
-        <mapperTableEntries name="nom_tournage" expression="StringHandling.DOWNCASE(TalendString.removeAccents(row8.nom_tournage))" type="id_String" nullable="true"/>
+        <mapperTableEntries name="nom_tournage" expression="StringHandling.DOWNCASE(TalendString.removeAccents(row8.nom_tournage)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="nom_realisateur" expression="StringHandling.DOWNCASE(TalendString.removeAccents(row8.nom_realisateur))" type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="Lieux">
@@ -821,11 +821,13 @@
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties shellMaximized="true"/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var">
+        <mapperTableEntries name="htmlchar_to_char" expression="StringHandling.CHANGE(StringHandling.CHANGE(row12.title,&quot;&amp;#39;&quot;,&quot;'&quot;),&quot;;&quot;,&quot; &quot;) ;&#xA;&#xA;//StringHandling.CHANGE(StringHandling.CHANGE(StringHandling.CHANGE(row12.title,&quot;&amp;ecirc;&quot;,&quot;e&quot;) ,&quot;&amp;#39;&quot;,&quot;'&quot;),&quot;&amp;oacute;&quot;,&quot;o&quot;) " type="id_String"/>
+      </varTables>
       <outputTables sizeState="INTERMEDIATE" name="out8">
         <mapperTableEntries name="key_film" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="TITRE" expression="StringHandling.DOWNCASE(TalendString.removeAccents(row12.title))" type="id_String" nullable="true"/>
-        <mapperTableEntries name="AUTEUR" type="id_String" nullable="true"/>
+        <mapperTableEntries name="TITRE" expression="StringHandling.DOWNCASE(TalendString.removeAccents(Var.htmlchar_to_char)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="AUTEUR" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="nbEmprunt" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="annee_tournage" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="type_tournage" type="id_String" nullable="true"/>
