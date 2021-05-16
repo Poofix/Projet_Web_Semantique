@@ -1143,7 +1143,7 @@
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="g_key_realisateur" expression="Numeric.sequence(&quot;sRealisateur&quot;,1,1)" type="id_Integer"/>
       </varTables>
-      <outputTables sizeState="INTERMEDIATE" name="outPatate">
+      <outputTables sizeState="INTERMEDIATE" name="outPatate" expressionFilter="(row6.AUTEUR != null) &amp;&amp; (StringHandling.LEN(row6.AUTEUR) > 1)" activateExpressionFilter="true">
         <mapperTableEntries name="key_realisateur" expression="Var.g_key_realisateur " type="id_Integer"/>
         <mapperTableEntries name="key_film" expression="row6.key_film " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="AUTEUR" expression="row6.AUTEUR " type="id_String" nullable="true"/>
