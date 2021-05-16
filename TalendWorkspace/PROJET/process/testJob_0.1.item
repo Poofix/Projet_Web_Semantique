@@ -1110,7 +1110,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tNormalize_1" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/opt/TOS_DI/configuration/lib/java" show="false"/>
     <elementParameter field="PREV_COLUMN_LIST" name="NORMALIZE_COLUMN" value="AUTEUR"/>
-    <elementParameter field="TEXT" name="ITEMSEPARATOR" value="&quot;, | et | - | / &quot;"/>
+    <elementParameter field="TEXT" name="ITEMSEPARATOR" value="&quot; , | et | - | / &quot;"/>
     <elementParameter field="CHECK" name="DEDUPLICATE" value="false"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
     <elementParameter field="CLOSED_LIST" name="ESCAPE_CHAR" value="ESCAPE_MODE_DOUBLED" show="false"/>
