@@ -1,5 +1,5 @@
-nom;genre;
-realisateur1;action;
-realisateur2;comédie;
-realisateur3;action;
-realisateur4;aventure;
+id;nom;idgenre;
+1;realisateur1;1;
+2;realisateur2;2;
+3;realisateur3;1;
+4;realisateur4;3;

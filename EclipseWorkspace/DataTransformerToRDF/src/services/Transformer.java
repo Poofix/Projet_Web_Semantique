@@ -40,7 +40,7 @@ public class Transformer {
 			e.printStackTrace();
 		}
 		if (serverIsUp) {
-			System.out.println("Fuseli server is ready...");
+			System.out.println("Fuseki server is ready...");
 		} else {
 			System.out.println("ERROR : Fuseli server unreachable...");
 		}
@@ -60,7 +60,7 @@ public class Transformer {
 				while ((line = fileReader.readLine()) != null) {
 					// Get all tokens available in line
 					String[] tokens = line.split(";");
-					dictGenres.put(Utils.normalize(tokens[0]), new Genre(tokens[0]));
+					dictGenres.put(tokens[0], new Genre(tokens[1]));
 				}
 			}
 
@@ -88,8 +88,8 @@ public class Transformer {
 				// Read the file line by line
 				while ((line = fileReader.readLine()) != null) {
 					String[] nextLine = line.split(";");
-					dictRealisateurs.put(Utils.normalize(nextLine[0]),
-							new Realisateur(nextLine[0], dictGenres.get(Utils.normalize(nextLine[1]))));
+					dictRealisateurs.put(nextLine[0],
+							new Realisateur(nextLine[1], dictGenres.get(nextLine[2])));
 
 				}
 			}
@@ -118,11 +118,7 @@ public class Transformer {
 				// Read the file line by line
 				while ((line = fileReader.readLine()) != null) {
 					String[] nextLine = line.split(";");
-					String adr = nextLine[0];
-					String ville = nextLine[1];
-					String codePostal = nextLine[2];
-
-					dictLieux.put(Utils.normalize(adr + "-" + codePostal), new Lieu(ville, adr, codePostal));
+					dictLieux.put( nextLine[0], new Lieu( nextLine[1],  nextLine[2],  nextLine[3]));
 				}
 			}
 
@@ -150,19 +146,15 @@ public class Transformer {
 				// Read the file line by line
 				while ((line = fileReader.readLine()) != null) {
 					String[] nextLine = line.split(";");
-					String titre = nextLine[0];
-					String annee = nextLine[1]; // TODO METTRE LE BON INDEX
-					String lieu = Utils.normalize(nextLine[4]);
-					String filmKey = Utils.normalize(titre + annee);
-					Film existingFilm = dictFilm.get(filmKey);
+					Film existingFilm = dictFilm.get(nextLine[0]);
 					if (existingFilm == null) {
-						dictFilm.put(filmKey,
-								new Film(titre, annee, dictGenres.get(Utils.normalize(nextLine[2])),
-										dictRealisateurs.get(Utils.normalize(nextLine[3])), dictLieux.get(lieu),
-										Float.parseFloat((nextLine[5])))); // TODO Finir le
+						dictFilm.put(nextLine[0],
+								new Film(nextLine[1], nextLine[2], dictGenres.get(nextLine[3]),
+										dictRealisateurs.get(nextLine[4]), dictLieux.get(nextLine[5]),
+										Float.parseFloat((nextLine[6])))); // TODO Finir le
 																			// constructeur
 					} else {
-						existingFilm.lieuxDeTournages.add(dictLieux.get(lieu));
+						existingFilm.lieuxDeTournages.add(dictLieux.get(nextLine[4]));
 					}
 				}
 			}
