@@ -1,4 +1,4 @@
-label;
-action;
-comédie;
-aventure;
+id;label;
+1;action;
+2;comédie;
+3;aventure;

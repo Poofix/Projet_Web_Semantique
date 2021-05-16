@@ -1,7 +1,7 @@
-adresse;ville;codePostal;
-rue1;Toulouse;31300;
-rue2;Agen;47130;
-rue3;Agen;47130;
-rue4;Agen;47130;
-rue5;Toulouse;31300;
-rue6;Paris;71300;
+id;adresse;ville;codePostal;
+1;rue1;Toulouse;31300;
+2;rue2;Agen;47130;
+3;rue3;Agen;47130;
+4;rue4;Agen;47130;
+5;rue5;Toulouse;31300;
+6;rue6;Paris;71300;
