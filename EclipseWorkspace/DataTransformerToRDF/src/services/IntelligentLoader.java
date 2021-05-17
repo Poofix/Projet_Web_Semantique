@@ -97,7 +97,7 @@ public class IntelligentLoader {
 				saveJson(responseJSON, film.imdbId);
 			}
 		} else { // On passe par le titre ici
-			String fileName = searchRequestExist(film.imdbId);
+			String fileName = searchRequestExist(film.titre);
 			if (fileName != null) {
 				//InputStream is = IntelligentLoader.class.getResourceAsStream(fileName);
 				JSONTokener tokener = null;
