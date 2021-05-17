@@ -10,8 +10,8 @@ import services.Utils;
 
 public class LieuBuilder {
 	public int    id			= -1;
-	public String adresse		= "<NONE>";
-	public String codePostal	= "<NONE>";
+	public String adresse		= "";
+	public String codePostal	= "";
 	
 	public LieuBuilder(int id, String adr, String c) {
 		this.id 		= id;

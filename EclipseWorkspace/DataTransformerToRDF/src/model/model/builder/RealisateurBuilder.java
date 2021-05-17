@@ -12,7 +12,7 @@ import services.Utils;
 public class RealisateurBuilder {
 
 	public int id						= -1;
-	public String nom					= "<NONE>";
+	public String nom					= "";
 	public Genre genreDePredilection	= null;
 
 	public RealisateurBuilder(int id, String nom) {

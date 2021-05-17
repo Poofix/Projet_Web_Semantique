@@ -8,6 +8,7 @@ import model.model.Genre;
 import model.model.Lieu;
 import model.model.Realisateur;
 import model.model.builder.FilmBuilder;
+import model.model.builder.GenreBuilder;
 import model.model.builder.LieuBuilder;
 import model.model.builder.RealisateurBuilder;
 import services.OMDBProxy;
@@ -21,6 +22,11 @@ public class buildFinalCSV {
 	Map<String, LieuBuilder> 	dictLieu;
 	
 	final static String API_KEY = "b82b2479";
+	
+	static int LAST_ID_MOVIE 		= 0;
+	static int LAST_ID_LIEU 		= 0;
+	static int LAST_ID_REALISATEUR  = 0;
+	static int LAST_ID_GENRE 		= 0;
 	
 	final static byte INDEX_FI_key_film 		= 0;
 	final static byte INDEX_FI_TITRE 			= 1;
@@ -45,9 +51,10 @@ public class buildFinalCSV {
 		//dictGenres = new HashMap<String, Genre>();
 		//dictRealisateurs = new HashMap<String, Realisateur>();
 		//dictLieux = new HashMap<String, Lieu>();
-		Map<String, FilmBuilder> 		dictFilm = new HashMap<String, FilmBuilder>();
-		Map<String, LieuBuilder> 		dictLieu = new HashMap<String, LieuBuilder>();
-		Map<String, RealisateurBuilder> dictReal = new HashMap<String, RealisateurBuilder>();
+		Map<String, FilmBuilder> 		dictFilm 	= new HashMap<String, FilmBuilder>();
+		Map<String, LieuBuilder> 		dictLieu 	= new HashMap<String, LieuBuilder>();
+		Map<String, RealisateurBuilder> dictReal	= new HashMap<String, RealisateurBuilder>();
+		Map<String, GenreBuilder> 		dictGenre 	= new HashMap<String, GenreBuilder>();
 		OMDBProxy proxy = new OMDBProxy();
 		
 		firstLoad(System.getProperty("user.dir") + "/src/datas/talendOutput/FilmsIncomplete.csv", dictFilm);
@@ -88,11 +95,16 @@ public class buildFinalCSV {
 		
 		// DEUXIEME PASSES :)
 		// -----------------------------------------------------------------------------------------------------------------------
+		LAST_ID_MOVIE = dictFilm.size();
+		LAST_ID_REALISATEUR = dictReal.size();
+		LAST_ID_LIEU = dictLieu.size();
+		LAST_ID_GENRE = 0;
+		
 		
 		// Itération des films et requêtage
 		for(String aMovieKey : dictFilm.keySet()) {
 			FilmBuilder aMovie = dictFilm.get(aMovieKey);
-			if (aMovie.anneeSortie == "<NONE>" || aMovie.genreDominant == null || aMovie.realisateur == null || aMovie.note == -1.0f) {
+			if (aMovie.anneeSortie.equals("") || aMovie.genreDominant == null || aMovie.realisateur == null || aMovie.note == -1.0f) {
 				
 				HashMap<String, String> response = null;
 				
@@ -102,7 +114,7 @@ public class buildFinalCSV {
 					response = proxy.getMovieInfosByTitle(API_KEY, aMovie.titre);
 				}
 				
-				if (response != null) {
+				if (response != null && response.size() > 2) { // >~ 2 : Pas d'erreur
 					// TODO : Compléter : 
 					
 					// Exemple de requête : http://www.omdbapi.com/?y=&plot=short&r=json&apikey=b82b2479&i=tt0046066
@@ -112,15 +124,51 @@ public class buildFinalCSV {
 					 * 
 					 */
 					
-					aMovie.anneeSortie = (aMovie.anneeSortie != response.get("Year")) ? response.get("Year") : aMovie.anneeSortie;
-					//aMovie.realisateur = (aMovie.realisateur.equals(response.get("Director"))) ? new RealisateurBuilder(response.get("Director")) : aMovie.realisateur;
-					
-					String[] genres = response.get("Genre").split(", ");
-					if (genres.length > 0) {
-						
+					// TRAITEMENT MOVIE : -----------------------
+					// -> Si pas ANNEE SORTIE
+					if (aMovie.anneeSortie.equals("")) {
+						aMovie.anneeSortie = response.get("Year");
 					}
 					
+					// -> Si pas REALISATEUR
+					if (aMovie.realisateur == null) {
+						String nomRealisateur = response.get("Director");
+						
+						if (!dictReal.containsKey(nomRealisateur)) {
+							RealisateurBuilder newRealisateur = new RealisateurBuilder(LAST_ID_REALISATEUR, nomRealisateur);
+							aMovie.realisateur = newRealisateur;
+							
+							dictReal.put(nomRealisateur, newRealisateur);
+							LAST_ID_REALISATEUR++;
+						} else {
+							aMovie.realisateur = dictReal.get(response.get("Director"));
+						}
+					}
+					
+					// -> Si pas GENRE :
+					if (aMovie.genreDominant == null) {
+						String[] genres = response.get("Genre").split(", ");
+						if (genres.length > 0) {
+							for (String aGenre : genres) {
+								if (!dictGenre.containsKey(aGenre)) {
+									dictGenre.put(aGenre, new GenreBuilder(LAST_ID_GENRE, aGenre));
+									LAST_ID_GENRE++;
+								}
+							}
+							aMovie.genreDominant = dictGenre.get(genres[0]);
+						}
+					}
+					
+					// -> Si pas NOTE :
+					if (aMovie.note == -1.0f) {
+						aMovie.note = Float.parseFloat(response.get("imdbRating"));
+					}
+					
+				} else {
+					System.out.println("ERROR : " + response.get("Error"));
 				}
+				
+				System.out.println(aMovie);
 			}
 		}
 	}

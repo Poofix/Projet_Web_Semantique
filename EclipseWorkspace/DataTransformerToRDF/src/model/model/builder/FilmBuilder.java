@@ -13,9 +13,9 @@ import services.Utils;
 public class FilmBuilder {
 	public int 					imdbId 			 = -1;
 	public int 					id				 = -1;
-	public String 				titre			 = "<NONE>";
-	public String 				anneeSortie		 = "<NONE>";
-	public Genre 				genreDominant	 = null;
+	public String 				titre			 = "";
+	public String 				anneeSortie		 = "";
+	public GenreBuilder			genreDominant	 = null;
 	public RealisateurBuilder 	realisateur		 = null;
 	public List<LieuBuilder> 	lieuxDeTournages = null;
 	public float				note		 	 = -1.0f;

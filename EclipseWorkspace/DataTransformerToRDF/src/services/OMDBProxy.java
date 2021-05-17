@@ -89,8 +89,14 @@ public class OMDBProxy {
 			
 			JSONObject obj = new JSONObject(result);
 			for (String key : obj.keySet()) {
-				String val = obj.getString(key);
-				ret.put(key, val);
+				String val = "";
+				try {
+					val = obj.getString(key);
+					ret.put(key, val);
+				} catch (org.json.JSONException ex) {
+					continue; // On passe
+				}
+				
 			}
 			
 		} catch (IOException e) {
@@ -122,12 +128,6 @@ public class OMDBProxy {
 		
 		try {
 			System.out.println("Envoie requête : " + this.baseUrl + "&apikey=" + URLEncoder.encode(apiKey, "UTF-8").toString() + "&i=tt" + URLEncoder.encode(titleRequest, "UTF-8").toString());
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		/*try {
 			url = new URL(this.baseUrl + "&apikey=" + URLEncoder.encode(apiKey, "UTF-8") + "&i=tt" + URLEncoder.encode(titleRequest, "UTF-8"));
 			conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET");
@@ -139,15 +139,21 @@ public class OMDBProxy {
 			
 			JSONObject obj = new JSONObject(result);
 			for (String key : obj.keySet()) {
-				String val = obj.getString(key);
-				ret.put(key, val);
+				String val = "";
+				try {
+					val = obj.getString(key);
+					ret.put(key, val);
+				} catch (org.json.JSONException ex) {
+					continue; // On passe
+				}
+				
 			}
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
-		}*/
+		}
 		
 		return ret;
 	}
