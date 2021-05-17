@@ -113,7 +113,7 @@ public class buildFinalCSV {
 			if (aMovie.anneeSortie.equals("") || aMovie.genres.size() > 0 || aMovie.realisateur == null || aMovie.note == -1.0f) {
 				
 				HashMap<String, String> response = null;
-				if (cpt < 2) {
+				if (cpt < 100) {
 					cpt++;
 					response = intelligentLoader.makeIntelligentCallOMDB(aMovie);
 
@@ -187,7 +187,10 @@ public class buildFinalCSV {
 
 					// -> Si pas NOTE :
 					if (aMovie.note == -1.0f) {
-						aMovie.note = Float.parseFloat(response.get("imdbRating"));
+						Object ranking = response.get("imdbRating");
+						if ((ranking != null) && (!ranking.equals("N/A"))) {
+							aMovie.note = Float.parseFloat(response.get("imdbRating"));
+						}
 					}
 				} else {
 					System.out.println("ERROR : " + response.get("Error"));
