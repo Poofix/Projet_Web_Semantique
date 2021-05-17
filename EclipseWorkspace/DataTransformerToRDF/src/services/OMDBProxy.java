@@ -3,6 +3,7 @@ package services;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URL;
@@ -13,16 +14,17 @@ import org.json.JSONObject; // penser à rajouter la bibliothèque json-20141113
 
 public class OMDBProxy {
 
-	private String baseUrl = "http://www.omdbapi.com/?y=&plot=short&r=json&t=";// base de l'url correspondant à la
+	//private String baseTitleUrl = "http://www.omdbapi.com/?y=&plot=short&r=json&t=";// base de l'url correspondant à la
 																				// requête get qui devra être
 																				// compléter avec le nom du film à
-																				// considérer
-
+																				// considére
+	private String baseUrl = "http://www.omdbapi.com/?y=&plot=short&r=json";
+	
 	public OMDBProxy() {
 
 	}
 
-	public HashMap<String, String> getMovieInfos(String movieTitle) { // permet pour un titre de film de récupérer un
+	/*public HashMap<String, String> getMovieInfos(String movieTitle) { // permet pour un titre de film de récupérer un
 																		// hachage contenant les couples (propriété du
 																		// film / valeur) retournés par OMDB
 		HashMap<String, String> ret = new HashMap<>();
@@ -54,6 +56,99 @@ public class OMDBProxy {
 			e.printStackTrace();
 		}
 
+		return ret;
+	}*/
+	
+	public HashMap<String, String> getMovieInfosByTitle(String apiKey, String movieTitle) { // permet pour un titre de film de récupérer un
+		// hachage contenant les couples (propriété du
+		// film / valeur) retournés par OMDB
+		HashMap<String, String> ret = new HashMap<>();
+		
+		URL url;
+		HttpURLConnection conn;
+		BufferedReader rd;
+		String line;
+		String result = "";
+		
+		try {
+			System.out.println("Envoie requ�te : " + this.baseUrl + "&apikey=" + URLEncoder.encode(apiKey, "UTF-8") + "&t=" + URLEncoder.encode(movieTitle, "UTF-8"));
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		/*try {
+			url = new URL(this.baseUrl + "&apikey=" + URLEncoder.encode(apiKey, "UTF-8") + "&t=" + URLEncoder.encode(movieTitle, "UTF-8"));
+			conn = (HttpURLConnection) url.openConnection();
+			conn.setRequestMethod("GET");
+			rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			while ((line = rd.readLine()) != null) {
+				result += line;
+			}
+			rd.close();
+			
+			JSONObject obj = new JSONObject(result);
+			for (String key : obj.keySet()) {
+				String val = obj.getString(key);
+				ret.put(key, val);
+			}
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}*/
+		
+		return ret;
+	}
+	
+	public HashMap<String, String> getMovieInfosById(String apiKey, String movieId) { // permet pour un titre de film de récupérer un
+		// hachage contenant les couples (propriété du
+		// film / valeur) retournés par OMDB
+		HashMap<String, String> ret = new HashMap<>();
+		
+		URL url;
+		HttpURLConnection conn;
+		BufferedReader rd;
+		String line;
+		String result = "";
+		
+		String titleRequest = "";
+		int iLenDiff = 7 - movieId.length();
+		for(int i=0; i<iLenDiff; i++) {
+			titleRequest += "0";
+		}
+		titleRequest += movieId;
+		
+		try {
+			System.out.println("Envoie requ�te : " + this.baseUrl + "&apikey=" + URLEncoder.encode(apiKey, "UTF-8").toString() + "&i=tt" + URLEncoder.encode(titleRequest, "UTF-8").toString());
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		/*try {
+			url = new URL(this.baseUrl + "&apikey=" + URLEncoder.encode(apiKey, "UTF-8") + "&i=tt" + URLEncoder.encode(titleRequest, "UTF-8"));
+			conn = (HttpURLConnection) url.openConnection();
+			conn.setRequestMethod("GET");
+			rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			while ((line = rd.readLine()) != null) {
+				result += line;
+			}
+			rd.close();
+			
+			JSONObject obj = new JSONObject(result);
+			for (String key : obj.keySet()) {
+				String val = obj.getString(key);
+				ret.put(key, val);
+			}
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}*/
+		
 		return ret;
 	}
 
