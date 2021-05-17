@@ -8,7 +8,7 @@ public class FilmBuilder {
 	public int 					id				 = -1;
 	public String 				titre			 = "";
 	public String 				anneeSortie		 = "";
-	public GenreBuilder			genreDominant	 = null;
+	public List<GenreBuilder>	genres	 		 = null;
 	public RealisateurBuilder 	realisateur		 = null;
 	public List<LieuBuilder> 	lieuxDeTournages = null;
 	public float				note		 	 = -1.0f;
@@ -21,5 +21,6 @@ public class FilmBuilder {
 		this.realisateur = real;
 		
 		this.lieuxDeTournages = new ArrayList<LieuBuilder>(); // Ici on peut se permettre de faire un ArrayList
+		this.genres = new ArrayList<GenreBuilder>();
 	}
 }

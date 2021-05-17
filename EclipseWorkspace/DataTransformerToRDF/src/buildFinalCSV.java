@@ -21,12 +21,6 @@ import services.Utils;
 
 public class buildFinalCSV {
 
-	// Map<String, Genre> dictGenres;
-	// Map<String, Realisateur> dictRealisateurs;
-	// Map<String, Lieu> dictLieux;
-	// Map<String, FilmBuilder> dictFilm;
-	// Map<String, LieuBuilder> dictLieu;
-
 	final static String API_KEY = "b82b2479";
 	
 	static int LAST_ID_MOVIE 		= 0;
@@ -54,9 +48,7 @@ public class buildFinalCSV {
 	final static byte INDEX_Lieu_geo_point_2d 	= 7;
 		
 	public static void main(String[] args) {
-		//dictGenres = new HashMap<String, Genre>();
-		//dictRealisateurs = new HashMap<String, Realisateur>();
-		//dictLieux = new HashMap<String, Lieu>();
+
 		Map<String, FilmBuilder> 		dictFilm 	= new HashMap<String, FilmBuilder>();
 		Map<String, LieuBuilder> 		dictLieu 	= new HashMap<String, LieuBuilder>();
 		Map<String, RealisateurBuilder> dictReal	= new HashMap<String, RealisateurBuilder>();
@@ -92,13 +84,13 @@ public class buildFinalCSV {
 		 * }
 		 */
 
-		// Ajout des rï¿½alisateurs + merges dans les films :
-		addAndMergeRealisateur(System.getProperty("user.dir") + "/src/datas/talendOutput/asso_film_lieu.csv", dictFilm,
+		// Ajout des realisateurs + merges dans les films :
+		addAndMergeRealisateur(System.getProperty("user.dir") + "/src/datas/talendOutput/out.csv", dictFilm,
 				dictReal);
 		/*
 		 * for(String aMovieKey : dictFilm.keySet()) { FilmBuilder aMovie =
 		 * dictFilm.get(aMovieKey); if (!aMovie.realisateur.equals(null)) {
-		 * System.out.println(aMovie.titre + " ---------> a un rï¿½alisateur"); }
+		 * System.out.println(aMovie.titre + " ---------> a un realisateur"); }
 		 * 
 		 * }
 		 */
@@ -111,10 +103,10 @@ public class buildFinalCSV {
 		LAST_ID_GENRE = 0;
 		
 		
-		// Itï¿½ration des films et requï¿½tage
-		for (String aMovieKey : dictFilm.keySet()) {
+		// Iteration des films et requetage
+		/*for (String aMovieKey : dictFilm.keySet()) {
 			FilmBuilder aMovie = dictFilm.get(aMovieKey);
-			if (aMovie.anneeSortie.equals("") || aMovie.genreDominant == null || aMovie.realisateur == null || aMovie.note == -1.0f) {
+			if (aMovie.anneeSortie.equals("") || aMovie.genres.size() > 0 || aMovie.realisateur == null || aMovie.note == -1.0f) {
 				
 				HashMap<String, String> response = null;
 
@@ -124,27 +116,39 @@ public class buildFinalCSV {
 					response = proxy.getMovieInfosByTitle(API_KEY, aMovie.titre);
 				}
 				
-				if (response != null && response.size() > 2) { // >~ 2 : Pas d'erreur
-					// TODO : Complï¿½ter : 
+				if (response != null && response.size() > 2) { // >~ 2 : Pas d'erreur		
+					// Exemple de requete : http://www.omdbapi.com/?y=&plot=short&r=json&apikey=b82b2479&i=tt0046066
 					
-					// Exemple de requï¿½te : http://www.omdbapi.com/?y=&plot=short&r=json&apikey=b82b2479&i=tt0046066
-					
-					/*
-					 * {"Title":"Mesa of Lost Women","Year":"1953","Rated":"Approved",
-					 * "Released":"17 Jun 1953","Runtime":"70 min","Genre":"Horror, Sci-Fi"
-					 * ,"Director":"Ron Ormond, Herbert Tevos"
-					 * ,"Writer":"Herbert Tevos (written for the screen by)"
-					 * ,"Actors":"Jackie Coogan, Allan Nixon, Richard Travis, Lyle Talbot"
-					 * ,"Plot":"A mad scientist named Arana is creating giant spiders and dwarfs in his lab on Zarpa Mesa in Mexico. He wants to create a master race of superwomen by injecting his female subjects with spider venom."
-					 * ,"Language":"English","Country":"USA","Awards":"N/A","Poster":
-					 * "https://m.media-amazon.com/images/M/MV5BZWNjNzFhYmYtNzFmZi00MjY4LTk3MDMtZWVjNjZlZWZlMjI0XkEyXkFqcGdeQXVyMTQ2MjQyNDc@._V1_SX300.jpg"
-					 * ,"Ratings":[{"Source":"Internet Movie Database","Value":"2.8/10"},{
-					 * "Source":"Rotten Tomatoes","Value":"17%"}],"Metascore":"N/A","imdbRating":
-					 * "2.8","imdbVotes":"1,440","imdbID":"tt0046066","Type":"movie",
-					 * "DVD":"27 Jul 2016","BoxOffice":"N/A","Production":"Ron Ormond Productions"
-					 * ,"Website":"N/A","Response":"True"}
-					 * 
-					 */
+					// {"Title":"Mesa of Lost Women",
+					// "Year":"1953",
+					// "Rated":"Approved",
+					// "Released":"17 Jun 1953",
+					// "Runtime":"70 min",
+					// "Genre":"Horror, Sci-Fi",
+					// "Director":"Ron Ormond, Herbert Tevos",
+					// "Writer":"Herbert Tevos (written for the screen by)",
+					// "Actors":"Jackie Coogan, Allan Nixon, Richard Travis, Lyle Talbot",
+					// "Plot":"A mad scientist named Arana is creating giant spiders and dwarfs in his lab on Zarpa Mesa in Mexico. He wants to create a master race of superwomen by injecting his female subjects with spider venom.",
+					// "Language":"English",
+					// "Country":"USA",
+					// "Awards":"N/A",
+					// "Poster": "https://m.media-amazon.com/images/M/MV5BZWNjNzFhYmYtNzFmZi00MjY4LTk3MDMtZWVjNjZlZWZlMjI0XkEyXkFqcGdeQXVyMTQ2MjQyNDc@._V1_SX300.jpg",
+					// "Ratings":[
+					// {"Source":"Internet Movie Database","Value":"2.8/10"},
+					// {"Source":"Rotten Tomatoes","Value":"17%"}
+					// ],
+					// "Metascore":"N/A",
+					// "imdbRating":"2.8",
+					// "imdbVotes":"1,440",
+					// "imdbID":"tt0046066",
+					// "Type":"movie",
+					// "DVD":"27 Jul 2016",
+					// "BoxOffice":"N/A",
+					// "Production":"Ron Ormond Productions",
+					// "Website":"N/A",
+					// "Response":"True"}
+					// 
+					//
 					
 					// TRAITEMENT MOVIE : -----------------------
 					// -> Si pas ANNEE SORTIE
@@ -153,34 +157,44 @@ public class buildFinalCSV {
 					}
 					
 					// -> Si pas REALISATEUR
-					if (aMovie.realisateur == null) {
-						String nomRealisateur = response.get("Director");
+					if (aMovie.realisateur.id == -1) {
+						String nomRealisateur = response.get("Director").split(", ")[0];
+						
+						RealisateurBuilder unNouveauRealisateur = null;
 						
 						if (!dictReal.containsKey(nomRealisateur)) {
-							RealisateurBuilder newRealisateur = new RealisateurBuilder(LAST_ID_REALISATEUR, nomRealisateur);
-							aMovie.realisateur = newRealisateur;
-							
-							dictReal.put(nomRealisateur, newRealisateur);
+							unNouveauRealisateur = new RealisateurBuilder(LAST_ID_REALISATEUR,nomRealisateur);
+							dictReal.put(nomRealisateur, unNouveauRealisateur);
 							LAST_ID_REALISATEUR++;
 						} else {
-							aMovie.realisateur = dictReal.get(response.get("Director"));
+							unNouveauRealisateur = dictReal.get(nomRealisateur);
 						}
+						
+						aMovie.realisateur = unNouveauRealisateur;
 					}
 					
 					// -> Si pas GENRE :
-					if (aMovie.genreDominant == null) {
+					if (aMovie.genres.size() == 0) {
 						String[] genres = response.get("Genre").split(", ");
 						if (genres.length > 0) {
 							for (String aGenre : genres) {
+								
+								GenreBuilder unNouveauGenre = null;
+								
+								
 								if (!dictGenre.containsKey(aGenre)) {
-									dictGenre.put(aGenre, new GenreBuilder(LAST_ID_GENRE, aGenre));
+									unNouveauGenre = new GenreBuilder(LAST_ID_GENRE, aGenre);
+									dictGenre.put(aGenre, unNouveauGenre);
 									LAST_ID_GENRE++;
+								} else {
+									unNouveauGenre = dictGenre.get(aGenre);
 								}
+								
+								aMovie.genres.add(unNouveauGenre);
 							}
-							aMovie.genreDominant = dictGenre.get(genres[0]);
 						}
 					}
-					
+
 					// -> Si pas NOTE :
 					if (aMovie.note == -1.0f) {
 						aMovie.note = Float.parseFloat(response.get("imdbRating"));
@@ -192,14 +206,13 @@ public class buildFinalCSV {
 				
 				System.out.println(aMovie);
 			}
-		}
+		}*/
 
 		writeOutPutFile(dictFilm, dictLieu, dictReal,dictGenre);
 	}
 
 	private static void writeOutPutFile(Map<String, FilmBuilder> dictFilm2, Map<String, LieuBuilder> dictLieu2,
 			Map<String, RealisateurBuilder> dictReal, Map<String, GenreBuilder> dictGenre) {
-		// TODO Auto-generated method stub
 		writeOutputFilm(dictFilm2);
 		writeOutputLieu(dictLieu2);
 		writeOutputRealisateur(dictReal);
@@ -208,7 +221,6 @@ public class buildFinalCSV {
 	}
 
 	private static void writeOutputGenre(Map<String, GenreBuilder> dictGenre) {
-		// TODO Auto-generated method stub
 		List<String> col = new ArrayList<String>();
 		col.add("id");
 		col.add("label");
@@ -217,7 +229,7 @@ public class buildFinalCSV {
 			List<String> line = new ArrayList<String>();
 			line.add(g.id + "");
 			line.add(g.label);
-			if (line.size() > col.size()) {
+			if (line.size() >= col.size()) {
 				data.add(line);
 			}
 		}
@@ -226,7 +238,6 @@ public class buildFinalCSV {
 	}
 
 	private static void writeOutputRealisateur(Map<String, RealisateurBuilder> dictReal) {
-		// TODO Auto-generated method stub
 		List<String> col = new ArrayList<String>();
 		col.add("id");
 		col.add("nom");
@@ -236,9 +247,9 @@ public class buildFinalCSV {
 			List<String> line = new ArrayList<String>();
 			line.add(r.id + "");
 			line.add(r.nom);
-			line.add(r.genreDePredilection.id + "");
+			line.add("");//line.add(r.genreDePredilection.id + ""); /// TODO : A determiner
 
-			if (line.size() > col.size()) {
+			if (line.size() >= col.size()) {
 				data.add(line);
 			}
 		}
@@ -247,7 +258,6 @@ public class buildFinalCSV {
 	}
 
 	private static void writeOutputLieu(Map<String, LieuBuilder> dictLieu2) {
-		// TODO Auto-generated method stub
 		List<String> col = new ArrayList<String>();
 		col.add("id");
 		col.add("adresse");
@@ -260,7 +270,7 @@ public class buildFinalCSV {
 			line.add(l.adresse);
 			line.add(l.ville);
 			line.add(l.codePostal);
-			if (line.size() > col.size()) {
+			if (line.size() >= col.size()) {
 				data.add(line);
 			}
 		}
@@ -269,7 +279,6 @@ public class buildFinalCSV {
 	}
 
 	private static void writeOutputFilm(Map<String, FilmBuilder> dictFilm2) {
-		// TODO Auto-generated method stub
 		List<String> col = new ArrayList<String>();
 		col.add("id");
 		col.add("titre");
@@ -284,15 +293,15 @@ public class buildFinalCSV {
 			for (LieuBuilder l : f.lieuxDeTournages) {
 				line.add(f.id + "");
 				line.add(f.titre);
-				line.add(f.anneeSortie);
-				line.add(f.genreDominant.id + "");
+				line.add(f.anneeSortie != "" ? f.anneeSortie : "<DEBUG-ANNEE>");
+				line.add(f.genres.size() > 0 ? String.valueOf(f.genres.get(0).id) : "<DEBUG-GENRE>"); // TODO : A remplacer
 				line.add(f.realisateur.id + "");
 				line.add(l.id+ "");
 				line.add(f.note + "");
 			}
 			
 			
-			if (line.size() > col.size()) {
+			if (line.size() >= col.size()) {
 				data.add(line);
 			}
 		}
@@ -302,31 +311,36 @@ public class buildFinalCSV {
 
 	private static void writeCsv(String filePath, List<String> columnsList, List<List<String>> data) {
 
-		if (columnsList.size() != data.get(0).size()) {
-			System.out.println("ERREUR, diffï¿½rences de colonnes entre les datas et le hearder");
-		} else {
+		try {
+			if (columnsList.size() != data.get(0).size()) {
+				System.out.println("ERREUR, differences de colonnes entre les datas et le hearder");
+			} else {
 
-			PrintWriter pw = null;
-			try {
-				pw = new PrintWriter(new File("NewData.csv"));
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
-			StringBuilder builder = new StringBuilder();
-			builder.append(String.join(";", columnsList));
-			builder.append("\n");
-			for (List<String> rowData : data) {
-				builder.append(String.join(";", rowData));
+				PrintWriter pw = null;
+				try {
+					pw = new PrintWriter(new File(filePath));
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				}
+				StringBuilder builder = new StringBuilder();
+				builder.append(String.join(";", columnsList));
 				builder.append("\n");
+				for (List<String> rowData : data) {
+					builder.append(String.join(";", rowData));
+					builder.append("\n");
+				}
+				pw.write(builder.toString());
+				pw.close();
 			}
-			pw.write(builder.toString());
-			pw.close();
+		} catch(Exception ex) {
+			//System.out.println(ex.getMessage());
 		}
+		
 	}
 
 	/**
 	 * Cette fonction permet de charger le fichier "FilmsIncomplete" et de remplir
-	 * les champs associï¿½s
+	 * les champs associes
 	 * 
 	 * @param csvFilePath
 	 */
@@ -408,6 +422,7 @@ public class buildFinalCSV {
 					int key_lieu = -1;
 					String id_lieu = "";
 					String adresse_lieu = "";
+					String ville = "";
 					String ardt_lieu = "";
 
 					try {
@@ -415,6 +430,12 @@ public class buildFinalCSV {
 						id_lieu = nextLine[INDEX_Lieu_id_lieu];
 						adresse_lieu = nextLine[INDEX_Lieu_adresse_lieu];
 						ardt_lieu = nextLine[INDEX_Lieu_ardt_lieu];
+						
+						/*if (adresse_lieu.split(", ").length > 1) {
+							ville = adresse_lieu.split(", ")[1].split(" ")[1]; // TODO : nul !
+						}*/
+						
+						ville = "Paris";
 
 					} catch (java.lang.ArrayIndexOutOfBoundsException e) {
 						// ERROR QUE NOUS IGNORONS :)
@@ -424,7 +445,7 @@ public class buildFinalCSV {
 
 					dico.put(nextLine[INDEX_Lieu_key_lieu], new LieuBuilder(key_lieu,
 							// id_lieu,
-							adresse_lieu, "", ardt_lieu));
+							adresse_lieu, ville, ardt_lieu));
 
 				}
 			}
@@ -507,29 +528,23 @@ public class buildFinalCSV {
 					int id = -1;
 					String movieId = "";
 					String realisateurName = "";
-
-					if (nextLine.length == 3) {
-						id = Integer.parseInt(nextLine[0]);
-						movieId = nextLine[1];
-						realisateurName = nextLine[2];
-					} else {
-						id = Integer.parseInt(nextLine[0]);
-						// movieId = nextLine[1];
-						realisateurName = nextLine[1];
-					}
+					
+					id = Integer.parseInt(nextLine[0]);
+					movieId = nextLine[1];
+					realisateurName = nextLine[2];
 
 					RealisateurBuilder aRealisateur = new RealisateurBuilder(id, realisateurName);
 
-					realisateurs.put(nextLine[0], new RealisateurBuilder(id, realisateurName));
+					realisateurs.put(nextLine[0], aRealisateur);
 
 					FilmBuilder thisMovie = movies.get(movieId);
 					if (thisMovie == null) {
 						System.err.println(
-								"Le film " + movieId + " n'existe pas ... Le realisateur ne peut pas ï¿½tre ajoutï¿½...");
+								"Le film \"" + movieId + "\" n'existe pas ... Le realisateur est créé mais pas associé.");
 						continue;
 					} else {
 						thisMovie.realisateur = aRealisateur;
-						// TODO : Problï¿½me ici : Si plusieurs rï¿½alisateurs ... ?
+						// TODO : Probleme ici : Si plusieurs realisateurs ... ?
 					}
 				}
 			}
