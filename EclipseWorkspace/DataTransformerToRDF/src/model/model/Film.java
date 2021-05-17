@@ -6,7 +6,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import model.IRDFGenerator;
 import model.Triplet;
-import services.Utils;
 
 public class Film implements IRDFGenerator {
 	private static final AtomicInteger count = new AtomicInteger(0);

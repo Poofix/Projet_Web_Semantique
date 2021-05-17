@@ -2,13 +2,6 @@ package model.model.builder;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-
-import model.IRDFGenerator;
-import model.Triplet;
-import model.model.Genre;
-import model.model.Realisateur;
-import services.Utils;
 
 public class FilmBuilder {
 	public int 					imdbId 			 = -1;
