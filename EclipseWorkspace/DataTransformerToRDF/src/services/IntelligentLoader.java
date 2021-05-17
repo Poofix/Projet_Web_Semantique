@@ -30,17 +30,18 @@ public class IntelligentLoader {
 	}
 
 	public String searchRequestExist(int id) {
-		File dir = new File(RepertoirePath + "/id/"+id+".txt");
-		if (dir.exists()) {
+		File aFile = new File(RepertoirePath + "/id/"+id+".txt");
+		if (aFile.exists()) {
 			return RepertoirePath + "/id/"+id+".txt";
 		}
 		return null;
 	}
 
 	public String searchRequestExist(String titre) {
-		File dir = new File(RepertoirePath + "/titre/"+titre+".txt");
-		if (dir.exists()) {
-			return RepertoirePath + "/id/"+titre+".txt";
+		String formalizedTitle = Utils.normalize(titre);
+		File aFile = new File(RepertoirePath + "/titre/"+formalizedTitle+".txt");
+		if (aFile.exists()) {
+			return RepertoirePath + "/titre/"+formalizedTitle+".txt";
 		}
 		return null;
 	}
