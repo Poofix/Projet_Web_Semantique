@@ -16,44 +16,49 @@ import model.model.builder.FilmBuilder;
 import model.model.builder.GenreBuilder;
 import model.model.builder.LieuBuilder;
 import model.model.builder.RealisateurBuilder;
+import services.IntelligentLoader;
 import services.OMDBProxy;
 import services.Utils;
 
 public class buildFinalCSV {
 
 	final static String API_KEY = "b82b2479";
-	
-	static int LAST_ID_MOVIE 		= 0;
-	static int LAST_ID_LIEU 		= 0;
-	static int LAST_ID_REALISATEUR  = 0;
-	static int LAST_ID_GENRE 		= 0;
-	
-	final static byte INDEX_FI_key_film 		= 0;
-	final static byte INDEX_FI_TITRE 			= 1;
-	final static byte INDEX_FI_AUTEUR 			= 2;
-	final static byte INDEX_FI_nbEmprunt 		= 3;
-	final static byte INDEX_FI_annee_tournage	= 4;
-	final static byte INDEX_FI_type_tournage 	= 5;
-	final static byte INDEX_FI_imdbid			= 6;
-	final static byte INDEX_FI_year 			= 7;
-	final static byte INDEX_FI_rating		 	= 8;
-	
-	final static byte INDEX_Lieu_key_lieu 		= 0;
-	final static byte INDEX_Lieu_id_lieu 		= 1;
-	final static byte INDEX_Lieu_adresse_lieu 	= 2;
-	final static byte INDEX_Lieu_ardt_lieu 		= 3;
-	final static byte INDEX_Lieu_coord_x		= 4;
-	final static byte INDEX_Lieu_coord_y 		= 5;
-	final static byte INDEX_Lieu_geo_shape		= 6;
-	final static byte INDEX_Lieu_geo_point_2d 	= 7;
-		
+
+	static int LAST_ID_MOVIE = 0;
+	static int LAST_ID_LIEU = 0;
+	static int LAST_ID_REALISATEUR = 0;
+	static int LAST_ID_GENRE = 0;
+
+	final static byte INDEX_FI_key_film = 0;
+	final static byte INDEX_FI_TITRE = 1;
+	final static byte INDEX_FI_AUTEUR = 2;
+	final static byte INDEX_FI_nbEmprunt = 3;
+	final static byte INDEX_FI_annee_tournage = 4;
+	final static byte INDEX_FI_type_tournage = 5;
+	final static byte INDEX_FI_imdbid = 6;
+	final static byte INDEX_FI_year = 7;
+	final static byte INDEX_FI_rating = 8;
+
+	final static byte INDEX_Lieu_key_lieu = 0;
+	final static byte INDEX_Lieu_id_lieu = 1;
+	final static byte INDEX_Lieu_adresse_lieu = 2;
+	final static byte INDEX_Lieu_ardt_lieu = 3;
+	final static byte INDEX_Lieu_coord_x = 4;
+	final static byte INDEX_Lieu_coord_y = 5;
+	final static byte INDEX_Lieu_geo_shape = 6;
+	final static byte INDEX_Lieu_geo_point_2d = 7;
+
 	public static void main(String[] args) {
 
-		Map<String, FilmBuilder> 		dictFilm 	= new HashMap<String, FilmBuilder>();
-		Map<String, LieuBuilder> 		dictLieu 	= new HashMap<String, LieuBuilder>();
-		Map<String, RealisateurBuilder> dictReal	= new HashMap<String, RealisateurBuilder>();
-		Map<String, GenreBuilder> 		dictGenre 	= new HashMap<String, GenreBuilder>();
-		OMDBProxy proxy = new OMDBProxy();
+		// dictGenres = new HashMap<String, Genre>();
+		// dictRealisateurs = new HashMap<String, Realisateur>();
+		// dictLieux = new HashMap<String, Lieu>();
+		Map<String, FilmBuilder> dictFilm = new HashMap<String, FilmBuilder>();
+		Map<String, LieuBuilder> dictLieu = new HashMap<String, LieuBuilder>();
+		Map<String, RealisateurBuilder> dictReal = new HashMap<String, RealisateurBuilder>();
+		Map<String, GenreBuilder> dictGenre = new HashMap<String, GenreBuilder>();
+		IntelligentLoader intelligentLoader = new IntelligentLoader(
+				"System.getProperty(\"user.dir\") + \"/src/datas/tmpRequest/", API_KEY);
 
 		firstLoad(System.getProperty("user.dir") + "/src/datas/talendOutput/FilmsIncomplete.csv", dictFilm);
 
@@ -102,54 +107,39 @@ public class buildFinalCSV {
 		LAST_ID_LIEU = dictLieu.size();
 		LAST_ID_GENRE = 0;
 		
-		
+		int cpt = 0;
 		// Iteration des films et requetage
-		/*for (String aMovieKey : dictFilm.keySet()) {
+		for (String aMovieKey : dictFilm.keySet()) {
 			FilmBuilder aMovie = dictFilm.get(aMovieKey);
 			if (aMovie.anneeSortie.equals("") || aMovie.genres.size() > 0 || aMovie.realisateur == null || aMovie.note == -1.0f) {
 				
 				HashMap<String, String> response = null;
+				if (cpt < 1) {
+					response = intelligentLoader.makeIntelligentCallOMDB(aMovie);
 
-				if (aMovie.imdbId != -1) {
-					response = proxy.getMovieInfosById(API_KEY, String.valueOf(aMovie.imdbId));
-				} else { // On passe par le titre ici
-					response = proxy.getMovieInfosByTitle(API_KEY, aMovie.titre);
-				}
-				
-				if (response != null && response.size() > 2) { // >~ 2 : Pas d'erreur		
-					// Exemple de requete : http://www.omdbapi.com/?y=&plot=short&r=json&apikey=b82b2479&i=tt0046066
-					
-					// {"Title":"Mesa of Lost Women",
-					// "Year":"1953",
-					// "Rated":"Approved",
-					// "Released":"17 Jun 1953",
-					// "Runtime":"70 min",
-					// "Genre":"Horror, Sci-Fi",
-					// "Director":"Ron Ormond, Herbert Tevos",
-					// "Writer":"Herbert Tevos (written for the screen by)",
-					// "Actors":"Jackie Coogan, Allan Nixon, Richard Travis, Lyle Talbot",
-					// "Plot":"A mad scientist named Arana is creating giant spiders and dwarfs in his lab on Zarpa Mesa in Mexico. He wants to create a master race of superwomen by injecting his female subjects with spider venom.",
-					// "Language":"English",
-					// "Country":"USA",
-					// "Awards":"N/A",
-					// "Poster": "https://m.media-amazon.com/images/M/MV5BZWNjNzFhYmYtNzFmZi00MjY4LTk3MDMtZWVjNjZlZWZlMjI0XkEyXkFqcGdeQXVyMTQ2MjQyNDc@._V1_SX300.jpg",
-					// "Ratings":[
-					// {"Source":"Internet Movie Database","Value":"2.8/10"},
-					// {"Source":"Rotten Tomatoes","Value":"17%"}
-					// ],
-					// "Metascore":"N/A",
-					// "imdbRating":"2.8",
-					// "imdbVotes":"1,440",
-					// "imdbID":"tt0046066",
-					// "Type":"movie",
-					// "DVD":"27 Jul 2016",
-					// "BoxOffice":"N/A",
-					// "Production":"Ron Ormond Productions",
-					// "Website":"N/A",
-					// "Response":"True"}
-					// 
-					//
-					
+					if (response != null && response.size() > 2) { // >~ 2 : Pas d'erreur
+						// TODO : Complï¿½ter :
+
+						// Exemple de requï¿½te :
+						// http://www.omdbapi.com/?y=&plot=short&r=json&apikey=b82b2479&i=tt0046066
+
+						/*
+						 * {"Title":"Mesa of Lost Women","Year":"1953","Rated":"Approved",
+						 * "Released":"17 Jun 1953","Runtime":"70 min","Genre":"Horror, Sci-Fi"
+						 * ,"Director":"Ron Ormond, Herbert Tevos"
+						 * ,"Writer":"Herbert Tevos (written for the screen by)"
+						 * ,"Actors":"Jackie Coogan, Allan Nixon, Richard Travis, Lyle Talbot"
+						 * ,"Plot":"A mad scientist named Arana is creating giant spiders and dwarfs in his lab on Zarpa Mesa in Mexico. He wants to create a master race of superwomen by injecting his female subjects with spider venom."
+						 * ,"Language":"English","Country":"USA","Awards":"N/A","Poster":
+						 * "https://m.media-amazon.com/images/M/MV5BZWNjNzFhYmYtNzFmZi00MjY4LTk3MDMtZWVjNjZlZWZlMjI0XkEyXkFqcGdeQXVyMTQ2MjQyNDc@._V1_SX300.jpg"
+						 * ,"Ratings":[{"Source":"Internet Movie Database","Value":"2.8/10"},{
+						 * "Source":"Rotten Tomatoes","Value":"17%"}],"Metascore":"N/A","imdbRating":
+						 * "2.8","imdbVotes":"1,440","imdbID":"tt0046066","Type":"movie",
+						 * "DVD":"27 Jul 2016","BoxOffice":"N/A","Production":"Ron Ormond Productions"
+						 * ,"Website":"N/A","Response":"True"}
+						 * 
+						 */
+
 					// TRAITEMENT MOVIE : -----------------------
 					// -> Si pas ANNEE SORTIE
 					if (aMovie.anneeSortie.equals("")) {
@@ -199,16 +189,16 @@ public class buildFinalCSV {
 					if (aMovie.note == -1.0f) {
 						aMovie.note = Float.parseFloat(response.get("imdbRating"));
 					}
-					
 				} else {
 					System.out.println("ERROR : " + response.get("Error"));
 				}
-				
+
 				System.out.println(aMovie);
 			}
-		}*/
+		}
 
-		writeOutPutFile(dictFilm, dictLieu, dictReal,dictGenre);
+			writeOutPutFile(dictFilm, dictLieu, dictReal, dictGenre);
+		}
 	}
 
 	private static void writeOutPutFile(Map<String, FilmBuilder> dictFilm2, Map<String, LieuBuilder> dictLieu2,
@@ -247,7 +237,7 @@ public class buildFinalCSV {
 			List<String> line = new ArrayList<String>();
 			line.add(r.id + "");
 			line.add(r.nom);
-			line.add("");//line.add(r.genreDePredilection.id + ""); /// TODO : A determiner
+			line.add("");// line.add(r.genreDePredilection.id + ""); /// TODO : A determiner
 
 			if (line.size() >= col.size()) {
 				data.add(line);
@@ -294,13 +284,13 @@ public class buildFinalCSV {
 				line.add(f.id + "");
 				line.add(f.titre);
 				line.add(f.anneeSortie != "" ? f.anneeSortie : "<DEBUG-ANNEE>");
-				line.add(f.genres.size() > 0 ? String.valueOf(f.genres.get(0).id) : "<DEBUG-GENRE>"); // TODO : A remplacer
+				line.add(f.genres.size() > 0 ? String.valueOf(f.genres.get(0).id) : "<DEBUG-GENRE>"); // TODO : A
+																										// remplacer
 				line.add(f.realisateur.id + "");
-				line.add(l.id+ "");
+				line.add(l.id + "");
 				line.add(f.note + "");
 			}
-			
-			
+
 			if (line.size() >= col.size()) {
 				data.add(line);
 			}
@@ -332,10 +322,10 @@ public class buildFinalCSV {
 				pw.write(builder.toString());
 				pw.close();
 			}
-		} catch(Exception ex) {
-			//System.out.println(ex.getMessage());
+		} catch (Exception ex) {
+			// System.out.println(ex.getMessage());
 		}
-		
+
 	}
 
 	/**
@@ -430,11 +420,12 @@ public class buildFinalCSV {
 						id_lieu = nextLine[INDEX_Lieu_id_lieu];
 						adresse_lieu = nextLine[INDEX_Lieu_adresse_lieu];
 						ardt_lieu = nextLine[INDEX_Lieu_ardt_lieu];
-						
-						/*if (adresse_lieu.split(", ").length > 1) {
-							ville = adresse_lieu.split(", ")[1].split(" ")[1]; // TODO : nul !
-						}*/
-						
+
+						/*
+						 * if (adresse_lieu.split(", ").length > 1) { ville =
+						 * adresse_lieu.split(", ")[1].split(" ")[1]; // TODO : nul ! }
+						 */
+
 						ville = "Paris";
 
 					} catch (java.lang.ArrayIndexOutOfBoundsException e) {
@@ -528,7 +519,7 @@ public class buildFinalCSV {
 					int id = -1;
 					String movieId = "";
 					String realisateurName = "";
-					
+
 					id = Integer.parseInt(nextLine[0]);
 					movieId = nextLine[1];
 					realisateurName = nextLine[2];
@@ -539,8 +530,8 @@ public class buildFinalCSV {
 
 					FilmBuilder thisMovie = movies.get(movieId);
 					if (thisMovie == null) {
-						System.err.println(
-								"Le film \"" + movieId + "\" n'existe pas ... Le realisateur est créé mais pas associé.");
+						System.err.println("Le film \"" + movieId
+								+ "\" n'existe pas ... Le realisateur est crï¿½ï¿½ mais pas associï¿½.");
 						continue;
 					} else {
 						thisMovie.realisateur = aRealisateur;

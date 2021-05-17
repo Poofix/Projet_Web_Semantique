@@ -59,11 +59,11 @@ public class OMDBProxy {
 		return ret;
 	}*/
 	
-	public HashMap<String, String> getMovieInfosByTitle(String apiKey, String movieTitle) { // permet pour un titre de film de récupérer un
+	public JSONObject getMovieInfosByTitle(String apiKey, String movieTitle) { // permet pour un titre de film de récupérer un
 		// hachage contenant les couples (propriété du
 		// film / valeur) retournés par OMDB
 		HashMap<String, String> ret = new HashMap<>();
-		
+		JSONObject obj = null;
 		URL url;
 		HttpURLConnection conn;
 		BufferedReader rd;
@@ -77,7 +77,7 @@ public class OMDBProxy {
 			e.printStackTrace();
 		}
 		
-		/*try {
+		try {
 			url = new URL(this.baseUrl + "&apikey=" + URLEncoder.encode(apiKey, "UTF-8") + "&t=" + URLEncoder.encode(movieTitle, "UTF-8"));
 			conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET");
@@ -87,8 +87,9 @@ public class OMDBProxy {
 			}
 			rd.close();
 			
-			JSONObject obj = new JSONObject(result);
-			for (String key : obj.keySet()) {
+			obj = new JSONObject(result);
+			
+			/*for (String key : obj.keySet()) {
 				String val = "";
 				try {
 					val = obj.getString(key);
@@ -98,17 +99,17 @@ public class OMDBProxy {
 				}
 				
 			}
-			
+			*/
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
-		}*/
+		}
 		
-		return ret;
+		return obj;
 	}
 	
-	public HashMap<String, String> getMovieInfosById(String apiKey, String movieId) { // permet pour un titre de film de récupérer un
+	public JSONObject getMovieInfosById(String apiKey, String movieId) { // permet pour un titre de film de récupérer un
 		// hachage contenant les couples (propriété du
 		// film / valeur) retournés par OMDB
 		HashMap<String, String> ret = new HashMap<>();
@@ -120,6 +121,7 @@ public class OMDBProxy {
 		String result = "";
 		
 		String titleRequest = "";
+		JSONObject obj = null;
 		int iLenDiff = 7 - movieId.length();
 		for(int i=0; i<iLenDiff; i++) {
 			titleRequest += "0";
@@ -137,8 +139,8 @@ public class OMDBProxy {
 			}
 			rd.close();
 			
-			JSONObject obj = new JSONObject(result);
-			for (String key : obj.keySet()) {
+			obj = new JSONObject(result);
+			/*for (String key : obj.keySet()) {
 				String val = "";
 				try {
 					val = obj.getString(key);
@@ -148,14 +150,14 @@ public class OMDBProxy {
 				}
 				
 			}
-			
+			*/
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
-		return ret;
+		return obj;
 	}
 
 }

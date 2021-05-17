@@ -13,5 +13,6 @@
 	<classpathentry kind="lib" path="C:/Users/AdminEtu/Desktop/REPOSITORY/Projet_Web_Semantique/EclipseWorkspace/DataTransformerToRDF/src/libs/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AdminEtu/Desktop/REPOSITORY/Projet_Web_Semantique/EclipseWorkspace/DataTransformerToRDF/src/libs/owlapi-distribution-3.4.10.jar"/>
 	<classpathentry kind="lib" path="C:/Users/AdminEtu/Desktop/REPOSITORY/Projet_Web_Semantique/EclipseWorkspace/DataTransformerToRDF/src/libs/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AdminEtu/Desktop/REPOSITORY/Projet_Web_Semantique/EclipseWorkspace/DataTransformerToRDF/src/libs/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
