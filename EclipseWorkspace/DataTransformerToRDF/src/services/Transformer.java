@@ -118,7 +118,7 @@ public class Transformer {
 				// Read the file line by line
 				while ((line = fileReader.readLine()) != null) {
 					String[] nextLine = line.split(";");
-					dictLieux.put( nextLine[0], new Lieu( nextLine[1],  nextLine[2],  nextLine[3]));
+					dictLieux.put( nextLine[0], new Lieu( nextLine[2],  nextLine[1],  nextLine[3]));
 				}
 			}
 
