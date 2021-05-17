@@ -28,8 +28,9 @@ public class Realisateur implements IRDFGenerator {
 	@Override
 	public List<Triplet> generateRDFTriplet() {
 		List<Triplet> result = new ArrayList<Triplet>();
-
-		result.add(new Triplet(":" + key, "rdfs:label", '"' + nom + '"'));
+		if (nom != null) {			
+			result.add(new Triplet(":" + key, "rdfs:label", '"' + nom + '"'));
+		}
 		if (genreDePredilection != null) {
 			result.add(new Triplet(":" + key, ":aPourStyleDePredilection", ":" + genreDePredilection.getKey()));
 		}

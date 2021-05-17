@@ -42,7 +42,7 @@ public class Transformer {
 		if (serverIsUp) {
 			System.out.println("Fuseki server is ready...");
 		} else {
-			System.out.println("ERROR : Fuseli server unreachable...");
+			System.out.println("ERROR : Fuseki server unreachable...");
 		}
 	}
 
@@ -173,16 +173,16 @@ public class Transformer {
 
 	// load the model in the transformer instance
 	public void loadModel() {
-//		this.loadGenre(System.getProperty("user.dir") + "/src/datas/generated/genres.csv");
-//		this.loadLieu(System.getProperty("user.dir") + "/src/datas/generated/lieux.csv");
-//		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/generated/realisateurs.csv");
-//		this.loadFilm(System.getProperty("user.dir") + "/src/datas/generated/film.csv");
+		this.loadGenre(System.getProperty("user.dir") + "/src/datas/generated/genres.csv");
+		this.loadLieu(System.getProperty("user.dir") + "/src/datas/generated/lieux.csv");
+		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/generated/realisateurs.csv");
+		this.loadFilm(System.getProperty("user.dir") + "/src/datas/generated/film.csv");
 		
 		// load mock
-		this.loadGenre(System.getProperty("user.dir") + "/src/datas/mock/genres.csv");
-		this.loadLieu(System.getProperty("user.dir") + "/src/datas/mock/lieux.csv");
-		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/mock/realisateurs.csv");
-		this.loadFilm(System.getProperty("user.dir") + "/src/datas/mock/film.csv");
+//		this.loadGenre(System.getProperty("user.dir") + "/src/datas/mock/genres.csv");
+//		this.loadLieu(System.getProperty("user.dir") + "/src/datas/mock/lieux.csv");
+//		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/mock/realisateurs.csv");
+//		this.loadFilm(System.getProperty("user.dir") + "/src/datas/mock/film.csv");
 	}
 
 	private String generateRequest(List<Triplet> triplets) {
@@ -198,7 +198,7 @@ public class Transformer {
 		if (!debugMode) {
 			System.out.println("QUERY ## " + queryString);
 		}
-		return queryString;
+		return triplets.size() > 0 ? queryString :"";
 	}
 
 	public void convertModelToOntology() {
