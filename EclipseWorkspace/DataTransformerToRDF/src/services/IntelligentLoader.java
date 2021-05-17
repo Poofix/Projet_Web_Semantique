@@ -1,16 +1,19 @@
 package services;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 
 import model.model.builder.FilmBuilder;
 
@@ -43,10 +46,12 @@ public class IntelligentLoader {
 	}
 
 	private void saveJson(org.json.JSONObject responseJSON, int id) {
-		FileWriter fl;
+		PrintWriter fl;
 		try {
-			fl = new FileWriter(RepertoirePath + "/id/" + id+".txt");
+			fl = new PrintWriter(RepertoirePath + "/id/" + id+".txt");
 			fl.write(responseJSON.toString());
+			fl.flush();
+			fl.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -58,6 +63,8 @@ public class IntelligentLoader {
 		try {
 			fl = new FileWriter(RepertoirePath + "/titre/" + titre+".txt");
 			fl.write(responseJSON.toString());
+			fl.flush();
+			fl.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -67,45 +74,45 @@ public class IntelligentLoader {
 
 	public HashMap<String, String> makeIntelligentCallOMDB(FilmBuilder film) {
 
-		HashMap<String, String> response = null;
+		HashMap<String, String> response = new HashMap<String, String>();
 		org.json.JSONObject responseJSON = null;
-		JSONParser parser = new JSONParser();
 		if (film.imdbId != -1) {
 			String fileName = searchRequestExist(film.imdbId);
 			if (fileName != null) {
+				//InputStream is = IntelligentLoader.class.getResourceAsStream(fileName);
+				JSONTokener tokener = null;
 				try {
-					responseJSON = (org.json.JSONObject) parser.parse(new FileReader(fileName));
+					tokener = new JSONTokener(new FileInputStream(fileName));
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
 				}
+				responseJSON = new JSONObject(tokener); 
 			} else {
+				System.out.println("APPEL REST");
 				responseJSON = proxy.getMovieInfosById(API_KEY, String.valueOf(film.imdbId));
 				saveJson(responseJSON, film.imdbId);
 			}
 		} else { // On passe par le titre ici
 			String fileName = searchRequestExist(film.imdbId);
 			if (fileName != null) {
+				//InputStream is = IntelligentLoader.class.getResourceAsStream(fileName);
+				JSONTokener tokener = null;
 				try {
-					responseJSON = (org.json.JSONObject) parser
-							.parse(new FileReader(fileName));
+					tokener = new JSONTokener(new FileInputStream(fileName));
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
 				}
+				responseJSON = new JSONObject(tokener); 
 			} else {
+				System.out.println("APPEL REST");
 				responseJSON = proxy.getMovieInfosByTitle(API_KEY, film.titre);
 				saveJson(responseJSON, Utils.normalize(film.titre));
 			}

@@ -57,8 +57,7 @@ public class buildFinalCSV {
 		Map<String, LieuBuilder> dictLieu = new HashMap<String, LieuBuilder>();
 		Map<String, RealisateurBuilder> dictReal = new HashMap<String, RealisateurBuilder>();
 		Map<String, GenreBuilder> dictGenre = new HashMap<String, GenreBuilder>();
-		IntelligentLoader intelligentLoader = new IntelligentLoader(
-				"System.getProperty(\"user.dir\") + \"/src/datas/tmpRequest/", API_KEY);
+		IntelligentLoader intelligentLoader = new IntelligentLoader(System.getProperty("user.dir")+"/src/datas/tmpRequest/", API_KEY);
 
 		firstLoad(System.getProperty("user.dir") + "/src/datas/talendOutput/FilmsIncomplete.csv", dictFilm);
 
@@ -114,7 +113,8 @@ public class buildFinalCSV {
 			if (aMovie.anneeSortie.equals("") || aMovie.genres.size() > 0 || aMovie.realisateur == null || aMovie.note == -1.0f) {
 				
 				HashMap<String, String> response = null;
-				if (cpt < 1) {
+				if (cpt < 2) {
+					cpt++;
 					response = intelligentLoader.makeIntelligentCallOMDB(aMovie);
 
 					if (response != null && response.size() > 2) { // >~ 2 : Pas d'erreur

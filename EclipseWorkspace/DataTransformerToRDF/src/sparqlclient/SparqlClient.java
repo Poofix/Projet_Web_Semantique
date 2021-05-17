@@ -130,7 +130,7 @@ public class SparqlClient {
             HttpPost httpPost = new HttpPost("http://" + endpointUri + "/update");
             List<NameValuePair> nvps = new ArrayList<NameValuePair>();
             nvps.add(new BasicNameValuePair("update", queryString));
-            httpPost.setEntity(new UrlEncodedFormEntity(nvps));
+            httpPost.setEntity(new UrlEncodedFormEntity(nvps,"UTF-8"));
             HttpResponse response2 = httpclient.execute(httpPost);
 
             try {
