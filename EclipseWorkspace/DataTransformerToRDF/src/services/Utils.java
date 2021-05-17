@@ -19,6 +19,10 @@ public class Utils {
 		String result = new String (label);
 		result = removeAccent(result);
 		result = result.replaceAll("\\s+", "");
+		result = result.replace("(", "");
+		result = result.replace(")", "");
+		result = result.replace("\\", "");
+		result = result.replace("/", "");
 		result = result.toLowerCase();
 		return  result; 
 	}
