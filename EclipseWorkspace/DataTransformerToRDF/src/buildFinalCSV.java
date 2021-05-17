@@ -118,90 +118,89 @@ public class buildFinalCSV {
 					response = intelligentLoader.makeIntelligentCallOMDB(aMovie);
 
 					if (response != null && response.size() > 2) { // >~ 2 : Pas d'erreur
-						// TODO : Compl�ter :
-
-						// Exemple de requ�te :
-						// http://www.omdbapi.com/?y=&plot=short&r=json&apikey=b82b2479&i=tt0046066
-
-						/*
-						 * {"Title":"Mesa of Lost Women","Year":"1953","Rated":"Approved",
-						 * "Released":"17 Jun 1953","Runtime":"70 min","Genre":"Horror, Sci-Fi"
-						 * ,"Director":"Ron Ormond, Herbert Tevos"
-						 * ,"Writer":"Herbert Tevos (written for the screen by)"
-						 * ,"Actors":"Jackie Coogan, Allan Nixon, Richard Travis, Lyle Talbot"
-						 * ,"Plot":"A mad scientist named Arana is creating giant spiders and dwarfs in his lab on Zarpa Mesa in Mexico. He wants to create a master race of superwomen by injecting his female subjects with spider venom."
-						 * ,"Language":"English","Country":"USA","Awards":"N/A","Poster":
-						 * "https://m.media-amazon.com/images/M/MV5BZWNjNzFhYmYtNzFmZi00MjY4LTk3MDMtZWVjNjZlZWZlMjI0XkEyXkFqcGdeQXVyMTQ2MjQyNDc@._V1_SX300.jpg"
-						 * ,"Ratings":[{"Source":"Internet Movie Database","Value":"2.8/10"},{
-						 * "Source":"Rotten Tomatoes","Value":"17%"}],"Metascore":"N/A","imdbRating":
-						 * "2.8","imdbVotes":"1,440","imdbID":"tt0046066","Type":"movie",
-						 * "DVD":"27 Jul 2016","BoxOffice":"N/A","Production":"Ron Ormond Productions"
-						 * ,"Website":"N/A","Response":"True"}
-						 * 
-						 */
-
-					// TRAITEMENT MOVIE : -----------------------
-					// -> Si pas ANNEE SORTIE
-					if (aMovie.anneeSortie.equals("")) {
-						aMovie.anneeSortie = response.get("Year");
-					}
-					
-					// -> Si pas REALISATEUR
-					if (aMovie.realisateur.id == -1) {
-						String nomRealisateur = response.get("Director").split(", ")[0];
-						
-						RealisateurBuilder unNouveauRealisateur = null;
-						
-						if (!dictReal.containsKey(nomRealisateur)) {
-							unNouveauRealisateur = new RealisateurBuilder(LAST_ID_REALISATEUR,nomRealisateur);
-							dictReal.put(nomRealisateur, unNouveauRealisateur);
-							LAST_ID_REALISATEUR++;
-						} else {
-							unNouveauRealisateur = dictReal.get(nomRealisateur);
+							// TODO : Compl�ter :
+	
+							// Exemple de requ�te :
+							// http://www.omdbapi.com/?y=&plot=short&r=json&apikey=b82b2479&i=tt0046066
+	
+							/*
+							 * {"Title":"Mesa of Lost Women","Year":"1953","Rated":"Approved",
+							 * "Released":"17 Jun 1953","Runtime":"70 min","Genre":"Horror, Sci-Fi"
+							 * ,"Director":"Ron Ormond, Herbert Tevos"
+							 * ,"Writer":"Herbert Tevos (written for the screen by)"
+							 * ,"Actors":"Jackie Coogan, Allan Nixon, Richard Travis, Lyle Talbot"
+							 * ,"Plot":"A mad scientist named Arana is creating giant spiders and dwarfs in his lab on Zarpa Mesa in Mexico. He wants to create a master race of superwomen by injecting his female subjects with spider venom."
+							 * ,"Language":"English","Country":"USA","Awards":"N/A","Poster":
+							 * "https://m.media-amazon.com/images/M/MV5BZWNjNzFhYmYtNzFmZi00MjY4LTk3MDMtZWVjNjZlZWZlMjI0XkEyXkFqcGdeQXVyMTQ2MjQyNDc@._V1_SX300.jpg"
+							 * ,"Ratings":[{"Source":"Internet Movie Database","Value":"2.8/10"},{
+							 * "Source":"Rotten Tomatoes","Value":"17%"}],"Metascore":"N/A","imdbRating":
+							 * "2.8","imdbVotes":"1,440","imdbID":"tt0046066","Type":"movie",
+							 * "DVD":"27 Jul 2016","BoxOffice":"N/A","Production":"Ron Ormond Productions"
+							 * ,"Website":"N/A","Response":"True"}
+							 * 
+							 */
+	
+						// TRAITEMENT MOVIE : -----------------------
+						// -> Si pas ANNEE SORTIE
+						if (aMovie.anneeSortie.equals("")) {
+							aMovie.anneeSortie = response.get("Year");
 						}
 						
-						aMovie.realisateur = unNouveauRealisateur;
-					}
-					
-					// -> Si pas GENRE :
-					if (aMovie.genres.size() == 0) {
-						String[] genres = response.get("Genre").split(", ");
-						if (genres.length > 0) {
-							for (String aGenre : genres) {
-								
-								GenreBuilder unNouveauGenre = null;
-								
-								
-								if (!dictGenre.containsKey(aGenre)) {
-									unNouveauGenre = new GenreBuilder(LAST_ID_GENRE, aGenre);
-									dictGenre.put(aGenre, unNouveauGenre);
-									LAST_ID_GENRE++;
-								} else {
-									unNouveauGenre = dictGenre.get(aGenre);
+						// -> Si pas REALISATEUR
+						if (aMovie.realisateur.id == -1) {
+							String nomRealisateur = response.get("Director").split(", ")[0];
+							
+							RealisateurBuilder unNouveauRealisateur = null;
+							
+							if (!dictReal.containsKey(nomRealisateur)) {
+								unNouveauRealisateur = new RealisateurBuilder(LAST_ID_REALISATEUR,nomRealisateur);
+								dictReal.put(nomRealisateur, unNouveauRealisateur);
+								LAST_ID_REALISATEUR++;
+							} else {
+								unNouveauRealisateur = dictReal.get(nomRealisateur);
+							}
+							
+							aMovie.realisateur = unNouveauRealisateur;
+						}
+						
+						// -> Si pas GENRE :
+						if (aMovie.genres.size() == 0) {
+							String[] genres = response.get("Genre").split(", ");
+							if (genres.length > 0) {
+								for (String aGenre : genres) {
+									
+									GenreBuilder unNouveauGenre = null;
+									
+									
+									if (!dictGenre.containsKey(aGenre)) {
+										unNouveauGenre = new GenreBuilder(LAST_ID_GENRE, aGenre);
+										dictGenre.put(aGenre, unNouveauGenre);
+										LAST_ID_GENRE++;
+									} else {
+										unNouveauGenre = dictGenre.get(aGenre);
+									}
+									
+									aMovie.genres.add(unNouveauGenre);
 								}
-								
-								aMovie.genres.add(unNouveauGenre);
 							}
 						}
-					}
-
-					// -> Si pas NOTE :
-					if (aMovie.note == -1.0f) {
-						Object ranking = response.get("imdbRating");
-						if ((ranking != null) && (!ranking.equals("N/A"))) {
-							aMovie.note = Float.parseFloat(response.get("imdbRating"));
+	
+						// -> Si pas NOTE :
+						if (aMovie.note == -1.0f) {
+							Object ranking = response.get("imdbRating");
+							if ((ranking != null) && (!ranking.equals("N/A"))) {
+								aMovie.note = Float.parseFloat(response.get("imdbRating"));
+							}
 						}
+					} else {
+						System.out.println("ERROR : " + response.get("Error"));
 					}
-				} else {
-					System.out.println("ERROR : " + response.get("Error"));
+	
+					System.out.println(aMovie);
 				}
-
-				System.out.println(aMovie);
 			}
 		}
-
-			writeOutPutFile(dictFilm, dictLieu, dictReal, dictGenre);
-		}
+		writeOutPutFile(dictFilm, dictLieu, dictReal, dictGenre);
 	}
 
 	private static void writeOutPutFile(Map<String, FilmBuilder> dictFilm2, Map<String, LieuBuilder> dictLieu2,
