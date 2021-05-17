@@ -148,12 +148,12 @@ public class buildFinalCSV {
 						
 						// -> Si pas REALISATEUR
 						if (aMovie.realisateur.id == -1) {
-							String nomRealisateur = response.get("Director").split(", ")[0];
+							String nomRealisateur = Utils.normalizeAuteur(response.get("Director").split(", ")[0]); // TODO : A voir selon le formalisme
 							
 							RealisateurBuilder unNouveauRealisateur = null;
 							
 							if (!dictReal.containsKey(nomRealisateur)) {
-								unNouveauRealisateur = new RealisateurBuilder(LAST_ID_REALISATEUR,nomRealisateur);
+								unNouveauRealisateur = new RealisateurBuilder(LAST_ID_REALISATEUR, nomRealisateur);
 								dictReal.put(nomRealisateur, unNouveauRealisateur);
 								LAST_ID_REALISATEUR++;
 							} else {
@@ -360,7 +360,7 @@ public class buildFinalCSV {
 					try {
 						id = Integer.valueOf(nextLine[INDEX_FI_key_film]);
 						titre = nextLine[INDEX_FI_TITRE];
-						rea = new RealisateurBuilder(nextLine[INDEX_FI_AUTEUR]);
+						rea = new RealisateurBuilder(Utils.normalizeAuteur(nextLine[INDEX_FI_AUTEUR]));
 						// NB EMPRUNT
 
 						imdbId = (nextLine[INDEX_FI_imdbid].isEmpty() ? -1
@@ -420,15 +420,13 @@ public class buildFinalCSV {
 					try {
 						key_lieu = Integer.valueOf(nextLine[INDEX_Lieu_key_lieu]);
 						id_lieu = nextLine[INDEX_Lieu_id_lieu];
-						adresse_lieu = nextLine[INDEX_Lieu_adresse_lieu];
+						adresse_lieu = Utils.normalizeLieu(nextLine[INDEX_Lieu_adresse_lieu]);
 						ardt_lieu = nextLine[INDEX_Lieu_ardt_lieu];
 
 						/*
 						 * if (adresse_lieu.split(", ").length > 1) { ville =
 						 * adresse_lieu.split(", ")[1].split(" ")[1]; // TODO : nul ! }
 						 */
-
-						ville = "Paris";
 
 					} catch (java.lang.ArrayIndexOutOfBoundsException e) {
 						// ERROR QUE NOUS IGNORONS :)
@@ -524,7 +522,7 @@ public class buildFinalCSV {
 
 					id = Integer.parseInt(nextLine[0]);
 					movieId = nextLine[1];
-					realisateurName = nextLine[2];
+					realisateurName = Utils.normalizeAuteur(nextLine[2]);
 
 					RealisateurBuilder aRealisateur = new RealisateurBuilder(id, realisateurName);
 

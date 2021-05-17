@@ -29,4 +29,19 @@ public class Utils {
 		result = result.toLowerCase();
 		return  result; 
 	}
+	
+	public static String normalizeAuteur(String label) {
+		String result = new String (label);
+		result = removeAccent(result);
+		result = result.replace(",", "");
+		result = result.toLowerCase();
+		return  result; 
+	}
+	
+	public static String normalizeLieu(String lieu) {
+		String result = new String (lieu);
+		result = removeAccent(result);
+		result = result.toLowerCase();
+		return  result; 
+	}
 }
