@@ -199,7 +199,25 @@ public class buildFinalCSV {
 					System.out.println(aMovie);
 				}
 			}
+			
+			// Pour chaque film :
+			if (aMovie.realisateur != null) {
+				for (GenreBuilder unGenre : aMovie.genres) {
+					aMovie.realisateur.incementGenre(unGenre.label);
+				}
+			}
 		}
+		
+		// On cherche le genre de prédilection de chaque Realisateur, puis mise à jour
+		for (RealisateurBuilder realisateur : dictReal.values()) {
+			String genreDePredilection = realisateur.getGenrePredilection();
+			if (genreDePredilection != null) {
+				realisateur.genreDePredilection = dictGenre.get(genreDePredilection);
+				System.out.println("Realisateur : " + genreDePredilection);
+			}
+		}
+		
+		// Ecriture des CSVs
 		writeOutPutFile(dictFilm, dictLieu, dictReal, dictGenre);
 	}
 
@@ -239,7 +257,7 @@ public class buildFinalCSV {
 			List<String> line = new ArrayList<String>();
 			line.add(r.id + "");
 			line.add(r.nom);
-			line.add("");// line.add(r.genreDePredilection.id + ""); /// TODO : A determiner
+			line.add((r.genreDePredilection != null) ? String.valueOf(r.genreDePredilection.id) : "" );
 
 			if (line.size() >= col.size()) {
 				data.add(line);
