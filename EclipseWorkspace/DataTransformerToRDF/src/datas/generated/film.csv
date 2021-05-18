@@ -1,14 +1,14 @@
 id;titre;annee;genre;auteur;lieu;note
 3640;like me saison 2;<DEBUG-ANNEE>;<DEBUG-GENRE>;1014;3640;-1.0
-2303;le francais;<DEBUG-ANNEE>;<DEBUG-GENRE>;1408;2303;-1.0
-3630;one woman;<DEBUG-ANNEE>;<DEBUG-GENRE>;1173;3630;-1.0
-2310;kompromat;<DEBUG-ANNEE>;<DEBUG-GENRE>;231;2310;-1.0
+2303;le francais;2008;14;1408;2303;-1.0
+3630;one woman;2020;14;1173;3630;-1.0
+2310;kompromat;2019;14;231;2310;-1.0
 4976;clem saison 11;<DEBUG-ANNEE>;<DEBUG-GENRE>;-1;4976;-1.0
 3659;2fils (inversion decors int librairie / parc);<DEBUG-ANNEE>;<DEBUG-GENRE>;15;3659;-1.0
 1011;2fils (3eme partie);<DEBUG-ANNEE>;<DEBUG-GENRE>;-1;1011;-1.0
 1002;les temps des egares;<DEBUG-ANNEE>;<DEBUG-GENRE>;540;1002;-1.0
 3676;la petite bande;<DEBUG-ANNEE>;<DEBUG-GENRE>;-1;3676;-1.0
-3685;deux gouttes d'eau;<DEBUG-ANNEE>;<DEBUG-GENRE>;1009;3685;-1.0
+3685;deux gouttes d'eau;2018;11;1009;3685;5.9
 1047;alice in paris - saison 02 - episode 14 - rencard;<DEBUG-ANNEE>;<DEBUG-GENRE>;1847;1047;-1.0
 2397;skam saison 5 et 6 semaine 10 sur 10;<DEBUG-ANNEE>;<DEBUG-GENRE>;-1;2397;-1.0
 2399;profilage episodes 96/97;<DEBUG-ANNEE>;<DEBUG-GENRE>;-1;2399;-1.0

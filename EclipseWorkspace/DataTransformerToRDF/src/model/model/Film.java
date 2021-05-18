@@ -31,7 +31,7 @@ public class Film implements IRDFGenerator {
 		note = n;
 
 		id = count.incrementAndGet();
-		key = "Film" + id;
+		key = "film" + id;
 		// key = Utils.removeAccent(titre+anneeSortie);
 	}
 

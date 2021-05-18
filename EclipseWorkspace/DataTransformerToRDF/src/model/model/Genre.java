@@ -21,7 +21,7 @@ public class Genre implements IRDFGenerator{
 		label = token;
 		
 		id = count.incrementAndGet();
-		key = "Genre"+id;
+		key = "genre"+id;
 		// key= Utils.removeAccent(label);
 	}
 

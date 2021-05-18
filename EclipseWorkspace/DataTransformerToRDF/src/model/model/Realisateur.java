@@ -21,7 +21,7 @@ public class Realisateur implements IRDFGenerator {
 		nom = token;
 		genreDePredilection = genre;
 		id = count.incrementAndGet();
-		key = "Realisateur" + id;
+		key = "realisateur" + id;
 		// key = Utils.removeAccent(nom);
 	}
 
