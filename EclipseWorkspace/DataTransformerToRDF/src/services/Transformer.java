@@ -173,21 +173,21 @@ public class Transformer {
 
 	// load the model in the transformer instance
 	public void loadModel() {
-		this.loadGenre(System.getProperty("user.dir") + "/src/datas/generated/genres.csv");
-		this.loadLieu(System.getProperty("user.dir") + "/src/datas/generated/lieux.csv");
-		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/generated/realisateurs.csv");
-		this.loadFilm(System.getProperty("user.dir") + "/src/datas/generated/film.csv");
+//		this.loadGenre(System.getProperty("user.dir") + "/src/datas/generated/genres.csv");
+//		this.loadLieu(System.getProperty("user.dir") + "/src/datas/generated/lieux.csv");
+//		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/generated/realisateurs.csv");
+//		this.loadFilm(System.getProperty("user.dir") + "/src/datas/generated/film.csv");
 		
 		// load mock
-//		this.loadGenre(System.getProperty("user.dir") + "/src/datas/mock/genres.csv");
-//		this.loadLieu(System.getProperty("user.dir") + "/src/datas/mock/lieux.csv");
-//		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/mock/realisateurs.csv");
-//		this.loadFilm(System.getProperty("user.dir") + "/src/datas/mock/film.csv");
+		this.loadGenre(System.getProperty("user.dir") + "/src/datas/mock/genres.csv");
+		this.loadLieu(System.getProperty("user.dir") + "/src/datas/mock/lieux.csv");
+		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/mock/realisateurs.csv");
+		this.loadFilm(System.getProperty("user.dir") + "/src/datas/mock/film.csv");
 	}
 
 	private String generateRequest(List<Triplet> triplets) {
 		String prefix = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n"
-				+ "Prefix : <http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-4>\r\n"
+				+ "Prefix : <http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#>\r\n"
 				+ "PREFIX owl: <http://www.w3.org/2002/07/owl#>\r\n";
 
 		String queryString = prefix + "\n" + "insert data {";

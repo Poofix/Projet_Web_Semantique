@@ -1,4 +1,5 @@
 id;nom;idgenre
+1958;Steven Brill;
 1462;le besco, maeiwenn;
 1461;paul lapierre;
 1460;roach, jay;
@@ -29,6 +30,7 @@ id;nom;idgenre
 1463;tadjedin, massy;
 8;amaouche, nassim;
 9;izquierdo, angel;
+1927;David Michôd;
 1000;riklis, eran;
 1484;oelhoffen, david;
 1483;eva ionesco;
@@ -41,6 +43,7 @@ id;nom;idgenre
 1476;redford, robert;
 1475;frederic schoendoerffer;
 1474;alex graves;
+1953;Charles Brabin;
 1011;cortes, rodrigo;
 1495;ragobert, thierry;
 1010;hakonarson, grimur;
@@ -52,6 +55,7 @@ id;nom;idgenre
 1008;hill, tim;
 1007;de vita, christian;
 1006;maxime govare;
+1955;Karan Johar;
 1005;langmann, thomas;
 1489;lasseter, john;
 1004;blossier, antoine.;
@@ -95,6 +99,7 @@ id;nom;idgenre
 603;ludovic  hudson;
 604;scorsese, martin;
 605;alex zamm;
+1932;Michael Tully;
 606;kinberg, simon;
 607;julien despaux;
 608;sebasien cirade;
@@ -109,6 +114,7 @@ id;nom;idgenre
 1037;sohn, peter;
 610;percival, brian;
 1036;pascal bourdiaux;
+1897;Jon Hewitt;
 611;lee, chang-dong;
 1035;debbouze, jamel;
 612;jan hryniak;
@@ -120,6 +126,7 @@ id;nom;idgenre
 617;dardenne, jean-pierre;
 618;non communique;
 619;bird, brad;
+1911;Maneesh Sharma;
 1055;stephanie murat;
 1054;laguionie, jean-frandcois;
 1053;jarrad paul;
@@ -155,6 +162,7 @@ id;nom;idgenre
 1058;norton, edward;
 633;dudok de wit, michael;
 1057;emily mortimer;
+1901;Edgar G. Ulmer;
 634;minkoff, rob;
 1056;levinson, barry;
 635;guillaume nicloux;
@@ -163,6 +171,7 @@ id;nom;idgenre
 638;allen, woody;
 639;damien chazelle, houda benyamina, laila marrakchi, alan poul;
 1077;rodriguez, robert;
+1907;Jean Vigo;
 1076;philippe larue;
 1075;delaporte, matthieu;
 1074;david hourregue;
@@ -183,6 +192,7 @@ id;nom;idgenre
 647;teddy lussi modeste;
 648;frederic balekdjian, fabien nury;
 649;colombe savignac;
+1967;Pedro Almodóvar;
 1080;valeria bruni tedeschi;
 1088;james foley;
 1087;bobin, james;
@@ -206,6 +216,7 @@ id;nom;idgenre
 659;xavier giannoli;
 1091;virginie verrier;
 1090;simon bouisson;
+1960;Martin Scorsese;
 1099;mouscadet, jerome;
 1098;miller, tim;
 1097;alexandra leclere;
@@ -225,6 +236,7 @@ id;nom;idgenre
 1089;jacquot, benoit;
 668;elsa bennett;
 669;hippolyte dard;
+1931;Gregg Champion;
 670;frederic berthe;
 671;malick, terrence;
 672;rambaldi, julien;
@@ -235,6 +247,7 @@ id;nom;idgenre
 677;antoine garceau;
 678;kike maillo;
 679;august, bille;
+1941;Lisa Gottlieb;
 680;kirkpatrick, karey;
 681;gaelin, hugo;
 682;olivier doran;
@@ -297,6 +310,7 @@ id;nom;idgenre
 239;kechiche, abdellatif;
 240;almodovar, pedro;
 241;claus drexel;
+1949;Umberto Lenzi;
 242;tirard, laurent;
 243;hustache-mathieu, gerald.;
 244;silverston, anthony;
@@ -315,11 +329,13 @@ id;nom;idgenre
 257;pascal thomas;
 258;mysius, lea;
 259;charles, larry;
+1970;John Hughes;
 260;mackenzie, david;
 261;louis garrel;
 262;adeline picault;
 263;octave raspail;
 264;nicolas herdt;
+1919;Woody Allen;
 265;gelblat, cyril;
 266;laferriere, gabriel;
 267;lin, justin;
@@ -335,6 +351,8 @@ id;nom;idgenre
 277;ayuko tsukahara,;
 278;eric rochant;
 279;thierry de perreti;
+1943;Gus Van Sant;
+1962;Nimród Antal;
 280;elodie faure boulue;
 281;rouaud, cecilia;
 282;mazin, craig;
@@ -359,6 +377,7 @@ id;nom;idgenre
 1502;columbus, chris;
 1501;chaumeil, pascal;
 1500;stephen cafiero;
+1965;Charles Reisner;
 1509;bruno podalydes;
 1508;francois uzan;
 1507;vladimir rodionoff;
@@ -395,6 +414,7 @@ id;nom;idgenre
 1539;bergeon, edouard;
 1538;renaud betrand;
 1537;polanski, roman;
+1894;Phil Lord;
 1550;zhao, chloae;
 1547;wash westmoreland;
 1546;paolo barzman;
@@ -432,6 +452,7 @@ id;nom;idgenre
 1582;moore, tomm;
 1581;julia rezende;
 1580;anger, cedric;
+1950;Michael Bay;
 1579;campion, jane;
 1578;hallard, julien;
 1577;marion laine;
@@ -463,6 +484,7 @@ id;nom;idgenre
 1108;lord, peter;
 1121;kurosawa, kiyoshi;
 1120;julian schnabel;
+1924;Seth Gordon;
 1118;ficarra, glenn.;
 1117;chris briant;
 1116;li lu;
@@ -507,6 +529,7 @@ id;nom;idgenre
 1137;estibal, sylvain;
 1136;affleck, ben;
 1135;burger, neil;
+1900;William Friedkin;
 710;sylvie verheyde;
 1134;cedric klapisch;
 711;yonebayashi, hiromasa;
@@ -533,6 +556,7 @@ id;nom;idgenre
 1145;mitchell, mike;
 722;musker, john;
 1144;waters, mark;
+1905;Nagisa Ôshima;
 723;hiroshi nishatani;
 724;akin, fatih;
 725;mostow, jonathan;
@@ -546,6 +570,7 @@ id;nom;idgenre
 1162;anouar el alami;
 1161;manuel laurent;
 1160;penn, sean;
+1940;Sean Anders;
 1159;coulin, muriel;
 730;matt bloom, ronan burke, robert burke;
 1158;meier, ursula;
@@ -568,6 +593,7 @@ id;nom;idgenre
 1172;hara, keiichi;
 1171;byun hyuk;
 1170;webb, mark;
+1920;Nick Corirossi;
 740;lucie borleteau;
 741;alves, ruben;
 1169;xavier de choudens;
@@ -624,6 +650,7 @@ id;nom;idgenre
 767;antony hickling;
 768;francois de joussineau;
 769;douglas attal;
+1936;Justin Lin;
 770;sheridan, taylor;
 771;lanthimos, yorgos;
 772;cordier, antony;
@@ -635,6 +662,7 @@ id;nom;idgenre
 1199;clert, alexandra;
 778;simon kinberg;
 779;coen, ethan;
+1922;Barry Sonnenfeld;
 780;kosaka, kitaro;
 781;hunt, courtney;
 782;softley, iain;
@@ -645,6 +673,7 @@ id;nom;idgenre
 785;jean philippe amar;
 302;hood, gavin;
 786;evans, marc;
+1944;Christian Alvart;
 303;jacqueline lentzou;
 787;mouret, emmanuel;
 304;judor, eric;
@@ -705,6 +734,8 @@ id;nom;idgenre
 347;emilie carpentier;
 348;pascal bonitzer;
 349;wachowski, larry;
+1903;Will Slocombe;
+1913;Jonathan Milott;
 350;jean-christophe meurisse;
 351;ines reg, kevin debonne;
 352;pierre aknine;
@@ -725,6 +756,7 @@ id;nom;idgenre
 17;podalydaes, bruno;
 360;peele, jordan;
 361;gatlif, tony;
+1942;Clay Glen;
 362;cailley, thomas;
 363;coffre, alexandre;
 364;jean francois davy;
@@ -734,6 +766,7 @@ id;nom;idgenre
 368;boden, anna;
 369;hardwicke, catherine;
 20;martin-laval, pierre-frandcois;
+1933;Aluizio Abranches;
 21;delepine, benoait;
 22;ghobadi, bahman;
 23;dion, cyril;
@@ -802,6 +835,7 @@ id;nom;idgenre
 57;arnaud selignac;
 58;oury, gaerard;
 59;nicole garcia;
+1938;David Mamet;
 60;polanski roman;
 61;meadows, shane;
 62;hahn, gerhard;
@@ -812,6 +846,7 @@ id;nom;idgenre
 67;takahata, isao;
 68;andrews, mark;
 69;diab, mohamed;
+1952;Clea DuVall;
 70;tristan seguela;
 71;dayton, jonathan;
 72;olivier marchal;
@@ -884,6 +919,8 @@ id;nom;idgenre
 1636;gary gray;
 1646;zhang bo li;
 1645;mitchell, david robert;
+1934;Victor Halperin;
+1939;François Truffaut;
 1644;noemie saglio;
 1643;renaud bertrand;
 1642;benoit jacquot;
@@ -892,6 +929,7 @@ id;nom;idgenre
 1649;laurent rochette;
 1648;persichetti, bob;
 1647;campanella, juan j.;
+1910;Lewis Gilbert;
 1660;szumowska, malgorzata;
 1657;tavernier, nils;
 1656;hillcoat, john;
@@ -908,6 +946,7 @@ id;nom;idgenre
 1668;balda, kyle;
 1667;renner, benjamin;
 1666;james huth;
+1914;William A. Wellman;
 1665;schuh, jakob;
 1664;frankie wallach;
 1663;delpy, julie.;
@@ -925,6 +964,7 @@ id;nom;idgenre
 1674;valerie urrea;
 1673;leo karmann;
 1672;benedicte delmas;
+1908;Rob Cohen;
 1693;guirado, eric;
 1692;miller, bruce;
 1691;desmares, christian;
@@ -932,6 +972,7 @@ id;nom;idgenre
 1206;jean pascal zadi;
 1205;gabriel julien-laferriere;
 1689;herve hadmar;
+1921;Joseph Kosinski;
 1204;annakin, ken;
 1688;julien weill;
 1203;sy, brigitte;
@@ -940,6 +981,7 @@ id;nom;idgenre
 1686;edouard deluc;
 1201;cooley, josh;
 1685;okiura, hiroyuki;
+1891;Gary Winick;
 1200;minghella, anthony;
 1684;lord, phil;
 1683;gonzalez inarritu, alejandro;
@@ -985,6 +1027,7 @@ id;nom;idgenre
 1229;gabriele muccino;
 808;philippe de chauveron;
 809;leo zhang;
+1954;Pete Docter;
 1242;emmanuel courcol;
 1241;verney, cathy;
 1240;jaoui, agnes;
@@ -1042,12 +1085,14 @@ id;nom;idgenre
 832;mabrouk el mechri;
 1254;lelio, sebastian;
 833;theodore bonnet;
+1895;Claire Denis;
 834;fontaine, anne;
 835;elsa bennett;
 836;hippolyte dard;
 837;cecilia rouaud;
 838;boreal, marc;
 839;gastambide, franck;
+1918;Joel Schumacher;
 1275;comar, etienne;
 1274;tuva novotny;
 1273;varante soudjian;
@@ -1089,6 +1134,7 @@ id;nom;idgenre
 856;ladislas chollat;
 857;yamamoto, nizo;
 858;martin rosete;
+1892;Tom Shadyac;
 859;kassovitz, mathieu;
 1297;muriel robin;
 1296;lavaine, eric;
@@ -1126,6 +1172,7 @@ id;nom;idgenre
 880;elia souleiman;
 881;blomkamp, neill;
 882;muschietti, andy;
+1896;Shane Black;
 883;lenoir, blandine;
 400;antoine chevrollier;
 884;belvaux, lucas;
@@ -1143,6 +1190,7 @@ id;nom;idgenre
 407;daniel sackheim;
 408;elise otzenberger;
 409;aurelie saada;
+1937;Clarence Brown;
 890;reed, peyton;
 891;marquand, richard;
 892;placido, michele;
@@ -1163,6 +1211,7 @@ id;nom;idgenre
 417;jeanne herry;
 418;kawase, naomi;
 419;carion, christian;
+1915;Haifaa Al-Mansour;
 420;pierre briois;
 421;theo galampoix;
 422;sattouf, riad;
@@ -1183,6 +1232,7 @@ id;nom;idgenre
 437;sugii, gisaburo;
 438;edouard baer;
 439;petersen, wolfgang;
+1929;Craig McCracken;
 440;yu, ronny;
 441;laetitia masson;
 442;bohringer, romane;
@@ -1209,10 +1259,12 @@ id;nom;idgenre
 463;del toro, guillermo;
 464;azzeddine, saphia;
 465;donzelli, valerie.;
+1935;Jocelyn Moorhouse;
 466;murro, noam;
 467;didier bivel;
 468;fontaine, anne.;
 469;newell, mike;
+1909;Ashutosh Gowariker;
 470;samuel bodin;
 471;julien lacombe;
 472;ringer, olivier;
@@ -1233,6 +1285,7 @@ id;nom;idgenre
 487;julien carpentier;
 488;de micco, kirk;
 489;daniel auteuil;
+1946;Akira Kurosawa;
 490;osborne, mark;
 491;robin campillo;
 492;stanley woodward;
@@ -1243,6 +1296,8 @@ id;nom;idgenre
 497;ruben alves;
 498;etienne comar;
 499;pascal verschooris;
+1948;Chad Crawford Kinkle;
+1904;Frank Oz;
 1701;thomas lilti;
 1700;david lynch;
 1709;gluck, will;
@@ -1254,6 +1309,7 @@ id;nom;idgenre
 1703;elsa amiel;
 1702;chun chieh;
 1712;miler, zdenek;
+1925;Pat O'Connor;
 1711;julie oona;
 1710;jonathan barre;
 1719;besson, luc;
@@ -1263,10 +1319,12 @@ id;nom;idgenre
 1715;haigh, andrew;
 1714;alaux, david;
 1713;jalil lespert;
+1890;Kike Maíllo;
 1723;corbijn, anton;
 1722;jonathan;
 1721;le guay, philippe.;
 1720;john wax, jean-pascal zadi;
+1956;Juan Carlos Fresnadillo;
 1729;dominik, andrew;
 1728;halas, john;
 1727;shirley monsarrat;
@@ -1283,6 +1341,7 @@ id;nom;idgenre
 1737;andrea bescond;
 1736;catherine corsini;
 1735;trousdale, gary;
+1951;Hannes Holm;
 1745;de palma, brian;
 1744;jerome commandeur;
 1743;fuqua, antoine;
@@ -1304,6 +1363,7 @@ id;nom;idgenre
 1758;avril besson;
 1757;baudry, antonin;
 1770;otomo, katsuhiro;
+1963;Mikael Håfström;
 1767;patrick mario bernard;
 1766;pierre trividic;
 1765;zhou nan;
@@ -1311,6 +1371,7 @@ id;nom;idgenre
 1763;morgan, peter;
 1762;tappe, holger;
 1761;samuel collardey, antoine chevrollier, mathieu demy, helier cisterne;
+1968;Nicholas Ray;
 1760;yann gonzalez;
 1769;didier le pecheurs;
 1768;peter cattaneo;
@@ -1324,6 +1385,7 @@ id;nom;idgenre
 1773;david oelhoffen;
 1772;stone, oliver;
 1771;andre erkau;
+1945;Trevor Nunn;
 1779;sarah marx;
 1792;mouloud achour;
 1791;dominique baumart;
@@ -1346,6 +1408,8 @@ id;nom;idgenre
 1308;flo ber;
 1307;gilroy, dan;
 1306;lucas bernard;
+1893;Glenn Ficarra;
+1899;Paul Thomas Anderson;
 1316;nadav lapid;
 1315;stephan kopecky;
 1799;omond, eric;
@@ -1363,6 +1427,7 @@ id;nom;idgenre
 1319;letterman, rob;
 1318;mathieu amalric;
 1317;agnes obdia;
+1926;Renny Harlin;
 1330;mckay, chris;
 1327;cavayae, fred;
 1326;guadagnino, luca;
@@ -1414,6 +1479,7 @@ id;nom;idgenre
 1346;koepp, david;
 1345;cong li;
 1344;yuri rossi;
+1947;Ridley Scott;
 1343;cornillac, clovis;
 920;waititi, taika;
 1342;lea fazer;
@@ -1477,6 +1543,7 @@ id;nom;idgenre
 1379;triet, justine;
 950;lilienfeld, jean-paul;
 1378;alfred lot;
+1930;George Albert Smith;
 951;bouvard viret;
 1377;saada, nicolas;
 952;zeitlin, benh;
@@ -1563,12 +1630,14 @@ id;nom;idgenre
 517;sciamma, celine;
 518;coen, ethan.;
 519;blier, bertrand;
+1961;Sofia Coppola;
 520;cooper, scott;
 521;mathieu sapin;
 522;hastrup, jannik;
 523;abrams, jeffrey jacob;
 524;alan swyer;
 525;roth, eli;
+1959;Raoul Ruiz;
 526;julie manoukian;
 527;yuki saito;
 528;cyril mennegun;
@@ -1577,6 +1646,7 @@ id;nom;idgenre
 531;emmanuel mouret;
 532;cauvin, brice;
 533;levy, shawn;
+1923;Herbert Wilcox;
 534;kaye, tony;
 535;eastwood, clint;
 536;michael schur;
@@ -1613,6 +1683,7 @@ id;nom;idgenre
 567;bourdos, gilles;
 568;daniel roby;
 569;alexei popogrebsky;
+1928;Susanne Bier;
 570;xavier legrand;
 571;jolivet, pierre;
 572;wedge, chris;
@@ -1623,6 +1694,7 @@ id;nom;idgenre
 577;cathy verne;
 578;garrel, louis;
 579;canet, guillaume.;
+1912;Dario Argento;
 580;christophe duthuron;
 581;zimmer, helene;
 582;jeffrey chiang;
@@ -1663,6 +1735,7 @@ id;nom;idgenre
 117;elena cosson;
 118;elissalde, serge;
 119;manos, james jr;
+1906;Nick Tomnay;
 120;charpiat, francoise;
 121;olivier dahan;
 122;nolan, christopher;
@@ -1673,6 +1746,7 @@ id;nom;idgenre
 127;legrand, xavier;
 128;hooper, tom;
 129;moretti, nanni;
+1957;Alexander Mackendrick;
 130;inarritu, alejandro gonzales;
 131;delepine, benoit;
 132;elliot, adam;
@@ -1686,6 +1760,7 @@ id;nom;idgenre
 1809;damien maric;
 140;jean-marc brondolo;
 141;hayward, jimmy;
+1898;Gavin O'Connor;
 142;(matt quezada) 2nde equipe paris xavier roy;
 143;claire denis;
 1800;eric rochant, jacques audiard, anna novion, samuel collardey;
@@ -1694,6 +1769,7 @@ id;nom;idgenre
 146;peter atencio;
 147;vincent, christian;
 148;ameris, jean-pierre;
+1916;Francis Ford Coppola;
 149;l. colbeau justin;
 1808;tonie marshall;
 1807;hitchcock, alfred;
@@ -1763,6 +1839,7 @@ id;nom;idgenre
 1836;quillevere, katell;
 1835;senez, guillaume;
 1834;rizal mantovani;
+1969;Greg Mottola;
 180;alexia walther;
 181;thomas kruithof;
 182;yishu yang;
@@ -1803,16 +1880,19 @@ id;nom;idgenre
 1858;nicolas guicheteau;
 1857;penna, joe;
 1856;stephane malhuret;
+1917;Wesley Strick;
 1866;leon de aranoa, fernando;
 1865;chadwick, justin;
 1864;anderson, wes;
 1863;mckay, adam;
 1862;proyas, alex;
 1861;archie borders;
+1964;Phil Rosen;
 1860;titus selge;
 1869;silberling, brad;
 1868;marc-aurele vecchione;
 1867;francis magnin;
+1902;Steve Hoefer;
 1880;eric le roux;
 1877;sengelin, emilie;
 1876;saldanha, carlos;
@@ -1888,4 +1968,5 @@ id;nom;idgenre
 1443;gelin, hugo;
 1442;loach, ken;
 1441;arnaud selignac,;
+1966;Danny Boyle;
 1449;blandine lenoir;
