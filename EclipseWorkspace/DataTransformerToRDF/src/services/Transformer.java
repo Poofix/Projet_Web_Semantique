@@ -88,8 +88,8 @@ public class Transformer {
 				// Read the file line by line
 				while ((line = fileReader.readLine()) != null) {
 					String[] nextLine = line.split(";");
-					dictRealisateurs.put(nextLine[0],
-							new Realisateur(nextLine[1], dictGenres.get(nextLine[2])));
+					Genre genre = (nextLine.length > 2) ? dictGenres.get(nextLine[2]) : null;
+					dictRealisateurs.put(nextLine[0], new Realisateur(nextLine[1], genre));
 
 				}
 			}
@@ -118,7 +118,11 @@ public class Transformer {
 				// Read the file line by line
 				while ((line = fileReader.readLine()) != null) {
 					String[] nextLine = line.split(";");
-					dictLieux.put( nextLine[0], new Lieu( nextLine[2],  nextLine[1],  nextLine[3]));
+					String id = (nextLine.length > 0) ? nextLine[0] : null;
+					String adresse = (nextLine.length > 1) ? nextLine[1] : null;
+					String ville = (nextLine.length > 2) ? nextLine[2] : null;
+					String codePostal = (nextLine.length > 3) ? nextLine[3] : null;
+					dictLieux.put(id, new Lieu(ville, adresse, codePostal));
 				}
 			}
 
@@ -173,16 +177,17 @@ public class Transformer {
 
 	// load the model in the transformer instance
 	public void loadModel() {
-//		this.loadGenre(System.getProperty("user.dir") + "/src/datas/generated/genres.csv");
-//		this.loadLieu(System.getProperty("user.dir") + "/src/datas/generated/lieux.csv");
-//		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/generated/realisateurs.csv");
-//		this.loadFilm(System.getProperty("user.dir") + "/src/datas/generated/film.csv");
-		
+
+		this.loadGenre(System.getProperty("user.dir") + "/src/datas/generated/genres.csv");
+		this.loadLieu(System.getProperty("user.dir") + "/src/datas/generated/lieux.csv");
+		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/generated/realisateurs.csv");
+		this.loadFilm(System.getProperty("user.dir") + "/src/datas/generated/film.csv");
+
 		// load mock
-		this.loadGenre(System.getProperty("user.dir") + "/src/datas/mock/genres.csv");
-		this.loadLieu(System.getProperty("user.dir") + "/src/datas/mock/lieux.csv");
-		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/mock/realisateurs.csv");
-		this.loadFilm(System.getProperty("user.dir") + "/src/datas/mock/film.csv");
+//		this.loadGenre(System.getProperty("user.dir") + "/src/datas/mock/genres.csv");
+//		this.loadLieu(System.getProperty("user.dir") + "/src/datas/mock/lieux.csv");
+//		this.loadRealisateur(System.getProperty("user.dir") + "/src/datas/mock/realisateurs.csv");
+//		this.loadFilm(System.getProperty("user.dir") + "/src/datas/mock/film.csv");
 	}
 
 	private String generateRequest(List<Triplet> triplets) {
@@ -198,7 +203,7 @@ public class Transformer {
 		if (!debugMode) {
 			System.out.println("QUERY ## " + queryString);
 		}
-		return triplets.size() > 0 ? queryString :"";
+		return triplets.size() > 0 ? queryString : "";
 	}
 
 	public void convertModelToOntology() {
@@ -213,43 +218,44 @@ public class Transformer {
 					e.printStackTrace();
 				}
 			}
-			System.out.println("========================");
-			for (Lieu l : dictLieux.values()) {
-				if (debugMode) {
-					System.out.println(generateRequest(l.generateRDFTriplet()));
-				} else {
-					try {
-						sparqlClient.update(generateRequest(l.generateRDFTriplet()));
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-				}
-			}
-			System.out.println("========================");
-			for (Realisateur r : dictRealisateurs.values()) {
-				if (debugMode) {
-					System.out.println(generateRequest(r.generateRDFTriplet()));
-				} else {
-					try {
-						sparqlClient.update(generateRequest(r.generateRDFTriplet()));
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-				}
-			}
-			System.out.println("========================");
-			for (Film f : this.dictFilm.values()) {
-				if (debugMode) {
-					System.out.println(generateRequest(f.generateRDFTriplet()));
-
-				} else {
-					try {
-						sparqlClient.update(generateRequest(f.generateRDFTriplet()));
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
+		}
+		System.out.println("========================");
+		for (Lieu l : dictLieux.values()) {
+			if (debugMode) {
+				System.out.println(generateRequest(l.generateRDFTriplet()));
+			} else {
+				try {
+					sparqlClient.update(generateRequest(l.generateRDFTriplet()));
+				} catch (Exception e) {
+					e.printStackTrace();
 				}
 			}
 		}
+		System.out.println("========================");
+		for (Realisateur r : dictRealisateurs.values()) {
+			if (debugMode) {
+				System.out.println(generateRequest(r.generateRDFTriplet()));
+			} else {
+				try {
+					sparqlClient.update(generateRequest(r.generateRDFTriplet()));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		System.out.println("========================");
+		for (Film f : this.dictFilm.values()) {
+			if (debugMode) {
+				System.out.println(generateRequest(f.generateRDFTriplet()));
+
+			} else {
+				try {
+					sparqlClient.update(generateRequest(f.generateRDFTriplet()));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
 	}
 }

@@ -302,9 +302,8 @@ public class buildFinalCSV {
 			for (LieuBuilder l : f.lieuxDeTournages) {
 				line.add(f.id + "");
 				line.add(f.titre);
-				line.add(f.anneeSortie != "" ? f.anneeSortie : "<DEBUG-ANNEE>");
-				line.add(f.genres.size() > 0 ? String.valueOf(f.genres.get(0).id) : "<DEBUG-GENRE>"); // TODO : A
-																										// remplacer
+				line.add(f.anneeSortie != "" ? f.anneeSortie : "");
+				line.add(f.genres.size() > 0 ? String.valueOf(f.genres.get(0).id) : "");
 				line.add(f.realisateur.id + "");
 				line.add(l.id + "");
 				line.add(f.note + "");

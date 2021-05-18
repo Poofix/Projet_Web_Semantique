@@ -31,7 +31,7 @@ public class Genre implements IRDFGenerator{
 		String s = ":" + key; 
 		String p = "rdfs:label";
 		String o = '"'+this.label+'"';
-		if (label != null) {
+		if (label != null && !label.equals("") && !label.equals("N/A")) {
 			result.add(new Triplet(s, p, o));			
 		}
 		return result;

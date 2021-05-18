@@ -38,10 +38,10 @@ public class Film implements IRDFGenerator {
 	@Override
 	public List<Triplet> generateRDFTriplet() {
 		List<Triplet> result = new ArrayList<Triplet>();
-		if (titre != null) {
+		if (titre != null && !titre.equals("")) {
 			result.add(new Triplet(":" + key, "rdfs:label", '"' + titre + '"'));
 		}
-		if (anneeSortie != null) {
+		if (anneeSortie != null && !anneeSortie.equals("")) {
 			result.add(new Triplet(":" + key, ":aEteTourneEn", '"' + anneeSortie + '"'));
 		}
 		if (genreDominant != null) {

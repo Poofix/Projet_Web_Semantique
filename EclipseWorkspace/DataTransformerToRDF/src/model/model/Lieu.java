@@ -30,13 +30,13 @@ public class Lieu implements IRDFGenerator {
 	@Override
 	public List<Triplet> generateRDFTriplet() {
 		List<Triplet> result = new ArrayList<Triplet>();
-		if (ville != null) {
+		if (ville != null && !ville.equals("")) {
 			result.add(new Triplet(":" + key, ":aPourVille", '"' + ville + '"'));
 		}
-		if (codePostal != null) {
+		if (codePostal != null && !codePostal.equals("")) {
 			result.add(new Triplet(":" + key, ":aPourCodePostal", '"' + codePostal + '"'));
 		}
-		if (adresse != null) {
+		if (adresse != null && !adresse.equals("")) {
 			result.add(new Triplet(":" + key, ":aPourAdresse", '"' + adresse + '"'));
 		}
 		return result;
