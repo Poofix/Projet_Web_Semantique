@@ -113,7 +113,7 @@ public class buildFinalCSV {
 			if (aMovie.anneeSortie.equals("") || aMovie.genres.size() > 0 || aMovie.realisateur == null || aMovie.note == -1.0f) {
 				
 				HashMap<String, String> response = null;
-				if (cpt < 100) {
+				if (cpt < 500) {
 					cpt++;
 					response = intelligentLoader.makeIntelligentCallOMDB(aMovie);
 
