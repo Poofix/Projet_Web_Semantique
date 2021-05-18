@@ -213,7 +213,6 @@ public class buildFinalCSV {
 			String genreDePredilection = realisateur.getGenrePredilection();
 			if (genreDePredilection != null) {
 				realisateur.genreDePredilection = dictGenre.get(genreDePredilection);
-				System.out.println("Realisateur : " + genreDePredilection);
 			}
 		}
 		
