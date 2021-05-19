@@ -6,3 +6,5 @@ TalendWorkspace/*/code/routines/system/*.*
 TalendWorkspace/*/temp/
 TalendWorkspace/*/sqlPatterns/
 TalendWorkspace/*/talend.project
+
+NodeJSWorkspace/node_modules/*
