@@ -17,6 +17,7 @@ public class Lieu implements IRDFGenerator {
 	public String ville;
 	public String adresse;
 	public String codePostal;
+	public String dbpediaURI;
 
 	public Lieu(String v, String adr, String c) {
 		ville = v;
@@ -38,6 +39,9 @@ public class Lieu implements IRDFGenerator {
 		}
 		if (adresse != null && !adresse.equals("")) {
 			result.add(new Triplet(":" + key, ":aPourAdresse", '"' + adresse + '"'));
+		}
+		if (dbpediaURI != null && !dbpediaURI.equals("")) {
+			result.add(new Triplet(":" + key, ":sameAs", ":" + dbpediaURI));
 		}
 		return result;
 	}

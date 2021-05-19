@@ -16,6 +16,7 @@ import sparqlclient.SparqlClient;
 public class Transformer {
 
 	private SparqlClient sparqlClient;
+	private SparqlClient dbpediaClient;
 	private boolean debugMode = false;
 
 	Map<String, Genre> dictGenres;
@@ -23,13 +24,14 @@ public class Transformer {
 	Map<String, Lieu> dictLieux;
 	Map<String, Film> dictFilm;
 
-	public Transformer(SparqlClient sparqlClient, boolean debugMode) {
+	public Transformer(SparqlClient sparqlClient, SparqlClient dbpediaClient, boolean debugMode) {
 		dictGenres = new HashMap<String, Genre>();
 		dictRealisateurs = new HashMap<String, Realisateur>();
 		dictLieux = new HashMap<String, Lieu>();
 		dictFilm = new HashMap<String, Film>();
 
 		this.sparqlClient = sparqlClient;
+		this.dbpediaClient = dbpediaClient;
 		this.debugMode = debugMode;
 
 		String query = "ASK WHERE { ?s ?p ?o }";
@@ -204,6 +206,26 @@ public class Transformer {
 			System.out.println("QUERY ## " + queryString);
 		}
 		return triplets.size() > 0 ? queryString : "";
+	}
+	
+	public void doAlignStreet() {
+		for (Lieu l : dictLieux.values()) {
+			String request = 
+					"PREFIX dbo: <http://dbpedia.org/ontology/>\r\n"
+					+ "PREFIX geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#>\r\n"
+					+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n"
+					+ "\r\n"
+					+ "SELECT * WHERE {\r\n"
+					+ "?uriRessoures a dbo:Place;\r\n"
+					+ "rdfs:label \""+ l.adresse +"@fr.\r\n"
+					+ "}";
+			
+			//Iterable<Map<String, String>> response = dbpediaClient.select(request);
+			
+			String uri = "customUri";
+			
+			l.dbpediaURI = uri;
+		}
 	}
 
 	public void convertModelToOntology() {
