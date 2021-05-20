@@ -18,8 +18,8 @@
     },
     "homepage": "https://github.com/Poofix/Projet_Web_Semantique#readme",
     "dependencies": {
+        "ejs": "^3.1.6",
         "express": "^4.17.1",
-        "pug": "^3.0.2",
         "sparql-http-client": "^2.3.1"
     }
 }
