@@ -62,7 +62,7 @@ public class IntelligentLoader {
 	private void saveJson(org.json.JSONObject responseJSON, String titre) {
 		FileWriter fl;
 		try {
-			fl = new FileWriter(RepertoirePath + "/titre/" + titre+".txt");
+			fl = new FileWriter(RepertoirePath + "/titre/" + titre+".txt"); //TODO : use normalizer
 			fl.write(responseJSON.toString());
 			fl.flush();
 			fl.close();

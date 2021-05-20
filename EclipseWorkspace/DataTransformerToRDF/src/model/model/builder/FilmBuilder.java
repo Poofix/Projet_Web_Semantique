@@ -1,6 +1,7 @@
 package model.model.builder;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class FilmBuilder {
@@ -25,5 +26,16 @@ public class FilmBuilder {
 		this.lieuxDeTournages = new ArrayList<LieuBuilder>(); // Ici on peut se permettre de faire un ArrayList
 		this.genres = new ArrayList<GenreBuilder>();
 		this.estFrancais = false;
+	}
+
+	public void updateEstFrancais() {	
+		if (!estFrancais) {
+			for(LieuBuilder l : lieuxDeTournages) {
+				if (l.ville.toLowerCase().contains("paris")) {
+					estFrancais = true;
+					break;
+				}
+			}
+		}
 	}
 }

@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
+import java.security.KeyPair;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -210,21 +211,9 @@ public class buildFinalCSV {
 								}
 							}
 							
-							// TODO : A faire mieux grosse merde
 							// Ici, on vérifie l'adresse de tournage dans le cas où "Country" n'est pas renseigné.
 							if (!isFrench) {
-								if (aMovie.lieuxDeTournages != null && aMovie.lieuxDeTournages.size() > 0) {
-									Iterator<LieuBuilder> it = aMovie.lieuxDeTournages.iterator();
-									
-									while(it.hasNext()) {
-										LieuBuilder l = it.next();
-										if (l.ville.toLowerCase().contains("paris")) {
-											aMovie.estFrancais = true;
-											break;
-										}
-									}
-									
-								}
+								aMovie.updateEstFrancais();								
 							}
 						} // Fin IF
 						
@@ -265,31 +254,12 @@ public class buildFinalCSV {
 		Map<String, FilmBuilder> filmsFrancais = new HashMap<String, FilmBuilder>();
 		Map<String, RealisateurBuilder> realisateurConserves = new HashMap<String, RealisateurBuilder>();
 		
-		Map<RealisateurBuilder, List<String>> associationRealisateurFilm = new HashMap<RealisateurBuilder, List<String>>();
 		
-		for (String cleFilm : dictFilm.keySet()) {
-			
-			FilmBuilder film = dictFilm.get(cleFilm);
-			
-			associationRealisateurFilm.putIfAbsent(film.realisateur, new ArrayList<String>());
-			associationRealisateurFilm.get(film.realisateur).add(cleFilm);
-		}
-		
-		// Itération sur les films non-français pour supprimer les realisateurs inutiles
-		for (RealisateurBuilder realisateur : associationRealisateurFilm.keySet()) {
-			
-			List<String> listeCleFilm = associationRealisateurFilm.get(realisateur);
-			
-			for (String cleFilm : listeCleFilm) {
-				if (dictFilm.get(cleFilm).estFrancais) {
-					filmsFrancais.put(cleFilm, dictFilm.get(cleFilm));
-					
-					String keyRealisateur = "";
-					
-					for (String cleRealisateur : dictReal.keySet()) {
-						if (dictReal.get(cleRealisateur).equals(realisateur)) realisateurConserves.put(cleRealisateur, realisateur);
-					}
-				}
+		for (Map.Entry<String,FilmBuilder> e : dictFilm.entrySet()) {
+			e.getValue().updateEstFrancais();
+			if (e.getValue().estFrancais ) {
+				filmsFrancais.put(e.getKey(), e.getValue());
+				realisateurConserves.put(e.getValue().realisateur.id+"",e.getValue().realisateur); 
 			}
 		}
 		

@@ -12,7 +12,7 @@ public class Launcher {
 		transformer.loadModel();
 		System.out.println("End model loading");
 		System.out.println("Start aligning informations with DBPedia");
-		transformer.doAlignStreet();
+		//transformer.doAlignStreet();
 		System.out.println("End aligning informations with DBPedia");
 		System.out.println("Start insert into sparql");
 		transformer.convertModelToOntology();
