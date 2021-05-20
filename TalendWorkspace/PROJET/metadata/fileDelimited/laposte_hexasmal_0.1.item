@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_uhBrQLmmEeuv-ODnFWwIlQ" name="laposte_hexasmal" dataPackage="_uhBrQbmmEeuv-ODnFWwIlQ" Server="Localhost 127.0.0.1" FilePath="/home/etudiant/Bureau/Projet_Web_Semantique/TalendWorkspace/PROJET/dataSourceFolder/laposte_hexasmal.csv" Encoding="UTF-8" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_uhBrQbmmEeuv-ODnFWwIlQ" name="default" dataManager="_uhBrQLmmEeuv-ODnFWwIlQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_uhBrQrmmEeuv-ODnFWwIlQ" id="_jUTUILmmEeuv-ODnFWwIlQ" label="laposte_hexasmal">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uhBrQ7mmEeuv-ODnFWwIlQ" label="Code_commune_INSEE" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uhCSULmmEeuv-ODnFWwIlQ" label="Nom_commune" length="24" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uhCSUbmmEeuv-ODnFWwIlQ" label="Code_postal" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uhCSUrmmEeuv-ODnFWwIlQ" label="Ligne_5" length="18" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uhCSU7mmEeuv-ODnFWwIlQ" label="Libelle_d_acheminement" length="24" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uhCSVLmmEeuv-ODnFWwIlQ" label="coordonnees_gps" length="27" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
