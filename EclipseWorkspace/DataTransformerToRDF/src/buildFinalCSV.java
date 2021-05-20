@@ -5,8 +5,11 @@ import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import org.openjena.atlas.lib.Pair;
 
 import model.model.Film;
 import model.model.Genre;
@@ -147,7 +150,7 @@ public class buildFinalCSV {
 						}
 						
 						// -> Si pas REALISATEUR
-						if (aMovie.realisateur.id == -1) {
+						if (aMovie.realisateur.id == -1) { // TODO : Etait -1
 							String nomRealisateur = Utils.normalizeAuteur(response.get("Director").split(", ")[0]); // TODO : A voir selon le formalisme
 							
 							RealisateurBuilder unNouveauRealisateur = null;
@@ -192,6 +195,39 @@ public class buildFinalCSV {
 								aMovie.note = Float.parseFloat(response.get("imdbRating"));
 							}
 						}
+						
+						// Détermine si le film est d'origine Française :
+						if (!aMovie.estFrancais) {
+							boolean isFrench = false;
+							
+							// On vérifie avec la propriété "Country" de la requête IMDB
+							String[] countries = response.get("Country").split(", ");
+							for (String pays : countries) {
+								if (pays.toLowerCase().equals("france")) {
+									aMovie.estFrancais = true; // Si OK on annote que le film est FRANCAIS
+									isFrench = true; // sert seulement pour la condition prochaine
+									break;
+								}
+							}
+							
+							// TODO : A faire mieux grosse merde
+							// Ici, on vérifie l'adresse de tournage dans le cas où "Country" n'est pas renseigné.
+							if (!isFrench) {
+								if (aMovie.lieuxDeTournages != null && aMovie.lieuxDeTournages.size() > 0) {
+									Iterator<LieuBuilder> it = aMovie.lieuxDeTournages.iterator();
+									
+									while(it.hasNext()) {
+										LieuBuilder l = it.next();
+										if (l.ville.toLowerCase().contains("paris")) {
+											aMovie.estFrancais = true;
+											break;
+										}
+									}
+									
+								}
+							}
+						} // Fin IF
+						
 					} else {
 						System.out.println("ERROR : " + response.get("Error"));
 					}
@@ -200,13 +236,18 @@ public class buildFinalCSV {
 				}
 			}
 			
-			// Pour chaque film :
+			// Pour le réalisateur courant : On cherche à mettre à jour le compteur de genre en fonction des films
 			if (aMovie.realisateur != null) {
 				for (GenreBuilder unGenre : aMovie.genres) {
 					aMovie.realisateur.incementGenre(unGenre.label);
 				}
 			}
 		}
+		
+		// On cherche quels sont les film autres que Français pour les supprimer...
+		Pair<Map<String, FilmBuilder>, Map<String, RealisateurBuilder>> purged = purgeFilmeNonFrancais(dictFilm, dictReal);
+		dictFilm = purged.getLeft();
+		dictReal = purged.getRight();
 		
 		// On cherche le genre de prédilection de chaque Realisateur, puis mise à jour
 		for (RealisateurBuilder realisateur : dictReal.values()) {
@@ -218,6 +259,41 @@ public class buildFinalCSV {
 		
 		// Ecriture des CSVs
 		writeOutPutFile(dictFilm, dictLieu, dictReal, dictGenre);
+	}
+	
+	private static Pair<Map<String, FilmBuilder>, Map<String, RealisateurBuilder>> purgeFilmeNonFrancais(Map<String, FilmBuilder> dictFilm, Map<String, RealisateurBuilder> dictReal) {
+		Map<String, FilmBuilder> filmsFrancais = new HashMap<String, FilmBuilder>();
+		Map<String, RealisateurBuilder> realisateurConserves = new HashMap<String, RealisateurBuilder>();
+		
+		Map<RealisateurBuilder, List<String>> associationRealisateurFilm = new HashMap<RealisateurBuilder, List<String>>();
+		
+		for (String cleFilm : dictFilm.keySet()) {
+			
+			FilmBuilder film = dictFilm.get(cleFilm);
+			
+			associationRealisateurFilm.putIfAbsent(film.realisateur, new ArrayList<String>());
+			associationRealisateurFilm.get(film.realisateur).add(cleFilm);
+		}
+		
+		// Itération sur les films non-français pour supprimer les realisateurs inutiles
+		for (RealisateurBuilder realisateur : associationRealisateurFilm.keySet()) {
+			
+			List<String> listeCleFilm = associationRealisateurFilm.get(realisateur);
+			
+			for (String cleFilm : listeCleFilm) {
+				if (dictFilm.get(cleFilm).estFrancais) {
+					filmsFrancais.put(cleFilm, dictFilm.get(cleFilm));
+					
+					String keyRealisateur = "";
+					
+					for (String cleRealisateur : dictReal.keySet()) {
+						if (dictReal.get(cleRealisateur).equals(realisateur)) realisateurConserves.put(cleRealisateur, realisateur);
+					}
+				}
+			}
+		}
+		
+		return new Pair<Map<String, FilmBuilder>, Map<String, RealisateurBuilder>>(filmsFrancais, realisateurConserves);
 	}
 
 	private static void writeOutPutFile(Map<String, FilmBuilder> dictFilm2, Map<String, LieuBuilder> dictLieu2,
@@ -438,6 +514,7 @@ public class buildFinalCSV {
 						id_lieu = nextLine[INDEX_Lieu_id_lieu];
 						adresse_lieu = Utils.normalizeLieu(nextLine[INDEX_Lieu_adresse_lieu]);
 						ardt_lieu = nextLine[INDEX_Lieu_ardt_lieu];
+						ville = nextLine[8];
 
 						/*
 						 * if (adresse_lieu.split(", ").length > 1) { ville =

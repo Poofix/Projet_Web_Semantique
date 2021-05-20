@@ -26,6 +26,9 @@ public class Utils {
 		result = result.replace("'", "");
 		result = result.replace(".", "");
 		result = result.replace(",", "");
+		result = result.replace("\"", "");
+		result = result.replace("?", "");
+		result = result.replace("!", "");
 		result = result.toLowerCase();
 		return  result; 
 	}
@@ -40,6 +43,7 @@ public class Utils {
 	
 	public static String normalizeLieu(String lieu) {
 		String result = new String (lieu);
+		result = result.replace("Â", "");
 		result = removeAccent(result);
 		result = result.toLowerCase();
 		return  result; 
