@@ -26,7 +26,7 @@ import services.Utils;
 
 public class buildFinalCSV {
 
-	final static String API_KEY = "cd292d19"; // First : b82b2479
+	final static String API_KEY = "b82b2479"; // First : b82b2479
 
 	static int LAST_ID_MOVIE = 0;
 	static int LAST_ID_LIEU = 0;

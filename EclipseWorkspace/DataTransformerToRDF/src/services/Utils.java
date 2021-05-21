@@ -29,6 +29,7 @@ public class Utils {
 		result = result.replace("\"", "");
 		result = result.replace("?", "");
 		result = result.replace("!", "");
+		result = result.replace(":", "");
 		result = result.toLowerCase();
 		return  result; 
 	}

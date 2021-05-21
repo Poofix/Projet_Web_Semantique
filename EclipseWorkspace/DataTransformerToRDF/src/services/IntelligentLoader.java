@@ -120,6 +120,7 @@ public class IntelligentLoader {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				System.out.println(fileName);
 				responseJSON = new JSONObject(tokener); 
 			} else {
 				if (doDownload && downloadCount < maxDownloadCount) {
@@ -142,6 +143,8 @@ public class IntelligentLoader {
 			}
 
 		}
+		
+		System.out.println(downloadCount);
 		return response;
 	}
 
