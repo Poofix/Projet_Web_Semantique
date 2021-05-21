@@ -118,7 +118,7 @@ public class buildFinalCSV {
 				
 				HashMap<String, String> response = null;
 				
-				response = intelligentLoader.makeIntelligentCallOMDB(aMovie, true);
+				response = intelligentLoader.makeIntelligentCallOMDB(aMovie, false);
 
 				if (response != null && response.size() > 2) { // >~ 2 : Pas d'erreur
 						// TODO : Compl�ter :
