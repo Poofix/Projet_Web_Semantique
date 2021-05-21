@@ -48,4 +48,17 @@ public class Utils {
 		result = result.toLowerCase();
 		return  result; 
 	}
+	
+	public static String normalizeAnnee(String annee) {
+		String result = new String (annee);
+		result = result.replace("â", "");
+		result = result.replace("€", "");
+		result = result.replace("“", "");
+		
+		// Dans certains cas : une annee est note comme ceci "20182019"... On garde les 4 derniers chiffres
+		if (result.length() > 4) {
+			result = result.substring(result.length()-4,result.length());
+		}
+		return result;
+	}
 }

@@ -22,11 +22,16 @@ public class IntelligentLoader {
 	public String RepertoirePath;
 	private String API_KEY;
 	private OMDBProxy proxy;
-
-	public IntelligentLoader(String repertoirePath, String apikey) {
+	private int downloadCount;
+	private int maxDownloadCount;
+	
+	
+	public IntelligentLoader(String repertoirePath, String apikey, int maxDownloadCount) {
 		RepertoirePath = repertoirePath;
 		proxy = new OMDBProxy();
 		API_KEY = apikey;
+		this.maxDownloadCount = maxDownloadCount;
+		downloadCount = 0;
 	}
 
 	public String searchRequestExist(int id) {
@@ -73,8 +78,8 @@ public class IntelligentLoader {
 
 	}
 
-	public HashMap<String, String> makeIntelligentCallOMDB(FilmBuilder film) {
-
+	public HashMap<String, String> makeIntelligentCallOMDB(FilmBuilder film, boolean doDownload) {
+		
 		HashMap<String, String> response = new HashMap<String, String>();
 		org.json.JSONObject responseJSON = null;
 		if (film.imdbId != -1) {
@@ -93,9 +98,12 @@ public class IntelligentLoader {
 				}
 				responseJSON = new JSONObject(tokener); 
 			} else {
-				System.out.println("APPEL REST");
-				responseJSON = proxy.getMovieInfosById(API_KEY, String.valueOf(film.imdbId));
-				saveJson(responseJSON, film.imdbId);
+				if (doDownload && downloadCount < maxDownloadCount) {
+					System.out.println("APPEL REST");
+					responseJSON = proxy.getMovieInfosById(API_KEY, String.valueOf(film.imdbId));
+					saveJson(responseJSON, film.imdbId);
+					downloadCount++;
+				}
 			}
 		} else { // On passe par le titre ici
 			String fileName = searchRequestExist(film.titre);
@@ -113,11 +121,15 @@ public class IntelligentLoader {
 				}
 				responseJSON = new JSONObject(tokener); 
 			} else {
-				System.out.println("APPEL REST");
-				responseJSON = proxy.getMovieInfosByTitle(API_KEY, film.titre);
-				saveJson(responseJSON, Utils.normalize(film.titre));
+				if (doDownload && downloadCount < maxDownloadCount) {
+					System.out.println("APPEL REST");
+					responseJSON = proxy.getMovieInfosByTitle(API_KEY, film.titre);
+					saveJson(responseJSON, Utils.normalize(film.titre));	downloadCount++;
+				}
 			}
 		}
+		
+		if (responseJSON == null) return null;
 
 		for (String key : responseJSON.keySet()) {
 			String val = "";

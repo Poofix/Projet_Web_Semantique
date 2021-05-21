@@ -61,7 +61,7 @@ public class buildFinalCSV {
 		Map<String, LieuBuilder> dictLieu = new HashMap<String, LieuBuilder>();
 		Map<String, RealisateurBuilder> dictReal = new HashMap<String, RealisateurBuilder>();
 		Map<String, GenreBuilder> dictGenre = new HashMap<String, GenreBuilder>();
-		IntelligentLoader intelligentLoader = new IntelligentLoader(System.getProperty("user.dir")+"/src/datas/tmpRequest/", API_KEY);
+		IntelligentLoader intelligentLoader = new IntelligentLoader(System.getProperty("user.dir")+"/src/datas/tmpRequest/", API_KEY, 500);
 
 		firstLoad(System.getProperty("user.dir") + "/src/datas/talendOutput/FilmsIncomplete.csv", dictFilm);
 
@@ -110,119 +110,128 @@ public class buildFinalCSV {
 		LAST_ID_LIEU = dictLieu.size();
 		LAST_ID_GENRE = 0;
 		
-		int cpt = 0;
+		
 		// Iteration des films et requetage
 		for (String aMovieKey : dictFilm.keySet()) {
 			FilmBuilder aMovie = dictFilm.get(aMovieKey);
 			if (aMovie.anneeSortie.equals("") || aMovie.genres.size() > 0 || aMovie.realisateur == null || aMovie.note == -1.0f) {
 				
 				HashMap<String, String> response = null;
-				if (cpt < 500) {
-					cpt++;
-					response = intelligentLoader.makeIntelligentCallOMDB(aMovie);
+				
+				response = intelligentLoader.makeIntelligentCallOMDB(aMovie, false);
 
-					if (response != null && response.size() > 2) { // >~ 2 : Pas d'erreur
-							// TODO : Complï¿½ter :
-	
-							// Exemple de requï¿½te :
-							// http://www.omdbapi.com/?y=&plot=short&r=json&apikey=b82b2479&i=tt0046066
-	
-							/*
-							 * {"Title":"Mesa of Lost Women","Year":"1953","Rated":"Approved",
-							 * "Released":"17 Jun 1953","Runtime":"70 min","Genre":"Horror, Sci-Fi"
-							 * ,"Director":"Ron Ormond, Herbert Tevos"
-							 * ,"Writer":"Herbert Tevos (written for the screen by)"
-							 * ,"Actors":"Jackie Coogan, Allan Nixon, Richard Travis, Lyle Talbot"
-							 * ,"Plot":"A mad scientist named Arana is creating giant spiders and dwarfs in his lab on Zarpa Mesa in Mexico. He wants to create a master race of superwomen by injecting his female subjects with spider venom."
-							 * ,"Language":"English","Country":"USA","Awards":"N/A","Poster":
-							 * "https://m.media-amazon.com/images/M/MV5BZWNjNzFhYmYtNzFmZi00MjY4LTk3MDMtZWVjNjZlZWZlMjI0XkEyXkFqcGdeQXVyMTQ2MjQyNDc@._V1_SX300.jpg"
-							 * ,"Ratings":[{"Source":"Internet Movie Database","Value":"2.8/10"},{
-							 * "Source":"Rotten Tomatoes","Value":"17%"}],"Metascore":"N/A","imdbRating":
-							 * "2.8","imdbVotes":"1,440","imdbID":"tt0046066","Type":"movie",
-							 * "DVD":"27 Jul 2016","BoxOffice":"N/A","Production":"Ron Ormond Productions"
-							 * ,"Website":"N/A","Response":"True"}
-							 * 
-							 */
-	
-						// TRAITEMENT MOVIE : -----------------------
-						// -> Si pas ANNEE SORTIE
-						if (aMovie.anneeSortie.equals("")) {
-							aMovie.anneeSortie = response.get("Year");
-						}
-						
-						// -> Si pas REALISATEUR
-						if (aMovie.realisateur.id == -1) { // TODO : Etait -1
-							String nomRealisateur = Utils.normalizeAuteur(response.get("Director").split(", ")[0]); // TODO : A voir selon le formalisme
-							
-							RealisateurBuilder unNouveauRealisateur = null;
-							
-							if (!dictReal.containsKey(nomRealisateur)) {
-								unNouveauRealisateur = new RealisateurBuilder(LAST_ID_REALISATEUR, nomRealisateur);
-								dictReal.put(nomRealisateur, unNouveauRealisateur);
-								LAST_ID_REALISATEUR++;
-							} else {
-								unNouveauRealisateur = dictReal.get(nomRealisateur);
-							}
-							
-							aMovie.realisateur = unNouveauRealisateur;
-						}
-						
-						// -> Si pas GENRE :
-						if (aMovie.genres.size() == 0) {
-							String[] genres = response.get("Genre").split(", ");
-							if (genres.length > 0) {
-								for (String aGenre : genres) {
-									
-									GenreBuilder unNouveauGenre = null;
-									
-									
-									if (!dictGenre.containsKey(aGenre)) {
-										unNouveauGenre = new GenreBuilder(LAST_ID_GENRE, aGenre);
-										dictGenre.put(aGenre, unNouveauGenre);
-										LAST_ID_GENRE++;
-									} else {
-										unNouveauGenre = dictGenre.get(aGenre);
-									}
-									
-									aMovie.genres.add(unNouveauGenre);
-								}
-							}
-						}
-	
-						// -> Si pas NOTE :
-						if (aMovie.note == -1.0f) {
-							Object ranking = response.get("imdbRating");
-							if ((ranking != null) && (!ranking.equals("N/A"))) {
-								aMovie.note = Float.parseFloat(response.get("imdbRating"));
-							}
-						}
-						
-						// Détermine si le film est d'origine Française :
-						if (!aMovie.estFrancais) {
-							boolean isFrench = false;
-							
-							// On vérifie avec la propriété "Country" de la requête IMDB
-							String[] countries = response.get("Country").split(", ");
-							for (String pays : countries) {
-								if (pays.toLowerCase().equals("france")) {
-									aMovie.estFrancais = true; // Si OK on annote que le film est FRANCAIS
-									isFrench = true; // sert seulement pour la condition prochaine
-									break;
-								}
-							}
-							
-							// Ici, on vérifie l'adresse de tournage dans le cas où "Country" n'est pas renseigné.
-							if (!isFrench) {
-								aMovie.updateEstFrancais();								
-							}
-						} // Fin IF
-						
-					} else {
-						System.out.println("ERROR : " + response.get("Error"));
+				if (response != null && response.size() > 2) { // >~ 2 : Pas d'erreur
+						// TODO : Complï¿½ter :
+
+						// Exemple de requï¿½te :
+						// http://www.omdbapi.com/?y=&plot=short&r=json&apikey=b82b2479&i=tt0046066
+
+						/*
+						 * {"Title":"Mesa of Lost Women","Year":"1953","Rated":"Approved",
+						 * "Released":"17 Jun 1953","Runtime":"70 min","Genre":"Horror, Sci-Fi"
+						 * ,"Director":"Ron Ormond, Herbert Tevos"
+						 * ,"Writer":"Herbert Tevos (written for the screen by)"
+						 * ,"Actors":"Jackie Coogan, Allan Nixon, Richard Travis, Lyle Talbot"
+						 * ,"Plot":"A mad scientist named Arana is creating giant spiders and dwarfs in his lab on Zarpa Mesa in Mexico. He wants to create a master race of superwomen by injecting his female subjects with spider venom."
+						 * ,"Language":"English","Country":"USA","Awards":"N/A","Poster":
+						 * "https://m.media-amazon.com/images/M/MV5BZWNjNzFhYmYtNzFmZi00MjY4LTk3MDMtZWVjNjZlZWZlMjI0XkEyXkFqcGdeQXVyMTQ2MjQyNDc@._V1_SX300.jpg"
+						 * ,"Ratings":[{"Source":"Internet Movie Database","Value":"2.8/10"},{
+						 * "Source":"Rotten Tomatoes","Value":"17%"}],"Metascore":"N/A","imdbRating":
+						 * "2.8","imdbVotes":"1,440","imdbID":"tt0046066","Type":"movie",
+						 * "DVD":"27 Jul 2016","BoxOffice":"N/A","Production":"Ron Ormond Productions"
+						 * ,"Website":"N/A","Response":"True"}
+						 * 
+						 */
+
+					// TRAITEMENT MOVIE : -----------------------
+					// -> Si pas ANNEE SORTIE
+					if (aMovie.anneeSortie.equals("")) {
+						aMovie.anneeSortie = Utils.normalizeAnnee(response.get("Year"));
 					}
-	
-					System.out.println(aMovie);
+					
+					// -> Si pas REALISATEUR
+					if (aMovie.realisateur.id == -1) { // TODO : Etait -1
+						String nomRealisateur = Utils.normalizeAuteur(response.get("Director").split(", ")[0]); // TODO : A voir selon le formalisme
+						
+						RealisateurBuilder unNouveauRealisateur = null;
+						
+						if (!dictReal.containsKey(nomRealisateur)) {
+							unNouveauRealisateur = new RealisateurBuilder(LAST_ID_REALISATEUR, nomRealisateur);
+							dictReal.put(nomRealisateur, unNouveauRealisateur);
+							LAST_ID_REALISATEUR++;
+						} else {
+							unNouveauRealisateur = dictReal.get(nomRealisateur);
+						}
+						
+						aMovie.realisateur = unNouveauRealisateur;
+					}
+					
+					// -> Si pas GENRE :
+					if (aMovie.genres.size() == 0) {
+						String[] genres = response.get("Genre").split(", ");
+						if (genres.length > 0) {
+							for (String aGenre : genres) {
+								
+								// Certains genres ne sont pas renseignes et sont annotes "N/A", on ignore.
+								if (aGenre.equals("N/A")) continue;
+								
+								GenreBuilder unNouveauGenre = null;
+								
+								
+								if (!dictGenre.containsKey(aGenre)) {
+									unNouveauGenre = new GenreBuilder(LAST_ID_GENRE, aGenre);
+									dictGenre.put(aGenre, unNouveauGenre);
+									LAST_ID_GENRE++;
+								} else {
+									unNouveauGenre = dictGenre.get(aGenre);
+								}
+								
+								aMovie.genres.add(unNouveauGenre);
+							}
+						}
+					}
+
+					// -> Si pas NOTE :
+					if (aMovie.note == -1.0f) {
+						Object ranking = response.get("imdbRating");
+						
+						// Si IMDB à une note :
+						if ((ranking != null) && (!ranking.equals("N/A"))) {
+							aMovie.note = Float.parseFloat(response.get("imdbRating"));
+						} else { // Dans le cas contraire, la note est par defaut mise à 0.0
+							//aMovie.note = 0.0f;
+						}
+					}
+					
+					// Détermine si le film est d'origine Française :
+					if (!aMovie.estFrancais) {
+						boolean isFrench = false;
+						
+						// On vérifie avec la propriété "Country" de la requête IMDB
+						String[] countries = response.get("Country").split(", ");
+						for (String pays : countries) {
+							if (pays.toLowerCase().equals("france")) {
+								aMovie.estFrancais = true; // Si OK on annote que le film est FRANCAIS
+								isFrench = true; // sert seulement pour la condition prochaine
+								break;
+							}
+						}
+						
+						// Ici, on vérifie l'adresse de tournage dans le cas où "Country" n'est pas renseigné.
+						if (!isFrench) {
+							aMovie.updateEstFrancais();								
+						}
+					} // Fin IF
+					
+				} else {
+					if (response != null) {
+						System.out.println("ERROR : " + response.get("Error"));
+					} else {
+						//System.out.println("DOWNLOAD LIMIT REACHED !"); // TODO : Pourri les loGS
+					}
 				}
+
+				System.out.println(aMovie);
 			}
 			
 			// Pour le réalisateur courant : On cherche à mettre à jour le compteur de genre en fonction des films
