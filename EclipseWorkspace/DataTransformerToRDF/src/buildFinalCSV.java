@@ -26,7 +26,7 @@ import services.Utils;
 
 public class buildFinalCSV {
 
-	final static String API_KEY = "b82b2479";
+	final static String API_KEY = "cd292d19"; // First : b82b2479
 
 	static int LAST_ID_MOVIE = 0;
 	static int LAST_ID_LIEU = 0;
@@ -61,7 +61,7 @@ public class buildFinalCSV {
 		Map<String, LieuBuilder> dictLieu = new HashMap<String, LieuBuilder>();
 		Map<String, RealisateurBuilder> dictReal = new HashMap<String, RealisateurBuilder>();
 		Map<String, GenreBuilder> dictGenre = new HashMap<String, GenreBuilder>();
-		IntelligentLoader intelligentLoader = new IntelligentLoader(System.getProperty("user.dir")+"/src/datas/tmpRequest/", API_KEY, 500);
+		IntelligentLoader intelligentLoader = new IntelligentLoader(System.getProperty("user.dir")+"/src/datas/tmpRequest/", API_KEY, 1000);
 
 		firstLoad(System.getProperty("user.dir") + "/src/datas/talendOutput/FilmsIncomplete.csv", dictFilm);
 
@@ -118,7 +118,7 @@ public class buildFinalCSV {
 				
 				HashMap<String, String> response = null;
 				
-				response = intelligentLoader.makeIntelligentCallOMDB(aMovie, false);
+				response = intelligentLoader.makeIntelligentCallOMDB(aMovie, true);
 
 				if (response != null && response.size() > 2) { // >~ 2 : Pas d'erreur
 						// TODO : Compl�ter :
