@@ -195,7 +195,8 @@ public class Transformer {
 	private String generateRequest(List<Triplet> triplets) {
 		String prefix = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n"
 				+ "Prefix : <http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#>\r\n"
-				+ "PREFIX owl: <http://www.w3.org/2002/07/owl#>\r\n";
+				+ "PREFIX owl: <http://www.w3.org/2002/07/owl#>\r\n"
+				+ "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n";
 
 		String queryString = prefix + "\n" + "insert data {";
 		for (Triplet t : triplets) {
@@ -214,7 +215,7 @@ public class Transformer {
 					"PREFIX dbo: <http://dbpedia.org/ontology/>\r\n"
 					+ "PREFIX geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#>\r\n"
 					+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n"
-					+ "\r\n"
+					+ "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n"
 					+ "SELECT * WHERE {\r\n"
 					+ "?uriRessoures a dbo:Place;\r\n"
 					+ "rdfs:label \""+ l.adresse +"@fr.\r\n"

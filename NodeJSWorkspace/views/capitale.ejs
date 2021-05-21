@@ -2,17 +2,75 @@
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">.
-
+    <style>
+        #app-container {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        #genre-panel {
+            margin: 40px;
+            flex: 1;
+            /* background-color: red; */
+        }
+        
+        #detail-panel {
+            margin: 40px;
+            flex: 1;
+            /* background-color: blue; */
+        }
+    </style>
 </head>
 
 <body>
     <h1>Dans quelle ville domine quel genre ?</h1>
     <div id="app-container">
         <div id="genre-panel">
+            <table class="table table-bordered table-striped">
+                <thread>
+                    <tr>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Nom de la ville</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <% for(var key in dico) {  %>
+                        <tr>
+                            <th>
+                                <%= key %>
+                            </th>
+                            <th>
+                                <%= dico[key][0].nomVille %>
+                            </th>
+                        </tr>
+                        <% } %>
 
+                </tbody>
+            </table>
         </div>
         <div id="detail-panel">
+            <div id="selected-genre-detail">test</div>
+            <table class="table table-bordered">
+                <thread>
+                    <tr>
+                        <th scope="col">Nom de la ville</th>
+                        <th scope="col">Note moyenne des films</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <% for(var key in dico) {  %>
+                        <tr>
+                            <th>
+                                <%= dico[key][0].nomVille %>
+                            </th>
+                            <th>
+                                <%= dico[key][0].moyenne %>
+                            </th>
+                        </tr>
+                        <% } %>
 
+                </tbody>
+            </table>
         </div>
     </div>
 </body>

@@ -31,6 +31,7 @@ app.get("/test", async(request, response) => {
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX : <http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
     select * WHERE { ?s a :Lieu }`
 
@@ -42,31 +43,103 @@ app.get("/test", async(request, response) => {
 
 
 app.get("/capitale", async(request, response) => {
-    const query = `
+    const queryGenre = `
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX : <http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        
+    select ?genre ?label ?lieu ?nomVille ?note   where {
+        ?genre rdfs:label ?label ; rdf:type :Genre. 
+        ?film :seDerouleDans ?lieu .
+        ?film :aPourGenre  ?genre .
+        ?film :aPourNote ?note.
+        ?lieu :aPourVille ?nomVille .
+     }`
 
-    select * WHERE { ?s a :Lieu }`
+    var dataGenre = await CallerService.doSelect(queryGenre)
+    var dico = {};
+    var dicotmp = {}
+    var tmp = {};
 
-    var data = await CallerService.doSelect(query)
+    dataGenre.forEach(element => {
+        if (tmp[element.label] == undefined || tmp[element.label] == null) {
+            tmp[element.label] = [];
+        }
+
+        if (tmp[element.label][element.nomVille] == undefined || tmp[element.label][element.nomVille] == null) {
+            tmp[element.label][element.nomVille] = []
+        }
+        tmp[element.label][element.nomVille].push({ nomVille: element.nomVille, note: parseFloat(element.note) })
+
+    });
+
+    for (var key in tmp) {
+        var current = tmp[key];
+        for (var k in current) {
+            var y = current[k]
+            var values = [];
+            for (var x in y) {
+                values.push(y[x].note)
+            }
+            if (dicotmp[key] == undefined || dicotmp[key] == null) {
+                dicotmp[key] = [];
+            }
+            dicotmp[key].push({ nomVille: current[k][0].nomVille, values: values })
+        }
+
+    };
+
+    for (var key in dicotmp) {
+        var current = dicotmp[key];
+        for (var k in current) {
+            if (dico[key] == undefined || dico[key] == null) {
+                dico[key] = [];
+            }
+            dico[key].push({ nomVille: current[k].nomVille, moyenne: avg(current[k].values) })
+        }
+    }
+    console.log(dico)
 
 
-    var formatedData = data;
+    var formatedData = {
+        dico: dico
+    };
     response.render("capitale", formatedData);
 });
 
 app.get("/topVille", async(request, response) => {
-    const query = `
+    const queryFilter = `
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX : <http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    
+    
+    select ?nomVille (AVG(?note) as ?moyenne) where {
+        {?film :aPourGenre :genre22} UNION {?film :aPourGenre :genre10} UNION {?film :aPourGenre :genre5}. 
+          ?film :seDerouleDans ?lieu .
+          ?film :aPourNote ?note.
+         ?lieu :aPourVille ?nomVille .
+    }
+    group by ?nomVille
+    order by desc (?moyenne) limit 10`
 
-    select * WHERE { ?s a :Lieu }`
-
-    var data = await CallerService.doSelect(query)
+    var data = await CallerService.doSelect(queryFilter)
 
 
-    var formatedData = data;
+    var formatedData = {
+        villeList: data
+    };
+    console.log(formatedData)
     response.render("topVille", formatedData);
 });
+
+
+function avg(tab) {
+    var moy = 0;
+    tab.forEach(el => {
+        moy += el;
+    })
+    return tab.length ? moy / tab.length : 0;
+}
