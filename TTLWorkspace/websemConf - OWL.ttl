@@ -1,0 +1,36 @@
+
+@prefix :      <http://base/#> .
+@prefix tdb:   <http://jena.hpl.hp.com/2008/tdb#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ja:    <http://jena.hpl.hp.com/2005/11/Assembler#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fuseki: <http://jena.apache.org/fuseki#> .
+
+:service3  a                          fuseki:Service ;
+        fuseki:dataset                :datasetOWL ;
+        fuseki:name                   "lieuFrance" ;
+        fuseki:serviceQuery           "query" , "sparql" ;
+        fuseki:serviceReadGraphStore  "get" ;
+        fuseki:serviceReadWriteGraphStore "data" ;
+        fuseki:serviceUpdate          "update" ;
+        fuseki:serviceUpload          "upload" .
+
+:datasetOWL    rdf:type ja:RDFDataset ;
+            rdfs:label "websemConf OWL" ;
+            ja:defaultGraph
+              [ rdfs:label "websemConf OWL" ;
+                a ja:InfModel ;
+
+                # Enable/disable systeme d'implication RDFS : e.g. property rdfs:subClassOf
+                # ja:reasoner [ja:reasonerURL <http://jena.hpl.hp.com/2003/RDFSExptRuleReasoner>] ;
+
+				# Enable/disable systeme d'implication OWL : e.g. property owl:sameAs
+                 ja:reasoner [ja:reasonerURL <http://jena.hpl.hp.com/2003/OWLFBRuleReasoner>] ;
+
+                #Enable/disable règles d'inference Jena ; indication du chemin vers le fichier myrules.rules file
+                #ja:reasoner [
+                #    ja:reasonerURL <http://jena.hpl.hp.com/2003/GenericRuleReasoner> ;
+                #    ja:rulesFrom <file:///C:/apache-jena-fuseki-2.5.0/run/databases/myrules.rules> ;
+                #] ;
+              ] ;
+			  .

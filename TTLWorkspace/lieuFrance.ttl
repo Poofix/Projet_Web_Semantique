@@ -1,0 +1,115 @@
+@prefix : <http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9> .
+
+<http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#aPourGenre
+:aPourGenre rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain :Film ;
+                                                        rdfs:range :Genre ;
+                                                        rdfs:label "aPourGenre"@fr .
+
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#ouSePasse
+:ouSePasse rdf:type owl:ObjectProperty ;
+                                                        owl:inverseOf :seDerouleDans ;
+                                                        rdfs:label "ouSePasse"@fr .
+
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#aRealise
+:aRealise rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain :Realisateur ;
+                                                        rdfs:range :Film ;
+                                                        rdfs:label "aRealise"@fr .
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#aPourRealisateur
+:aPourRealisateur rdf:type owl:ObjectProperty ; owl:inverseOf :aRealise;
+                                                        rdfs:label "aPourRealisateur"@fr .
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#aPourStyleDePredilection
+:aPourStyleDePredilection rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain :Realisateur ;
+                                                        rdfs:range :Genre ;
+                                                        rdfs:label "aPourStyleDePredilection"@fr .
+
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#seDerouleDans
+:seDerouleDans rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain :Film ;
+                                                        rdfs:range :Lieu ;
+                                                        rdfs:label "seDerouleDans"@fr .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#aPourVille
+:aPourVille 									rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain :Lieu ;
+                                                      rdfs:range xsd:string ;
+                                                      rdfs:label "aPourVille"@fr .
+
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#aEteTourneEn
+:aEteTourneEn rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain :Film ;
+                                                      rdfs:range xsd:int ;
+                                                      rdfs:label "aEteTourneEn"@fr .
+
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#aPourNote
+:aPourNote rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain :Film ;
+                                                      rdfs:range xsd:float ;
+                                                      rdfs:label "aPourNote"@fr .
+
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#aPourCodePostal
+:aPourCodePostal rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain :Lieu ;
+                                                      rdfs:range xsd:string ;
+                                                      rdfs:label "aPourCodePostal"@fr .
+
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#aPourAdresse
+:aPourAdresse rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain :Lieu ;
+                                                      rdfs:range xsd:string ;
+                                                      rdfs:label "aPourAdresse"@fr .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#Realisateur
+:Realisateur rdf:type owl:Class ;
+                                               rdfs:label "realisateur"@fr .
+
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#Lieu
+:Lieu rdf:type owl:Class ;
+                                               rdfs:label "lieuDeTournage"@fr .
+
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#Genre
+:Genre rdf:type owl:Class ;
+                                               rdfs:label "genre"@fr .
+
+
+###  http://www.semanticweb.org/adminetu/ontologies/2021/4/untitled-ontology-9#Film
+:Film rdf:type owl:Class ;
+                                               rdfs:label "film"@fr .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
