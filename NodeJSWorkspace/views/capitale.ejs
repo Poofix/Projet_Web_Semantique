@@ -14,7 +14,7 @@
             /* background-color: red; */
         }
         
-        #detail-panel {
+        #detail-container {
             margin: 40px;
             flex: 1;
             /* background-color: blue; */
@@ -27,20 +27,21 @@
     <div id="app-container">
         <div id="genre-panel">
             <table class="table table-bordered table-striped">
-                <thread>
+                <thead class="thead">
                     <tr>
                         <th scope="col">Genre</th>
                         <th scope="col">Nom de la ville</th>
                     </tr>
-                </thread>
+                </thead>
                 <tbody>
                     <% for(var key in dico) {  %>
                         <tr>
                             <th>
                                 <%= key %>
                             </th>
-                            <th>
+                            <th id=<%="row-ville-" + key %>>
                                 <%= dico[key][0].nomVille %>
+                                    <button class="btn ">voir les détails</button>
                             </th>
                         </tr>
                         <% } %>
@@ -48,34 +49,51 @@
                 </tbody>
             </table>
         </div>
-        <div id="detail-panel">
-            <div id="selected-genre-detail">test</div>
-            <table class="table table-bordered">
-                <thread>
-                    <tr>
-                        <th scope="col">Nom de la ville</th>
-                        <th scope="col">Note moyenne des films</th>
-                    </tr>
-                </thread>
-                <tbody>
-                    <% for(var key in dico) {  %>
+        <div id="detail-container">
+            <div id="detail-panel">
+                <div id="selected-genre-detail">test</div>
+                <table id="detail-table" class="table table-bordered">
+                    <thead>
                         <tr>
-                            <th>
-                                <%= dico[key][0].nomVille %>
-                            </th>
-                            <th>
-                                <%= dico[key][0].moyenne %>
-                            </th>
+                            <th scope="col">Nom de la ville</th>
+                            <th scope="col">Note moyenne des films</th>
                         </tr>
-                        <% } %>
-
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="detail-panel"></div>
         </div>
-    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+    var dataDico = <%- JSON.stringify(dico) %>
+
+    function removeOldTab(id) {
+        $("#detail-table > tbody").empty();
+    }
+    $("#detail-panel").hide()
+
+    for (var key in dataDico) {
+        $("#row-ville-" + key).click({
+            key: key
+        }, (event) => {
+            removeOldTab();
+            var key = event.data.key;
+            $("#selected-genre-detail").html("Classement des villes pour le genre <b>" + key + "</b>");
+            var content = "";
+            dataDico[key].forEach(e => {
+                content += "<tr>"
+                content += "<th>" + e.nomVille + "</th>" + "<th>" + e.moyenne + "</th>";
+                content += "</tr>";
+            });
+            $("#detail-table > tbody").append(content);
+            $("#detail-panel").show()
+        });
+    }
+</script>
 
 </html>

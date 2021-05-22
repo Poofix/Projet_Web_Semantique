@@ -99,9 +99,12 @@ app.get("/capitale", async(request, response) => {
             dico[key].push({ nomVille: current[k].nomVille, moyenne: avg(current[k].values) })
         }
     }
-    console.log(dico)
 
-
+    for (var key in dico) {
+        dico[key].sort((a, b) => {
+            return b.moyenne - a.moyenne;
+        });
+    }
     var formatedData = {
         dico: dico
     };
@@ -117,7 +120,7 @@ app.get("/topVille", async(request, response) => {
     
     
     select ?nomVille (AVG(?note) as ?moyenne) where {
-        {?film :aPourGenre :genre22} UNION {?film :aPourGenre :genre10} UNION {?film :aPourGenre :genre5}. 
+        {?film :aPourGenre :genre6} UNION {?film :aPourGenre :genre15} UNION {?film :aPourGenre :genre17}. 
           ?film :seDerouleDans ?lieu .
           ?film :aPourNote ?note.
          ?lieu :aPourVille ?nomVille .
@@ -126,12 +129,12 @@ app.get("/topVille", async(request, response) => {
     order by desc (?moyenne) limit 10`
 
     var data = await CallerService.doSelect(queryFilter)
-
+        // Short/Documentary/Adventure
 
     var formatedData = {
         villeList: data
     };
-    console.log(formatedData)
+
     response.render("topVille", formatedData);
 });
 
